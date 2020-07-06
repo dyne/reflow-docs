@@ -1,0 +1,7 @@
+{
+  "docs": {
+    "Getting started": ["what_is_reflowOS", "usecase", "pilots", "architecture"],
+    "Guides": ["install_a_reflowOS_node", "manage_a_node", "extend_reflowOS"],
+    "Components": ["zenpub", "decodeOS", "zenroom", "component_library"]
+  }
+}
