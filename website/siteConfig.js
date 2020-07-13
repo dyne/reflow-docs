@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'ReflowOS Manual', // Title for your website.
+  title: 'ReflowOS', // Title for your website.
   tagline: 'Architecture and Manual for Distributed Network Setup and Maintenance',
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */

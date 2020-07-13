@@ -60,13 +60,11 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl('what_is_reflowOS.html')}>Get started</Button>
+            <Button href="https://github.com/dyne/zenpub">Github</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -101,7 +99,24 @@ class Index extends React.Component {
       </div>
     );
 
-    const TryOut = () => (
+    const Social = () => (
+      <div className="left">
+        <Block id="try">
+          {[
+            {
+              content:
+                'Economic activities need coordination. ReflowOS enhances coordination allowing users to create, join and moderate focus groups within the network.' +
+                'Users can post their offers and needs in the whole network or in a specific group (that can represent a neighborhood, a community of intends, etc), have public discussions or group specific and so on.',
+              image: `${baseUrl}img/pride.svg`,
+              imageAlign: 'left',
+              title: 'Create and manage groups, follow users and have meaningful discussions',
+            },
+          ]}
+        </Block>
+      </div>
+    );
+
+    const MaterialPassport = () => (
       <Block id="try">
         {[
           {
@@ -109,9 +124,9 @@ class Index extends React.Component {
               'To make your landing page more attractive, use illustrations! Check out ' +
               '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
               'The illustrations you see on this page are from unDraw.',
-            image: `${baseUrl}img/undraw_code_review.svg`,
+            image: `${baseUrl}img/factory.svg`,
             imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+            title: 'Generate a resource material passport',
           },
         ]}
       </Block>
@@ -131,35 +146,51 @@ class Index extends React.Component {
       </Block>
     );
 
-    const LearnHow = () => (
+    const EconomicNetwork = () => (
+      <div className="left">
+      <Block background="light">
+        {[
+          {
+            content:
+              'ReflowOS can be used for creating public networks, where users can freely create an account on existing nodes, or start their own and interact with the network. <br/> **[Read more about open networks](#)**. <br /> <br /> But ReflowOS can be used also to create private and permissioned networks, relying on **[DecodeOS](#)** to anonymize all the activities behind a TOR layer. <br /> **[Read more about private networks]()**',
+            image: `${baseUrl}img/network.svg`,
+            imageAlign: 'right',
+            title: 'Create and join open or permissioned economic networks',
+          },
+        ]}
+      </Block>
+      </div>
+    );
+
+    const OffersNeeds = () => (
       <Block background="light">
         {[
           {
             content:
               'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
+            image: `${baseUrl}img/offers.svg`,
             imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            title: 'Publish and match offers and needs',
           },
         ]}
       </Block>
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
+      <Block id="features" background="gray" layout="threeColumn">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
+            content: 'ReflowOS infrastructure leverages on research and work in multiple successfull EU projects and rely on high standard encryption protocols. Smart contracts are based on **[zenroom](https://zenroom.org)** VM, permissioned networks are based upon **[DecodeOS](https://decodeos.dyne.org/)**',
+            title: 'Encrypted',
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
+            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](https://www.w3.org/TR/activitypub/)** protocol and the **[valueflows](https://valueflo.ws)** ontology. Such protocol allows to keep the ownership of its own data, meanwhile fostering interoperability with the rest of the network.',
+            title: 'Federated',
           },
+          {
+            content: 'The ReflowOS is built to be remixed and extended based on the diverse and evolving communities needs. Confident that does not exist 2 communities with the same needs, **[CommonsPub](https://commonspub.org)** allows to create new functionalities by plugging new code easily',
+            title: 'Extendable',
+          }
         ]}
       </Block>
     );
@@ -195,12 +226,17 @@ class Index extends React.Component {
 
     return (
       <div>
+        <div className="blm">Black Lives Matter. <a href="#">Support the Equal Justice Initiative</a></div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
+          <div className="left">
+            <Features />
+          </div>
+          {/* <FeatureCallout /> */}
+          <EconomicNetwork />
+          <Social />
+          <OffersNeeds />
+          <MaterialPassport />
           <Description />
           <Showcase />
         </div>
