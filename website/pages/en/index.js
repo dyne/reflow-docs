@@ -60,13 +60,11 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl('what_is_reflowOS.html')}>Get started</Button>
+            <Button href="https://github.com/dyne/zenpub">Github</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -101,65 +99,101 @@ class Index extends React.Component {
       </div>
     );
 
-    const TryOut = () => (
-      <Block id="try">
+    const Social = () => (
+      <div className="right">
+        <Block id="try">
+          {[
+            {
+              content:
+                'Economic activities need coordination. ReflowOS enhances coordination allowing users to create, join and moderate focus groups within the network.' +
+                'Users can post their offers and needs in the whole network or in a specific group (that can represent a neighborhood, a community of intends, etc), have public discussions or group specific and so on.',
+              image: `${baseUrl}img/pride.svg`,
+              imageAlign: 'left',
+              title: 'Create and manage groups, follow users and have meaningful discussions',
+            },
+          ]}
+        </Block>
+      </div>
+    );
+
+    const MaterialPassport = () => (
+      
+      <div className="right">
+        <Block id="try">
         {[
           {
             content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
-            image: `${baseUrl}img/undraw_code_review.svg`,
+              'Materials can be exchanged across the network, they can be transformed, consumed and combined with other materials to create new resources.' +
+              'Tracking any economic activity that happen to a resource, will allow participants to take more informed and conscious decisions.' +
+              'It will empower the network, providing meaningful infoormation about the network supply chains and how to create optimized ones. ',
+            image: `${baseUrl}img/factory.svg`,
             imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+            title: 'Generate a resource material passport',
           },
         ]}
       </Block>
+      </div>
+      
     );
 
-    const Description = () => (
-      <Block background="dark">
-        {[
-          {
-            content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/undraw_note_list.svg`,
-            imageAlign: 'right',
-            title: 'Description',
-          },
-        ]}
-      </Block>
+    const Cta = () => (
+      <div className='cta'>
+        <a className='button' href="">get started</a>
+        <a className='button' href="">Github</a>
+      </div>
     );
 
-    const LearnHow = () => (
+    const EconomicNetwork = () => (
+      <div className="left">
       <Block background="light">
         {[
           {
             content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
+              'ReflowOS can be used for creating public networks, where users can freely create an account on existing nodes, or start their own and interact with the network. <br/> **[Read more about open networks](#)**. <br /> <br /> But ReflowOS can be used also to create private and permissioned networks, relying on **[DecodeOS](#)** to anonymize all the activities behind a TOR layer. <br /> **[Read more about private networks]()**',
+            image: `${baseUrl}img/network.svg`,
             imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            title: 'Create and join open or permissioned economic networks',
           },
         ]}
       </Block>
+      </div>
+    );
+
+    const OffersNeeds = () => (
+      <div className="left">
+        <Block background="light">
+        {[
+          {
+            content:
+              'Needs and offers are a core aspect of any economic networks. They play a set of important roles such connecting different stakeholders and create new economic relationships.<br />'+
+              'But they also act as a network feedback system, signaling the sentiment of materials, services and skills most requested by the network participants and the abundance or availability of others.<br />'+
+              'A participant can search for a specific tool, raw material, service or skill available in the network. <br />'+
+              'To put the focus on circular economy, contrary to most of the platforms alike, ReflowOS is driven by needs, rather then offers, incentivating participants to produce and exchange materials and skills based on existing and explicit needs, rather than the contrary.',
+            image: `${baseUrl}img/offers.svg`,
+            imageAlign: 'right',
+            title: 'Publish and match needs and offers',
+          },
+        ]}
+      </Block>
+        
+      </div>
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
+      <Block id="features" background="gray" layout="threeColumn">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
+            content: 'ReflowOS infrastructure leverages on research and work in successfull EU projects and rely on standard encryption protocols. Smart contracts are based on **[zenroom](https://zenroom.org)** VM, permissioned networks are created on top of **[DecodeOS](https://decodeos.dyne.org/)**',
+            title: 'Encrypted',
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
+            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](https://www.w3.org/TR/activitypub/)** protocol and the **[valueflows](https://valueflo.ws)** ontology. Such protocol allows to keep the ownership of users own data, meanwhile fostering interoperability with the rest of the network and among networks.',
+            title: 'Federated',
           },
+          {
+            content: 'The ReflowOS is built to be remixed and extended based on the diverse and evolving communities needs. Confident that does not exist two communities with the same needs, **[CommonsPub](https://commonspub.org)** allows to create new functionalities by plugging new features easily',
+            title: 'Extendable',
+          }
         ]}
       </Block>
     );
@@ -197,12 +231,15 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase />
+          <div className="left">
+            <Features />
+          </div>
+          {/* <FeatureCallout /> */}
+          <EconomicNetwork />
+          <Social />
+          <OffersNeeds />
+          <MaterialPassport />
+          <Cta />
         </div>
       </div>
     );

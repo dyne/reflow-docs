@@ -5,12 +5,104 @@
  * LICENSE file in the root directory of this source tree.
  */
  
+.left .blockContent {
+  text-align: left !important;
+}
+.left .blockContent h2 {
+  text-align: left !important;
+}
+
+.right .blockContent {
+  text-align: right !important;
+}
+.right .blockContent h2 {
+  text-align: right !important;
+}
+ .mainContainer {
+   padding-top: 0;
+ }
 /* your custom css */
+.blm {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  /* display: grid; */
+  /* place-items: center; */
+  /* grid-template-rows: 1fr; */
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  display: block;
+  line-height: 60px;
+  background: #0a1c3f;
+  color: white;
+  font-size: 16px;
+}
+
+.blm a {
+  color: white;
+  border: 1px solid white;
+  padding: 8px 16px;
+  margin-left: 8px;
+  border-radius: 2px;
+}
+
+.cta {
+  background: #17191d;
+  place-content: center;
+  display: flex;
+  margin-bottom: -40px;
+}
+
+.cta .button {
+  margin: 32px 16px;
+}
+.fixedHeaderContainer {
+  height: 60px;
+}
+
+.fixedHeaderContainer header {
+  align-items: center;
+  height: 40px;
+}
+
+.homeContainer {
+ background: #0D2451;
+ background:linear-gradient( rgba(13, 36, 81, .9) 100%, rgba(13, 36, 81, 1)100%),url("../img/bc.png");
+ filter: brightness(1);
+}
+
+.homeContainer .homeSplashFade {
+  height: calc(100vh - 100px);
+  display: grid;
+  place-items: center;
+}
+
+.homeContainer .projectTitle {
+  color: #fff;
+}
+
+.button {
+  color: #4AE472;
+  border: 2px solid #4AE472;
+  border-radius: 6px;
+}
+.button:hover {
+  background-color: #4AE472;
+  color: white;
+}
+
+#features {
+  background-color: #efefef;
+}
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
 @media only screen and (min-width: 1024px) {
+  .navPusher{
+    padding-top: 60px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
