@@ -38,15 +38,19 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'what_is_reflowOS', label: 'Docs'},
-    {page: 'users', label: 'Users'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'what_is_reflowOS', label: 'Documentation'},
+    {href: 'https://github.com/dyne/zenpub', label: 'Github'},
+    {search: true}
   ],
 
+  twitterUsername: "REFLOW_project",
   // If you have users set above, you add it here:
   users,
-
+  cleanUrl: true,
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100,
+  },
   /* path to images for header/footer */
   headerIcon: 'img/logoWhite.svg',
   footerIcon: 'img/logoWhite.svg',

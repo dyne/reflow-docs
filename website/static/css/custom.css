@@ -92,6 +92,10 @@
   color: white;
 }
 
+.mainContainer .wrapper .post .postHeader {
+  margin-top: 60px;
+}
+
 #features {
   background-color: #efefef;
 }

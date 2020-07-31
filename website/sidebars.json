@@ -1,7 +1,34 @@
 {
   "docs": {
-    "Getting started": ["what_is_reflowOS", "usecases", "i_am_a_community", "i_am_a_user", "i_am_an_admin", "i_am_a_sysadmin", "i_am_a_developer", "i_am_a_designer", "pilots", "architecture"],
-    "Guides": ["install_a_reflowOS_node", "manage_a_node", "customize_reflowOS", "extend_reflowOS"],
-    "Components": ["commonspub", "decodeOS", "zenroom", "component_library"]
+    "Getting started": [
+      "what_is_reflowOS", 
+      "architecture",
+      "api_tour",
+      "encryption",
+      "smart_contract",
+      "i_am_a_community", 
+      "i_am_an_individual",
+      "i_am_a_sysadmin", 
+      "i_am_a_developer", 
+      "i_am_a_designer"
+    ],
+    "Usecases": [
+      "define_the_network_sentiment",
+      "generate_a_material_passport",
+      "smart_contract_secure_exchange",
+      "create_dataviz_on_top_of_reflowos"
+    ],
+    "Guides": [
+      "install_a_reflowOS_node", 
+      "setup_a_network",
+      "customize_reflowOS"
+
+    ],
+    "Components": [
+      "zenpub", 
+      "decodeOS", 
+      "zenroom",
+      "open_data_dashboard"
+    ]
   }
 }
