@@ -191,7 +191,7 @@ class Index extends React.Component {
             title: 'Federated',
           },
           {
-            content: 'The ReflowOS is built to be remixed and extended based on the diverse and evolving communities needs. Confident that does not exist two communities with the same needs, **[CommonsPub](https://commonspub.org)** allows to create new functionalities by plugging new features easily',
+            content: 'The ReflowOS is built to be remixed and extended based on the diverse and evolving communities needs. Confident that does not exist two communities with the same needs, **[Zenpub](https://github.com/dyne/zenpub)** allows to create new functionalities by plugging new features easily',
             title: 'Extendable',
           }
         ]}
