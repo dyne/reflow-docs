@@ -39,6 +39,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'what_is_reflowOS', label: 'Documentation'},
+    {page: 'api/index', label: 'Api'},
     {href: 'https://github.com/dyne/zenpub', label: 'Github'},
     {search: true}
   ],
