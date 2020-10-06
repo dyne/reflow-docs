@@ -2,27 +2,21 @@
   "docs": {
     "Getting started": [
       "what_is_reflowOS", 
+      "federation",
       "architecture",
       "api_tour",
-      "encryption",
-      "smart_contract",
-      "i_am_a_community", 
-      "i_am_an_individual",
-      "i_am_a_sysadmin", 
-      "i_am_a_developer", 
-      "i_am_a_designer"
+      "encryption"
     ],
     "Usecases": [
       "define_the_network_sentiment",
       "generate_a_material_passport",
-      "smart_contract_secure_exchange",
+      "create_and_manage_inventory",
       "create_dataviz_on_top_of_reflowos"
     ],
     "Guides": [
       "install_a_reflowOS_node", 
       "setup_a_network",
       "customize_reflowOS"
-
     ],
     "Components": [
       "zenpub", 

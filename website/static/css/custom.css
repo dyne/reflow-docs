@@ -96,6 +96,32 @@
   margin-top: 60px;
 }
 
+.hero__img {
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+  margin: 24px 0;
+  border-radius: 6px;
+}
+
+.reflow__doc p {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.reflow__doc li {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.reflow__doc ul {
+  list-style: circle;
+  padding: revert;
+  margin: inherit;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 #features {
   background-color: #efefef;
 }
@@ -158,4 +184,11 @@ h6 {
 
 html {
   background: white
+}
+
+.main__quote p {
+  font-size: 32px;
+  line-height: 50px;
+  font-weight: 200;
+  letter-spacing: .5px;
 }

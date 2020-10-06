@@ -1,7 +1,7 @@
 ---
 id: api_tour
 title: API
-sidebar_label: API
+sidebar_label: 📕 API
 ---
 
 

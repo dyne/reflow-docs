@@ -1,7 +1,7 @@
 ---
-id: i_am_a_sysadmin
-title: I am a sysadmin
-sidebar_label: I am a sysadmin
+id: federation
+title: Federation
+sidebar_label: 🌐 Federation
 ---
 
 Check the [documentation](https://docusaurus.io) for how to use Docusaurus.
