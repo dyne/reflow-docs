@@ -12,6 +12,9 @@
     "docusaurus": "^1.14.4"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "^2.12.2"
+    "@salesforce-ux/design-system": "^2.12.2",
+    "gray-matter": "^4.0.2",
+    "raw-loader": "^4.0.1",
+    "react-markdown": "^4.3.1"
   }
 }

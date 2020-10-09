@@ -122,6 +122,21 @@
   margin-bottom: 8px;
 }
 
+.toc .toggleNav ul li a {
+  font-size: 15px;
+}
+.toc .toggleNav ul li.navListItemActive a {
+  font-weight: 600;
+}
+
+
+.epic p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+
 #features {
   background-color: #efefef;
 }
@@ -132,6 +147,9 @@
 @media only screen and (min-width: 1024px) {
   .navPusher{
     padding-top: 60px;
+  }
+  .navigationSlider .slidingNav ul li a { 
+    font-size: 16px !important;
   }
 }
 
