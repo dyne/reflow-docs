@@ -6,9 +6,12 @@ sidebar_label: 📕 API
 
 
 ## API Tour
-Below a series of sampe queries and mutations that will be needed to perform the most common tasks available within the network.
-API are designed and implemented following the use cases and requirements collected in the deliverable 2.1.
 
+Below is a series of sample queries and mutations that will be needed to perform the most common tasks available.
+
+The API is designed and implemented following the use cases and requirements collected in the deliverable 2.1.
+
+You can also refer to the [full auto-generated API documentation](/api/index). 
 
 
 # Social features
@@ -60,8 +63,8 @@ user(username: String!) {
 }
 ```
 
-#### Display logged user details
-The current user. Contains more information than just the user type
+#### Display logged-in user details
+The current user. Contains more information than just the `user` type
 
 ```graphql
 me {
@@ -79,6 +82,8 @@ me {
 ```
 
 #### Display the instance timeline (paginated)
+Contains all activities from the instance. 
+
 ```graphql
 instance {
   description
@@ -102,7 +107,7 @@ instance {
 }
 ```
 
-#### Display federated timeline (paginated)
+#### Display a user's activities (paginated)
 ```graphql
 me {
   email
@@ -133,7 +138,9 @@ me {
 }
 ```
 
-#### Display user timeline (paginated)
+#### Display a user's feed (paginated)
+Contains activities from people, agents or groups the user is following.
+
 ```graphql
 user {
     icon
