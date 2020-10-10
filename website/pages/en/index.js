@@ -105,8 +105,8 @@ class Index extends React.Component {
           {[
             {
               content:
-                'Economic activities need coordination. ReflowOS enhances coordination allowing users to create, join and moderate focus groups within the network.' +
-                'Users can post their offers and needs in the whole network or in a specific group (that can represent a neighborhood, a community of intends, etc), have public discussions or group specific and so on.',
+                'Economic activities require coordination. ReflowOS enhances coordination by enabling users to create, join and moderate sub-groups within the network.' +
+                'Users can start discussions or post their offers and needs to the whole network or within a specific group (that can represent a neighborhood, a community of intents, etc).',
               image: `${baseUrl}img/pride.svg`,
               imageAlign: 'left',
               title: 'Create and manage groups, follow users and have meaningful discussions',
@@ -123,9 +123,9 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Materials can be exchanged across the network, they can be transformed, consumed and combined with other materials to create new resources.' +
-              'Tracking any economic activity that happen to a resource, will allow participants to take more informed and conscious decisions.' +
-              'It will empower the network, providing meaningful infoormation about the network supply chains and how to create optimized ones. ',
+              'Materials can be exchanged across the network, they can be transformed and combined with other materials to create new resources.' +
+              'Tracking any economic activity that happens to a resource will allow participants to take more informed and conscious decisions.' +
+              'It will empower the network, providing meaningful information about its supply chains and how to optimise them. ',
             image: `${baseUrl}img/factory.svg`,
             imageAlign: 'left',
             title: 'Generate a resource material passport',
@@ -138,8 +138,10 @@ class Index extends React.Component {
 
     const Cta = () => (
       <div className='cta'>
-        <a className='button' href="">get started</a>
-        <a className='button' href="">Github</a>
+
+        < a className = 'button'
+        href = "/docs/what_is_reflowOS.html" > Learn more< /a>
+         <a className='button' href="https://github.com/dyne/zenpub">Github</a> 
       </div>
     );
 
@@ -149,10 +151,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'ReflowOS can be used for creating public networks, where users can freely create an account on existing nodes, or start their own and interact with the network. <br/> **[Read more about open networks](#)**. <br /> <br /> But ReflowOS can be used also to create private and permissioned networks, relying on **[DecodeOS](#)** to anonymize all the activities behind a TOR layer. <br /> **[Read more about private networks]()**',
+              'Create <strong>public networks</strong>, where users can freely sign up to existing nodes, or start their own and interact with the network. <br/> -> **[Read more about open networks](#)**. <br /> <br />You can also create <strong>private and permissioned networks</strong>, relying on **[DecodeOS](https://decodeos.dyne.org/)** to anonymize all the activities behind a TOR layer. <br /> -> **[Read more about private networks]()**',
             image: `${baseUrl}img/network.svg`,
             imageAlign: 'right',
-            title: 'Create and join open or permissioned economic networks',
+            title: 'Create and join economic networks',
           },
         ]}
       </Block>
@@ -165,10 +167,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Needs and offers are a core aspect of any economic networks. They play a set of important roles such connecting different stakeholders and create new economic relationships.<br />'+
+              'Needs and offers are a core aspect of any economic networks. They play a set of important roles such as connecting different stakeholders and sparking new economic relationships.<br />' +
               'But they also act as a network feedback system, signaling the sentiment of materials, services and skills most requested by the network participants and the abundance or availability of others.<br />'+
-              'A participant can search for a specific tool, raw material, service or skill available in the network. <br />'+
-              'To put the focus on circular economy, contrary to most of the platforms alike, ReflowOS is driven by needs, rather then offers, incentivating participants to produce and exchange materials and skills based on existing and explicit needs, rather than the contrary.',
+              'A participant can search for a specific tool, raw material, service or skill available in the network. <p>'+
+              'To put the focus on circular economies, as opposed to most of the platforms, ReflowOS is driven by needs rather then offers, incentivising participants to produce and exchange materials and services based on existing and explicit needs, instead of pushing towards consumption based on available offers.',
             image: `${baseUrl}img/offers.svg`,
             imageAlign: 'right',
             title: 'Publish and match needs and offers',
@@ -183,16 +185,16 @@ class Index extends React.Component {
       <Block id="features" background="gray" layout="threeColumn">
         {[
           {
-            content: 'ReflowOS infrastructure leverages on research and work in successfull EU projects and rely on standard encryption protocols. Smart contracts are based on **[zenroom](https://zenroom.org)** VM, permissioned networks are created on top of **[DecodeOS](https://decodeos.dyne.org/)**',
+            content: 'ReflowOS infrastructure leverages research from successful EU projects and relies on standard encryption protocols. Smart contracts are based on **[Zenroom](https://zenroom.org)** VM. Permissioned networks are created on top of **[DecodeOS](https://decodeos.dyne.org/)**.',
             title: 'Encrypted',
           },
           {
-            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](https://www.w3.org/TR/activitypub/)** protocol and the **[valueflows](https://valueflo.ws)** ontology. Such protocol allows to keep the ownership of users own data, meanwhile fostering interoperability with the rest of the network and among networks.',
+            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](https://activitypub.rocks/)** protocol and the **[ValueFlows](https://valueflo.ws)** ontology. Such protocols enable users to retain control of their data while fostering interoperability with the rest of the Reflow network and with other networks.',
             title: 'Federated',
           },
           {
-            content: 'The ReflowOS is built to be remixed and extended based on the diverse and evolving communities needs. Confident that does not exist two communities with the same needs, **[Zenpub](https://github.com/dyne/zenpub)** allows to create new functionalities by plugging new features easily',
-            title: 'Extendable',
+            content: 'ReflowOS is built to be remixed and extended based on diverse and evolving needs. Knowing that each community has different needs, **[ZenPub](https://github.com/dyne/zenpub)** can be easily customised or extended with new functionality.',
+            title: 'Extensible',
           }
         ]}
       </Block>
