@@ -141,6 +141,9 @@
   background-color: #efefef;
 }
 
+body {
+  font-size: medium;
+}
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
@@ -162,6 +165,9 @@
 @media only screen and (min-width: 1500px) {
 }
 
+p {
+  margin-bottom: 1rem;
+}
 
 h1,
 h2,

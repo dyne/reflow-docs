@@ -44,6 +44,8 @@ const siteConfig = {
     {search: true}
   ],
 
+  githubUsername: "dyne",
+  githubProject: "zenpub",
   twitterUsername: "REFLOW_project",
   // If you have users set above, you add it here:
   users,
