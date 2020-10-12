@@ -19,9 +19,10 @@
       "first_steps"
     ],
     "Components": [
-      "zenpub", 
+      "ZenPub", 
+      "ZenPub-client",
       "decodeOS", 
-      "zenroom",
+      "ZenRoom",
       "open_data_dashboard"
     ]
   }
