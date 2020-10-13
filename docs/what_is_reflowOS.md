@@ -71,8 +71,6 @@ It may require a slight change in perspective for participants about how to look
 
 They're open challenges and without a single answer, and none of them are solved by the lone adoption of a technology, as also stated in the [ValueFlows core contributors' website](https://mikorizal.org): 
 
-<br />
-
 > We are developing software for transitioning to the next economy.
 > Not this economy, the next economy.
 > The next economy must be driven by human and ecological needs rather than profit. And it will be networked.
