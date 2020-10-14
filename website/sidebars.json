@@ -2,23 +2,27 @@
   "docs": {
     "Getting started": [
       "what_is_reflowOS", 
-      "federation",
       "architecture",
+      "federation",
+      "valueflows",
       "api_tour",
       "encryption"
     ],
     "Usecases": [
+      "usecases",
       "define_the_network_sentiment",
       "generate_a_material_passport",
       "create_and_manage_inventory",
       "create_dataviz_on_top_of_reflowos"
     ],
     "Guides": [
+      "guides",
       "install_a_reflowOS_node", 
       "setup_a_network",
       "first_steps"
     ],
     "Components": [
+      "components",
       "ZenPub", 
       "ZenPub-client",
       "decodeOS", 
