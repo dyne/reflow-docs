@@ -22,6 +22,10 @@ It helps to understand the urban metabolism the citizen is part of: how resource
 
 **How can such actors collaborate together and eventually how can citizens can fit in such value chains?**
 
+
+<div class="hero__img" style="height: 460px; background-image: url('../img/matpass.png'); background-size: contain; background-position: center center; background-repeat: no-repeat"></div>
+
+
 ## Empower producers 
 
 It also helps producers to improve the product value chain, for example reducing the waste and efforts involved in each step of a product life cycle.
