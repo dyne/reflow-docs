@@ -24,18 +24,17 @@ Productions usually are preceded by a series of activities: transformations, tra
 
 In the case of the cake, someone can record the ingredients involved and how they acquired them: harvesting trees (let's say it's an apple pie) or performing an exchange in the local market, which person was involved in the production of the cake and how much time it took, the amount of resources consumed and the ones left. 
 
+<div class="hero__img" style="background-image: url('../img/cake.jpg')"></div>
+
 Having such data available only for one cake is not particularly meaningful, but how would things be different if such data was recorded for most of the food prepared in a municipality?
 
 The network sentiment analysis could help us find insights about which ingredients are the most used in the niche we're exploring. Where such ingredients were retrieved, if there are particular activities that monopolize the area and what are the logistics involved in all the steps of production.
 
-Such observations, when available openly, can stimulate discussions and actions: participants in that area can find ways to coordinate their activities and reduce the use of motor vehicles, for example.
+<div class="hero__img" style="background-image: url('../img/networksent.png'); background-size: contain; background-position: center center; background-repeat: no-repeat"></div>
 
-## Example
-
-...
+Such observations, when available openly, can stimulate discussions and actions: participants in that area can find ways to coordinate their activities in order to optimize the logistic, with the end goal of reducing co2 emissions, or trying to grow local producer contribution to the market, among other things.
 
 ## Conclusion
-Network sentiment can act as a sentinel for taking specific actions over a network or as a way to ease the planning of specific activities.
-
+Network sentiment can act as a sentinel for taking specific actions over a network or as a way to ease the planning of specific activities, having the possibility to check actions against the data produced.
 
 </section>
