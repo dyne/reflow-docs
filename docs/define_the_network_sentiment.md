@@ -26,7 +26,7 @@ In the case of the cake, someone can record the ingredients involved and how the
 
 <div class="hero__img" style="background-image: url('../img/cake.jpg')"></div>
 
-Having such data available only for one cake is not particularly meaningful, but how would things be different if such data was recorded for most of the food prepared in a municipality?
+Having such data available only for one cake is not particularly meaningful, but how would things be different if such data was recorded for example for all the cakes sold in the municipal markets?
 
 The network sentiment analysis could help us find insights about which ingredients are the most used in the niche we're exploring. Where such ingredients were retrieved, if there are particular activities that monopolize the area and what are the logistics involved in all the steps of production.
 
