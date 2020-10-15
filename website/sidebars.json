@@ -12,8 +12,7 @@
       "usecases",
       "define_the_network_sentiment",
       "generate_a_material_passport",
-      "create_and_manage_inventory",
-      "create_dataviz_on_top_of_reflowos"
+      "create_and_manage_inventory"
     ],
     "Guides": [
       "guides",

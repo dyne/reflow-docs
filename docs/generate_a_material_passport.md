@@ -7,7 +7,9 @@ sidebar_label: 📖 Generate a material passport
   <div class="hero__img" style="background-image: url('../img/passport.jpg')"></div>
 
 
-**The material passport (MP) gives us meaningful insights about the genealogy of a specific product. Rather than merely focusing upon the qualities of the end product, it provides information about the whole set of actors, tools, collaborations, agreements, efforts and energy involved in its production, transportation and disposal.**
+**The material passport (MP) gives us meaningful insights about the genealogy of a specific product.**
+
+**Rather than merely focusing upon the qualities of the end product, it provides information about the whole set of actors, tools, collaborations, agreements, efforts and energy involved in its production, transportation and disposal.**
 
 
 Such perspective empowers actors to look at a more inclusive story of a product, according to its specific and unique flow of transformations: the so called **value chain**. 
@@ -32,16 +34,12 @@ It also helps producers to improve the product value chain, for example reducing
 
 It can strengthen relationships between producers and suggest new opportunities for new or improved supply chains. 
 
-## Material passport relevant data
+### Some of the relevant data showed in a material passport includes:
 
 - Design: any relevant design that has been used for the manufacturing of the product
 - Resources inventory: the set of resources that have been used and are part of the end product
 - Transformations: events that affected the product, step by step in chronological order
 - The places, actors and tools involved in the product supply chain
-
-## Example
-
-...
 
 ## Conclusion
 
