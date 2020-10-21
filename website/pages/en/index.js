@@ -189,7 +189,7 @@ class Index extends React.Component {
             title: 'Encrypted',
           },
           {
-            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](https://activitypub.rocks/)** protocol and the **[ValueFlows](https://valueflo.ws)** ontology. Such protocols enable users to retain control of their data while fostering interoperability with the rest of the Reflow network and with other networks.',
+            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](https://activitypub.rocks/)** protocol and the **[ValueFlows](https://valueflo.ws)** vocabulary. Such protocols enable users to retain control of their data while fostering interoperability with the rest of the Reflow network and with other networks.',
             title: 'Federated',
           },
           {

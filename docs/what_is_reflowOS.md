@@ -9,7 +9,7 @@ sidebar_label: 👋 Welcome
 
 <div class="main__quote">
 
-> ReflowOS is an operating system for communities who wants to create federated and secure economic networks to foster the creation and coordination of distributed value chains.
+> ReflowOS is an operating system for communities who want to create federated and secure economic networks to foster the creation and coordination of distributed value chains.
 
 </div>
 

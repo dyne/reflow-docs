@@ -1,6 +1,6 @@
 ---
 id: define_the_network_sentiment
-title: Network sentiment analisys
+title: Network sentiment analysis
 sidebar_label: 😸 Define the network sentiment
 ---
 
@@ -13,7 +13,7 @@ These data-driven assumptions, far from being "the reality", can be used as a **
 
 _The map is not the territory_, as Alfred Korzybski warns us...
 
-Taking actions - backed by such data-driven analisys -  may have a meaningful impact upon complex networks such as a municipality, where usually is hard to connect and intertwine data together in reliable ways, and where most of the information are gathered mostly through questionnaires or direct involvements/experiences.
+Taking actions - backed by such data-driven analysis -  may have a meaningful impact upon complex networks such as a municipality, where usually is hard to connect and intertwine data together in reliable ways, and where most of the information are gathered mostly through questionnaires or direct involvements/experiences.
 
 ## How it works
 With ZenPub each participant can record different types of economic activities that are performed over time.
