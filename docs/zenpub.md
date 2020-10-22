@@ -9,26 +9,23 @@ title: ZenPub server
 
 It is based on <a href="http://commonspub.org" rel="nofollow">CommonsPub</a>, a [federated](./federation) free software app ecosystem.
 
-## Design Decisions
-
-Feature goals:
-- Flexibility for developers and deployments.
-- Integrated federation with the existing fediverse.
-
-Operational goals:
-
-  - Easy to set up and run.
-  - Light on resources for small deployments.
-  - Scalable for large deployments.
-
-Operationally, there's a tension between wanting to be able to scale instances and not wanting to burden small instances with high resource requirements or difficult setup.
-
-There are no easy answers to this. Our current solution is heavily reliant on postgresql. We will monitor perforamnce and scaling and continually evolve our strategy.
-
 ## Stack
 
 Our implementation language is Elixir (running on Erlang/OTP), a language designed for building reliable systems. It uses the Phoenix web framework and the Absinthe GraphQL Toolkit to deliver a <a href="https://graphql.org/" rel="nofollow">GraphQL API</a> which the frontend interacts with.
 
 [Read more about the full auto-generated API documentation](/api/index). 
+
+
+## Documentation
+
+Do you want to...
+
+- Read about the CommonsPub architecture? Read the zenpub [overview](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/ARCHITECTURE.md).
+
+- Hack on the code? Read the zenpub [Developer FAQs](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/HACKING.md).
+
+- Understand the client API? Read the zenpub [GraphQL guide](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/GRAPHQL.md).
+
+- Deploy in production? Read the zenpub [Deployment Docs](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/DEPLOY.md).
 
 </section>
