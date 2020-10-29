@@ -27,6 +27,15 @@ Both ActivityPub and ActivityStreams are [web standards defined by the W3C (Worl
 
 Do you know RSS? It is thanks to RSS that a user can subscribe to almost any news/blog/content feed in the world from any number of independently developed feed readers. ActivityPub is having the same impact on social network interactions. It enables a decentralized social web, where a network of servers talk to each other on behalf of individual users, very much like email which made up of different apps operated by different providers but with all users being able to communicate regardless. 
 
+Advantages of a federated network:
+
+- Robust and resilient
+- Scales horizontally
+- Private data stays on each user’s home instance
+- Each instance is responsible for its content (moderation of discussions, etc)
+- Standards-based but also extensible
+- Open
+
 ## Economic federation
 
 The above protocols and standard vocabularies are made for social activities, but what about conducting economic activities?

@@ -4,9 +4,10 @@ title: API Tour
 sidebar_label: 📕 API Tour
 ---
 
-Below is a series of sample queries and mutations that will be needed to achieve the usecases proposed in this manual.
-The API are flexible enough to satisfy a wider range of usecases and scenario, according to the stakeholders needs.
-Think at the following ones as a starting point to help shaping apps and ideas.
+Here is a series of sample queries and mutations for the [ZenPub](/docs/ZenPub) client API (which uses [GraphQL](https://graphql.org/)) that will be needed to achieve the use cases proposed in this manual.
+
+The API is flexible enough to satisfy a wider range of use cases and scenario, according to the stakeholders needs.
+Think of the following ones as a starting point to help shape your apps and ideas.
 
 You can also refer to the [full auto-generated API documentation](/api/index). 
 
