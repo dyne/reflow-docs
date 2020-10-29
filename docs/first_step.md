@@ -1,7 +1,7 @@
 ---
 id: first_steps
-title: First steps
-sidebar_label: 🐇 First steps
+title: How to start using and populating the network
+sidebar_label: 🐇 Start using the network
 ---
 
 <section class="reflow__doc">

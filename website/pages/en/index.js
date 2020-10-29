@@ -151,7 +151,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Create <strong>public networks</strong>, where users can freely sign up to existing nodes, or start their own and interact with the network. <br/> -> **[Read more about open networks](#)**. <br /> <br />You can also create <strong>private and permissioned networks</strong>, relying on **[DecodeOS](https://decodeos.dyne.org/)** to anonymize all the activities behind a TOR layer. <br /> -> **[Read more about private networks]()**',
+              'Create <strong>public networks</strong>, where users can freely sign up to existing nodes, or start their own and interact with the network. <br/> -> **[Read more about open networks](#)**. <br /> <br />You can also create <strong>private and permissioned networks</strong>, relying on **[DecodeOS](/docs/decodeOS)** to anonymize all the activities behind a TOR layer. <br /> -> **[Read more about private networks]()**',
             image: `${baseUrl}img/network.svg`,
             imageAlign: 'right',
             title: 'Create and join economic networks',
@@ -185,15 +185,15 @@ class Index extends React.Component {
       <Block id="features" background="gray" layout="threeColumn">
         {[
           {
-            content: 'ReflowOS infrastructure leverages research from successful EU projects and relies on standard encryption protocols. Smart contracts are based on **[Zenroom](https://zenroom.org)** VM. Permissioned networks are created on top of **[DecodeOS](https://decodeos.dyne.org/)**.',
+            content: 'ReflowOS infrastructure leverages research from successful EU projects and relies on standard encryption protocols. Smart contracts are based on **[Zenroom](/docs/ZenRoom)** VM. Permissioned networks are created on top of **[DecodeOS](/docs/decodeOS)**.',
             title: 'Encrypted',
           },
           {
-            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](https://activitypub.rocks/)** protocol and the **[ValueFlows](https://valueflo.ws)** vocabulary. Such protocols enable users to retain control of their data while fostering interoperability with the rest of the Reflow network and with other networks.',
+            content: 'Stakeholders will engage in conversations and perform economic activities through the **[ActivityPub](/docs/federation)** protocol and the **[ValueFlows](/docs/valueflows)** vocabulary. Such protocols enable users to retain control of their data while fostering interoperability with the rest of the Reflow network and with other networks.',
             title: 'Federated',
           },
           {
-            content: 'ReflowOS is built to be remixed and extended based on diverse and evolving needs. Knowing that each community has different needs, **[ZenPub](https://github.com/dyne/zenpub)** can be easily customised or extended with new functionality.',
+            content: 'ReflowOS is built to be remixed and extended based on diverse and evolving needs. Knowing that each community has different needs, **[ZenPub](/docs/ZenPub)** can be easily customised or extended with new functionality.',
             title: 'Extensible',
           }
         ]}

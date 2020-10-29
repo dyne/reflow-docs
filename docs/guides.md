@@ -10,8 +10,8 @@ sidebar_label: 📖 Guides
 In the following section, we will guide you through the installation and setup of your economic network.
 
 By the end you will learn: 
-- **[How to install a new network on a server](install_a_reflowOS_node)**
-- **[How to configure the installed network](setup_a_network)**
+- **[How to install a new instance on a server](install_a_reflowOS_node)**
+- **[How to configure the installed instance](setup_a_network)**
 - **[How to start using and populating the network](first_steps)**
 
 

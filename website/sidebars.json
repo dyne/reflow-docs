@@ -17,7 +17,9 @@
     "Guides": [
       "guides",
       "install_a_reflowOS_node", 
-      "first_steps"
+      "setup_a_network",
+      "first_steps",
+      "glossary"
     ],
     "Components": [
       "ZenPub", 
