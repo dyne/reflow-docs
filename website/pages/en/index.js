@@ -151,7 +151,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Create <strong>public networks</strong>, where users can freely sign up to existing nodes, or start their own and interact with the network. <br/> -> **[Read more about open networks](#)**. <br /> <br />You can also create <strong>private and permissioned networks</strong>, relying on **[DecodeOS](/docs/decodeOS)** to anonymize all the activities behind a TOR layer. <br /> -> **[Read more about private networks]()**',
+              'Create <strong>public networks</strong>, where users can freely sign up to existing nodes, or start their own and interact with the network. <br/>  <br />You can also create <strong>private and permissioned networks</strong>, relying on **[DecodeOS](/docs/decodeOS)** to anonymize all the activities behind a TOR layer.',
             image: `${baseUrl}img/network.svg`,
             imageAlign: 'right',
             title: 'Create and join economic networks',

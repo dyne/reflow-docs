@@ -50,10 +50,10 @@ class Footer extends React.Component {
             </a> */}
           </div>
           <div>
-            <h5>Community</h5>
+            {/* <h5>Community</h5>
             <a href={this.pageUrl('users.html', this.props.language)}>
               User Showcase
-            </a>
+            </a> */}
     
           </div>
           <div>
