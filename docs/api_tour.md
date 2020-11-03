@@ -172,7 +172,7 @@ user(id: String!) {
 }
 ```
 
-### Display all users (paginated) 
+#### Display all users (paginated) 
 
 ```graphql
 users(after: after, limit: limit) {
@@ -399,21 +399,7 @@ mutation {
 }
 ```
 
-
-#### Phase 2. Search and filter aggregated data 
-
-
-
-
-
-
-## Generate a material passport
-
-
-## Manage your inventory
-
-
-#### Start a discussion 
+#### Start a discussion upon an offer or a need
 ```graphql
 mutation {
   createThread(
@@ -427,17 +413,193 @@ mutation {
       name
       id
       likerCount
-      ...
     }
     name
     content
-    ...
   }
 }
 ```
 
+#### Phase 2. Search and filter aggregated data 
+
+### Look for intents on a specific location
+
+```graphql
+{
+  intentsFiltered(atLocation: ID) {
+    id
+    name
+    note
+    image {
+      url
+    }
+  }
+}
+```
+
+### Look for intents near a specific location
+
+```graphql
+{
+  intentsFiltered(geolocation: {
+    nearAddress:String,
+    distance: {meters: 5000}
+  }) {
+    id
+    name
+    note
+    image {
+      url
+    }
+  }
+}
+```
+
+### Look for intents from a specific agent
+
+```graphql
+{
+  intentsFiltered(agent: [ID]) {
+    id
+    name
+    note
+    image {
+      url
+    }
+  }
+}
+```
+
+### Look for all intents that include a specific tag
+
+```graphql
+{
+  intentsFiltered(tagIds: [ID]) {
+    id
+    name
+    note
+    image {
+      url
+    }
+  }
+}
+```
+
+### Look for all EconomicEvents of a specific resource
+
+```graphql 
+{
+  economicEventsFiltered(resourceClassifiedAs: [URI!]) {
+    id
+    provider {
+      id
+      name
+    }
+    receiver {
+      id
+      name
+    }
+    action
+  }
+}
+```
+
+### Look for all EconomicEvents of a specific agent 
+
+```graphql
+{
+  economicEventsFiltered(providerId: ID) {
+    id
+    provider {
+      id
+      name
+    }
+    receiver {
+      id
+      name
+    }
+    action
+  }
+}
+```
+
+## Generate a material passport
+**[Read more about this usecase](/docs/generate_a_material_passport)**
 
 
+## Manage your inventory
 
+### Filter resources by owner
+```graphql
+{
+  economicResourcesFiltered(agent:[ID]) {
+    name
+    note
+    id
+    image
+  	accountingQuantity {
+      hasUnit {
+        label
+      }
+      hasNumericalValue
+    }
+    currentLocation {
+      name
+      lat
+      long
+    }
+    tags 
+    
+  }
+}
+```
 
+### Filter resources by current location
+```graphql
+{
+  economicResourcesFiltered(currentLocation:[ID]) {
+    name
+    note
+    id
+    image
+  	accountingQuantity {
+      hasUnit {
+        label
+      }
+      hasNumericalValue
+    }
+    currentLocation {
+      name
+      lat
+      long
+    }
+    tags 
+    
+  }
+}
+```
 
+### Filter resources by tags
+```graphql
+{
+  economicResourcesFiltered(tags:[ID]) {
+    name
+    note
+    id
+    image
+  	accountingQuantity {
+      hasUnit {
+        label
+      }
+      hasNumericalValue
+    }
+    currentLocation {
+      name
+      lat
+      long
+    }
+    tags 
+    
+  }
+}
+```
