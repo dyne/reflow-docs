@@ -528,6 +528,7 @@ mutation {
 
 
 ## Manage your inventory
+**[Read more about this usecase](/docs/create_and_manage_inventory)**
 
 ### Filter resources by owner
 ```graphql

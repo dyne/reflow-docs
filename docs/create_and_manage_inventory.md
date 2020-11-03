@@ -19,4 +19,10 @@ The user can also enter see details for each resource: like dimensions, quantiti
 
 Each participant only has access to their own inventory. The only way other participants can discover available resources is by looking at published proposals (offers).
 
+
+## Example
+
+**[Check some sample queries and mutations that can be usefull for this scenario](/docs/api_tour#generate-a-material-passport)**
+
+
 </section> 

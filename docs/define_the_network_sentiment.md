@@ -34,7 +34,10 @@ The network sentiment analysis could help us find insights about which ingredien
 
 Such observations, when available openly, can stimulate discussions and actions: participants in that area can find ways to coordinate their activities in order to optimize the logistic, with the end goal of reducing co2 emissions, or trying to grow local producer contribution to the market, among other things.
 
-## Conclusion
+## Example
 Network sentiment can act as a sentinel for taking specific actions over a network or as a way to ease the planning of specific activities, having the possibility to check actions against the data produced.
+
+**[Check some sample queries and mutations that can be usefull for this scenario](/docs/api_tour#define-the-network-sentiment)**
+
 
 </section>
