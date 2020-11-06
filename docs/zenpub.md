@@ -1,6 +1,6 @@
 ---
 id: ZenPub
-title: ZenPub server
+title: 🧩 ZenPub server
 ---
 
 <section class="reflow__doc">

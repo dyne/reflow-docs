@@ -1,7 +1,7 @@
 ---
 id: ZenRoom
 title: ZenRoom
-sidebar_label: ZenRoom
+sidebar_label: 🧩 ZenRoom
 ---
 
 # Crypto smart-contract executor

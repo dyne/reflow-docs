@@ -1,7 +1,7 @@
 ---
 id: decodeOS
 title: DecodeOS
-sidebar_label: DecodeOS
+sidebar_label: 🧩 DecodeOS
 ---
 
 ## Operating System for Private and Anonymous Computation Clusters
