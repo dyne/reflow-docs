@@ -4,62 +4,7 @@
             {"zIndex":100}
           )
         });
-        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logoWhite.svg" alt="ReflowOS"/><h2 class="headerTitleWithLogo">ReflowOS</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/what_is_reflowOS" target="_self">Documentation</a></li><li class=""><a href="/api/index" target="_self">API</a></li><li class=""><a href="https://github.com/dyne/zenpub" target="_self">Github</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Components</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/what_is_reflowOS">👋 Welcome</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture">🔩 Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/federation">🌐 Federation</a></li><li class="navListItem"><a class="navItem" href="/docs/valueflows">🥮 ValueFlows</a></li><li class="navListItem"><a class="navItem" href="/docs/api_tour">📕 API Tour</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Usecases</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/usecases">🧭 Usecases</a></li><li class="navListItem"><a class="navItem" href="/docs/define_the_network_sentiment">😸 Define the network sentiment</a></li><li class="navListItem"><a class="navItem" href="/docs/generate_a_material_passport">📖 Generate a material passport</a></li><li class="navListItem"><a class="navItem" href="/docs/create_and_manage_inventory">💼 Manage your inventory</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/guides">📖 Guides</a></li><li class="navListItem"><a class="navItem" href="/docs/install_a_reflowOS_node">💾 Install an instance</a></li><li class="navListItem"><a class="navItem" href="/docs/first_steps">🐇 Start using the network</a></li><li class="navListItem"><a class="navItem" href="/docs/glossary">❓ Glossary</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Components</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ZenPub">ZenPub server</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ZenPub-client">ZenPub client app</a></li><li class="navListItem"><a class="navItem" href="/docs/decodeOS">DecodeOS</a></li><li class="navListItem"><a class="navItem" href="/docs/ZenRoom">ZenRoom</a></li></ul></div></div></section></div><script>
-            var coll = document.getElementsByClassName('collapsible');
-            var checkActiveCategory = true;
-            for (var i = 0; i < coll.length; i++) {
-              var links = coll[i].nextElementSibling.getElementsByTagName('*');
-              if (checkActiveCategory){
-                for (var j = 0; j < links.length; j++) {
-                  if (links[j].classList.contains('navListItemActive')){
-                    coll[i].nextElementSibling.classList.toggle('hide');
-                    coll[i].childNodes[1].classList.toggle('rotate');
-                    checkActiveCategory = false;
-                    break;
-                  }
-                }
-              }
-
-              coll[i].addEventListener('click', function() {
-                var arrow = this.childNodes[1];
-                arrow.classList.toggle('rotate');
-                var content = this.nextElementSibling;
-                content.classList.toggle('hide');
-              });
-            }
-
-            document.addEventListener('DOMContentLoaded', function() {
-              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
-              createToggler('#tocToggler', 'body', 'tocActive');
-
-              var headings = document.querySelector('.toc-headings');
-              headings && headings.addEventListener('click', function(event) {
-                var el = event.target;
-                while(el !== headings){
-                  if (el.tagName === 'A') {
-                    document.body.classList.remove('tocActive');
-                    break;
-                  } else{
-                    el = el.parentNode;
-                  }
-                }
-              }, false);
-
-              function createToggler(togglerSelector, targetSelector, className) {
-                var toggler = document.querySelector(togglerSelector);
-                var target = document.querySelector(targetSelector);
-
-                if (!toggler) {
-                  return;
-                }
-
-                toggler.onclick = function(event) {
-                  event.preventDefault();
-
-                  target.classList.toggle(className);
-                };
-              }
-            });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">ZenPub client app</h1></header><article><div><span><p><a href="https://github.com/reflow-project/zenpub-client">ZenPub client</a> is the front-end software for the Reflow project, which connects to the <a href="./api_tour">API</a> of <a href="./ZenPub">ZenPub server</a>.</p>
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logoWhite.svg" alt="ReflowOS"/><h2 class="headerTitleWithLogo">ReflowOS</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/what_is_reflowOS" target="_self">Documentation</a></li><li class=""><a href="/api/index" target="_self">API</a></li><li class=""><a href="https://github.com/dyne/zenpub" target="_self">Github</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">ZenPub client app</h1></header><article><div><span><p><a href="https://github.com/reflow-project/zenpub-client">ZenPub client</a> is the front-end software for the Reflow project, which connects to the <a href="./api_tour">API</a> of <a href="./ZenPub">ZenPub server</a>.</p>
 <p>It is based on web technologies so you can use it with any modern browser (desktop or mobile). The client is written in React (TypeScript and JavaScript).</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ZenPub"><span class="arrow-prev">← </span><span class="function-name-prevnext">ZenPub server</span></a><a class="docs-next button" href="/docs/decodeOS"><span class="function-name-prevnext">DecodeOS</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logoWhite.svg" alt="ReflowOS" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/what_is_reflowOS.html">Project Documentation</a><a href="/api/index">API reference</a></div><div></div><div><h5>More</h5><a href="https://github.com/undefined/undefined"> GitHub </a><a class="github-button" data-icon="octicon-star" data-count-href="/undefined/undefined/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/REFLOW_project" class="twitter-follow-button">Follow @REFLOW_project</a></div></div></section><section class="copyright">Copyright © 2020 Dyne.org</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
+<p>The ZenPub clien, the mobile app and any other frontend to REFLOWOS is <strong>work in progress</strong>.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logoWhite.svg" alt="ReflowOS" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/what_is_reflowOS.html">Project Documentation</a><a href="/api/index">API reference</a></div><div></div><div><h5>More</h5><a href="https://github.com/undefined/undefined"> GitHub </a><a class="github-button" data-icon="octicon-star" data-count-href="/undefined/undefined/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/REFLOW_project" class="twitter-follow-button">Follow @REFLOW_project</a></div></div></section><section class="copyright">Copyright © 2020 Dyne.org</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
