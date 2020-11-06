@@ -17,13 +17,8 @@
       "guides",
       "install_a_reflowOS_node", 
       "first_steps",
+      "components",
       "glossary"
-    ],
-    "Components": [
-      "ZenPub", 
-      "ZenPub-client",
-      "decodeOS", 
-      "ZenRoom"
     ]
   }
 }

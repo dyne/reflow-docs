@@ -56,15 +56,5 @@ As also stated in the [valueflows core contributors website](https://mikorizal.o
 
 </div>
 
----
-
-## Where do you want to start
-
-- [Technical overview](/docs/architecture)
-- [API](/docs/api)
-- [Usecases](/docs/usecases)
-- [Guides](/docs/guides)
-- [Components](/docs/components)
-
 
 </section>
