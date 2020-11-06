@@ -46,6 +46,8 @@ Fortunately these standards were designed to be extensible, and even more fortun
 
 ## What does it mean for Reflow?
 
-We have built upon these standards so that any interaction you may have with an actor (person, organisation, group), or object (eg. a proposal or an economic resource) within the system (eg. posting a need in your neighborhood group, or recording the use of a 3D printer in a Fablab of a city you are visiting) can happen seamlessly even if the other people/groups involved are not users of the same instance as you (eg. you signed up to the Waag Amsterdam *instance* of Reflow, and are interacting with resources and recording events in the Fablab group on Iaac Barcelona instance). 
+We have built upon these standards so that any interaction one may have with an actor (person, organisation, group), or object (eg. a proposal or an economic resource) within the system (eg. posting a need in a neighborhood group, or recording the use of a 3D printer in a Fablab of a city one is visiting) can happen seamlessly even if the other people/groups involved are not users of the same instance, for example if one signed up to the Amsterdam Fablab of Reflow and then is interacting with resources and recording events on othe premises of the Barcelona Fablab, or another example can when there is more than one Fablab in the same city and resources and events by each of them can be networked and made available through every federated instance.
 
 This can foster more connection and cooperation between participants in Reflow, but thanks to the heavy use of interoperable standards, it also means that future adaptations of ZenPub as well as entirely new projects will be able to integrate with Reflow as well.
+
+This feature is being developed and tested in the course of the next cycle of development, following adoption by pilots and the evolution of requirements.
