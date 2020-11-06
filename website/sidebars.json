@@ -5,8 +5,7 @@
       "architecture",
       "federation",
       "valueflows",
-      "api_tour",
-      "encryption"
+      "api_tour"
     ],
     "Usecases": [
       "usecases",

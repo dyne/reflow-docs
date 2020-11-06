@@ -105,8 +105,8 @@ class Index extends React.Component {
           {[
             {
               content:
-                'Economic activities require coordination. ReflowOS enhances coordination by enabling users to create, join and moderate sub-groups within the network.' +
-                'Users can start discussions or post their offers and needs to the whole network or within a specific group (that can represent a neighborhood, a community of intents, etc).',
+                'Economic activities require coordination. ReflowOS enhances coordination by enabling users to create, join and moderate sub-groups within the network. ' +
+                'Users can start discussions or post their offers and needs to the whole network or within a specific group (that can represent a neighborhood, a community of intents, etc). ',
               image: `${baseUrl}img/pride.svg`,
               imageAlign: 'left',
               title: 'Create and manage groups, follow users and have meaningful discussions',
@@ -123,8 +123,8 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Materials can be exchanged across the network, they can be transformed and combined with other materials to create new resources.' +
-              'Tracking any economic activity that happens to a resource will allow participants to take more informed and conscious decisions.' +
+              'Materials can be exchanged across the network, they can be transformed and combined with other materials to create new resources. ' +
+              'Tracking any economic activity that happens to a resource will allow participants to take more informed and conscious decisions. ' +
               'It will empower the network, providing meaningful information about its supply chains and how to optimise them. ',
             image: `${baseUrl}img/factory.svg`,
             imageAlign: 'left',
@@ -138,7 +138,6 @@ class Index extends React.Component {
 
     const Cta = () => (
       <div className='cta'>
-
         < a className = 'button'
         href = "/docs/what_is_reflowOS.html" > Learn more< /a>
          <a className='button' href="https://github.com/dyne/zenpub">Github</a> 
