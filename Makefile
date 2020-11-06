@@ -1,7 +1,7 @@
 all:
-	if ! [ -r website/build ]; then cd website && yarn build; fi
+	cd website && yarn build
 	rsync -raX website/build/ReflowOS /tmp/
 	git co gh-pages
-	rsync -raX /tmp/ReflowOS .
+	rsync -raX /tmp/ReflowOS/* .
 	git status
 
