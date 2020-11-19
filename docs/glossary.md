@@ -6,6 +6,8 @@ sidebar_label: ❓ Glossary
 
 ## Glossary
 
+### Architecture
+
 **ActivityPub** - a standard decentralised social networking protocol based on ActivityStreams.
 
 **ActivityStreams** - a standard format for syndicating social activities.
@@ -47,3 +49,19 @@ sidebar_label: ❓ Glossary
 **Search index** - a component of search engines which collects, parses, and stores data to facilitate fast and accurate search and information retrieval. Index design incorporates interdisciplinary concepts from linguistics, cognitive psychology, mathematics, informatics, and computer science.
 
 **Standard** - a collection of agreed specifications, usually organised by a standards body such as the W3C.
+
+
+### ValueFlows
+
+**Intent** - A planned economic flow which has not been committed to, which can lead to economic events (sometimes through commitments).
+
+**Proposal** - Published requests or offers, sometimes with what is expected in return.
+
+**Action** - An action verb defining the kind of event, commitment, or intent.
+**EconomicEvent** - An observed economic flow, as opposed to a flow planned to happen in the future. This could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource (see `Action`)
+**EconomicResource** - A resource which is useful to people or the ecosystem.
+
+**ResourceSpecification** -Specification of a kind of resource. Could define a material item, service, digital item, currency account, etc. Used instead of a classification when more information is needed, particularly for recipes.
+**Process** - An activity that changes inputs into outputs.  It could transform or transport economic resource(s).
+
+

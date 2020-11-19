@@ -1,6 +1,7 @@
 ---
 id: components
 title: Components
+sidebar_label: 🧩 Components
 ---
 
 <section class="reflow__doc">

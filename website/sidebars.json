@@ -5,7 +5,11 @@
       "architecture",
       "federation",
       "valueflows",
-      "api_tour"
+      "api_tour",
+      "maintenance",
+      "bugtracker",
+      "system_requirements",
+      "changelog"
     ],
     "Usecases": [
       "usecases",
