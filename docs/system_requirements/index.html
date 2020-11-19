@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>System requirements · ReflowOS</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Server"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="System requirements · ReflowOS"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="## Server"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logoWhite.svg" alt="ReflowOS"/><h2 class="headerTitleWithLogo">ReflowOS</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/what_is_reflowOS" target="_self">Documentation</a></li><li class=""><a href="/api/index" target="_self">API</a></li><li class=""><a href="https://github.com/dyne/zenpub" target="_self">Github</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/what_is_reflowOS">👋 Welcome</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture">🔩 Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/federation">🌐 Federation</a></li><li class="navListItem"><a class="navItem" href="/docs/valueflows">🥮 ValueFlows</a></li><li class="navListItem"><a class="navItem" href="/docs/api_tour">📕 API Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/maintenance">🌱 Maintenance</a></li><li class="navListItem"><a class="navItem" href="/docs/bugtracker">📕 Bugtracker</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/system_requirements">🔨 System requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">🕰️ Changelog</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Usecases</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/usecases">🧭 Usecases</a></li><li class="navListItem"><a class="navItem" href="/docs/define_the_network_sentiment">😸 Define the network sentiment</a></li><li class="navListItem"><a class="navItem" href="/docs/generate_a_material_passport">📖 Generate a material passport</a></li><li class="navListItem"><a class="navItem" href="/docs/create_and_manage_inventory">💼 Manage your inventory</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/guides">📖 Guides</a></li><li class="navListItem"><a class="navItem" href="/docs/install_a_reflowOS_node">💾 Install an instance</a></li><li class="navListItem"><a class="navItem" href="/docs/first_steps">🐇 Start using the network</a></li><li class="navListItem"><a class="navItem" href="/docs/components">🧩 Components</a></li><li class="navListItem"><a class="navItem" href="/docs/glossary">❓ Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">System requirements</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="server"></a><a href="#server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server</h2>
+<p>For best performance, stability and functionality we have documented some recommendations for running a ReflowOS server.</p>
+<p>You can either use Docker on any server that supports it, and the docker-compose file provided will manage the OS, database, and app/web servers for you, or you can deploy manually with the following:</p>
+<table>
+<thead>
+<tr><th>Platform</th><th>Options</th></tr>
+</thead>
+<tbody>
+<tr><td>Operating System</td><td>Debian 10+ (Buster),  Alpine Linux 3+ (recommended), Ubuntu 20.04+ LTS, Red Hat Enterprise Linux 8+, SUSE Linux Enterprise Server 15+, openSUSE Leap 42.1+, or CentOS 8+</td></tr>
+<tr><td>Database</td><td>Postgres 12+ with Postgis extension</td></tr>
+<tr><td>App Server</td><td>Erlang / Elixir</td></tr>
+<tr><td>Web proxy</td><td>Nginx or Caddyserver</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="memory"></a><a href="#memory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Memory</h3>
+<p>Memory requirements for running a ReflowOS server are greatly variable, depending on the numbers of users, apps, files and volume of server activity.</p>
+<p>ReflowOS needs a minimum of 128MB RAM, and we recommend a minimum of 512MB.</p>
+<h3><a class="anchor" aria-hidden="true" id="web-browser"></a><a href="#web-browser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web browser</h3>
+<p>For the best experience with the ReflowOS web interface, we recommend that you use the latest and supported version of a browser from this list, or one based on those:</p>
+<ul>
+<li>Microsoft Edge</li>
+<li>Mozilla Firefox</li>
+<li>Google Chrome/Chromium</li>
+<li>Apple Safari</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="deployment-documentation"></a><a href="#deployment-documentation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deployment documentation</h3>
+<p>Please refer to the deploy guide published <strong><a href="https://github.com/dyne/zenpub/blob/flavour/zenpub/DEPLOY.md">here</a></strong></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/bugtracker"><span class="arrow-prev">← </span><span>📕 Bugtracker</span></a><a class="docs-next button" href="/docs/changelog"><span>🕰️ Changelog</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#server">Server</a><ul class="toc-headings"><li><a href="#memory">Memory</a></li><li><a href="#web-browser">Web browser</a></li><li><a href="#deployment-documentation">Deployment documentation</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logoWhite.svg" alt="ReflowOS" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/what_is_reflowOS.html">Project Documentation</a><a href="/api/index">API reference</a></div><div></div><div><h5>More</h5><a href="https://github.com/undefined/undefined"> GitHub </a><a class="github-button" data-icon="octicon-star" data-count-href="/undefined/undefined/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/REFLOW_project" class="twitter-follow-button">Follow @REFLOW_project</a></div></div></section><section class="copyright">Copyright © 2020 Dyne.org</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
