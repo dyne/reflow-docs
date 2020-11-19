@@ -4,15 +4,19 @@ title: System requirements
 sidebar_label: 🔨 System requirements
 ---
 
-## Server
+
+## Server
 For best performance, stability and functionality we have documented some recommendations for running a ReflowOS server.
 
+You can either use Docker on any server that supports it, and the docker-compose file provided will manage the OS, database, and app/web servers for you, or you can deploy manually with the following:
 
 | Platform |	Options|
 | -- | -- |
-| Operating System | Debian 10 (Buster),  Ubuntu 20.04 LTS (recommended), Red Hat Enterprise Linux 8 (recommended), , SUSE Linux Enterprise Server 15, openSUSE Leap 42.1+, CentOS 8 |
-| Database	|  PostgreSQL 9.5/9.6/10/11 |
-| Webserver	 | Nginx
+| Operating System | Debian 10+ (Buster),  Alpine Linux 3+ (recommended), Ubuntu 20.04+ LTS, Red Hat Enterprise Linux 8+, SUSE Linux Enterprise Server 15+, openSUSE Leap 42.1+, or CentOS 8+ |
+| Database	|  Postgres 12+ with Postgis extension |
+| App Server | Erlang / Elixir
+| Web proxy	 | Nginx or Caddyserver
+
 
 ### Memory
 Memory requirements for running a ReflowOS server are greatly variable, depending on the numbers of users, apps, files and volume of server activity.
@@ -31,5 +35,3 @@ For the best experience with the ReflowOS web interface, we recommend that you u
 
 ### Deployment documentation
 Please refer to the deploy guide published **[here](https://github.com/dyne/zenpub/blob/flavour/zenpub/DEPLOY.md)**
-
-
