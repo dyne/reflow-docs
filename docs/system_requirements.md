@@ -5,7 +5,7 @@ sidebar_label: 🔨 System requirements
 ---
 
 ## Server
-For best performance, stability and functionality we have documented some recommendations for running a Nextcloud server.
+For best performance, stability and functionality we have documented some recommendations for running a ReflowOS server.
 
 
 | Platform |	Options|
