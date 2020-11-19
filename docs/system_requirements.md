@@ -4,7 +4,6 @@ title: System requirements
 sidebar_label: 🔨 System requirements
 ---
 
-
 ## Server
 For best performance, stability and functionality we have documented some recommendations for running a ReflowOS server.
 
@@ -15,13 +14,14 @@ You can either use Docker on any server that supports it, and the docker-compose
 | Operating System | Debian 10+ (Buster),  Alpine Linux 3+ (recommended), Ubuntu 20.04+ LTS, Red Hat Enterprise Linux 8+, SUSE Linux Enterprise Server 15+, openSUSE Leap 42.1+, or CentOS 8+ |
 | Database	|  Postgres 12+ with Postgis extension |
 | App Server | Erlang / Elixir
+| Search index | Meili
 | Web proxy	 | Nginx or Caddyserver
 
 
 ### Memory
 Memory requirements for running a ReflowOS server are greatly variable, depending on the numbers of users, apps, files and volume of server activity.
 
-ReflowOS needs a minimum of 128MB RAM, and we recommend a minimum of 512MB.
+ReflowOS runs fine with a minimum of 512MB RAM, but we recommend at least 2GB.
 
 
 ### Web browser
@@ -35,3 +35,4 @@ For the best experience with the ReflowOS web interface, we recommend that you u
 
 ### Deployment documentation
 Please refer to the deploy guide published **[here](https://github.com/dyne/zenpub/blob/flavour/zenpub/DEPLOY.md)**
+
