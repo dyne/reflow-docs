@@ -20,22 +20,25 @@ mutation {
     icon: {url: String}, 
     image: {url: String}, 
     user: {
-      email: String!
-      extraInfo: Json
-      location: String
-      name: String!
-      password: String!
-      preferredUsername: String!
-      summary: String
-      wantsEmailDigest: Boolean!
-      wantsNotifications: Boolean!
+      email: String!,
+      extraInfo: Json,
+      location: String,
+      name: String!,
+      password: String!,
+      preferredUsername: String!,
+      summary: String,
+      wantsEmailDigest: Boolean!,
+      wantsNotifications: Boolean!,
       website: String
     }) {
-    me {
       email
       isConfirmed
-      ...
-    }
+      user {
+        preferredUsername
+        displayUsername
+        canonicalUrl
+        ...
+      }
   }
 }
 ```
@@ -62,11 +65,11 @@ mutation {
 }
 ```
 
-### Display the user profile
-The current logged user. Contains more information than just the `user` type
+### Get the current user details
+The current logged in account and user. Contains different fields (including private information) than querying for myAgent.
 
 ```graphql
-me {
+{me {
   email
   isConfirmed
   isInstanceAdmin
@@ -76,56 +79,111 @@ me {
     name
     preferredUsername
   }
-}
+}}
 ```
-
-### Display any user profile
+### Display currently logged in agent profile
 
 ```graphql
-user(username: String!) {
+ {myAgent {
   id
   name
-  preferredUsername
+  displayUsername
+  canonicalUrl
   image
-  icon
-}
+  primaryLocation {
+    name
+    lat
+    long
+  }
+  intents {
+    name
+  }
+  proposals {
+    name
+  }
+  inventoriedEconomicResources {
+    name
+  }
+  economic_events {
+    name
+  }
+}}
+```
+
+### Display any agent profile
+
+```graphql
+ {agent(id: ID!) {
+  id
+  name
+  displayUsername
+  canonicalUrl
+  image
+  primaryLocation {
+    name
+    lat
+    long
+  }
+  intents {
+    name
+  }
+  proposals {
+    name
+  }
+  inventoriedEconomicResources {
+    name
+  }
+  economic_events {
+    name
+  }
+}}
 ```
 
 
-#### Display the instance timeline (paginated)
+#### Display the activities on the local instance (paginated)
 Contains all activities from the instance. 
 
 ```graphql
-instance {
+{instance {
   description
-  outbox(after: [id], before: [id], limit: Number) {
+  outbox(after: [id], before: [id], limit: Number) { # <- pagination
     edges {
       user {
-        icon
+        icon {
+          url
+        }
         name
-        image
+        image {
+          url
+        }
       }
       verb
       context {
-        ... # it can be an intent, an economic event, or a social activity
+        # it can be an intent, an economic event, a social activity, etc
+        __typename
+        ...on Intent {
+          name
+          canonicalUrl
+        }
+         ...on Comment {
+          content
+        }
       }
     }
     totalCount
-    pageInfo
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
   }
-}
+}}
 ```
 
 #### Display a user's activities (paginated)
 ```graphql
-me {
-  email
-  isConfirmed
-  isInstanceAdmin
-  user {
-    icon
-    image
-    name
+{user(id: String!) {
     outbox(after: [id], before: [id], limit: Number) {
       edges {
         user {
@@ -135,7 +193,14 @@ me {
         }
         verb
         context {
-          ... # it can be an intent, an economic event, or a social activity
+          __typename
+          ...on Intent {
+          name
+          canonicalUrl
+        }
+         ...on Comment {
+          content
+        }
         }
       }
       totalCount
@@ -145,14 +210,12 @@ me {
 }
 ```
 
-#### Display a user's feed (paginated)
-Contains activities from people, agents or groups the user is following.
+#### Display current user's feed (paginated)
+Contains activities from people, agents or groups the current user is following.
 
 ```graphql
+{me {
 user(id: String!) {
-    icon
-    image
-    name
     inbox(after: [id], before: [id], limit: Number) {
       edges {
         user {
@@ -162,28 +225,47 @@ user(id: String!) {
         }
         verb
         context {
-          ... # it can be an intent, an economic event, or a social activity
+          __typename
+          ...on Intent {
+          name
+          canonicalUrl
+        }
+         ...on Comment {
+          content
+        }
         }
       }
       totalCount
       pageInfo
     }
   }
-}
+}}
 ```
 
 #### Display all users (paginated) 
 
 ```graphql
-users(after: after, limit: limit) {
-  edges:{
+{peoplePages(limit: 10) {
+  edges {
     id
     name
-    preferredUsername
+    displayUsername
     image
-    icon
+    canonicalUrl
   }
-}
+}}
+```
+
+```graphql
+{organizationsPages(limit: 10) {
+  edges {
+    id
+    name
+    displayUsername
+    image
+    canonicalUrl
+  }
+}}
 ```
 
 ## Define the network sentiment
@@ -238,21 +320,20 @@ mutation {
 }
 ```
 
-### Create an offer
+### Record an offer (inventory entry)
 
 ```graphql
 mutation {
   createOffer(intent: {
-    action:String!,
-    name: String,
-    note: String
-    atLocation: ID,
-    availableQuantity: {hasUnit: String!, hasNumericalValue: String!},
-    due: DateTime,
-    image: {url: String},
-    tags: [ID!]
-  }
-  isProposal: true
+      action:String!,
+      name: String,
+      note: String
+      atLocation: ID,
+      availableQuantity: {hasUnit: ID!, hasNumericalValue: String!},
+      due: DateTime,
+      image: {url: String},
+      tags: [ID!]
+    }
   ) {
     intent {
       id
@@ -263,7 +344,7 @@ mutation {
 }
 ```
 
-### Create a need
+### Record a need (wishlist entry)
 ```graphql
 mutation {
   createNeed(intent: {
@@ -276,7 +357,6 @@ mutation {
     image: {url: String},
     tags: [ID!]
   }
-  isProposal: true
   ) {
     intent {
       id
@@ -287,7 +367,47 @@ mutation {
 }
 ```
 
-### Create a proposal
+### Publish an offer or a need (proposal)
+
+1. Publish a proposal
+
+```graphql
+mutation {
+  createProposal(
+    proposal: {
+      hasEnd: Date,
+      inScopeOf: ID,
+    }
+  ) {
+    proposal {
+      id
+    }
+  }
+}
+```
+
+2. Link the offer or need (intent) to the proposal
+```graphql
+mutation {
+  proposeIntent(
+		publishes: ID!  # the (Intent) to include as part of the proposal 
+    publishedIn: ID! # the (Proposal) to include the intent in 
+    reciprocal: Boolean # true if this is a reciprocal intent of this proposal, not primary (eg. what amount of currency is offered in exchange for the proposed need)
+  ) {
+		proposedIntent {
+      id
+      publishes {
+        name
+      }
+      publishedIn {
+        name
+      }
+  	}
+  }
+}
+```
+
+### Publish a proposal (by itself)
 
 ```graphql
 mutation {
@@ -295,51 +415,16 @@ mutation {
     proposal: {
       name: String,
       note: String,
-      eligibleLocation: ID
+      eligibleLocation: ID,
+      hasEnd: Date,
+      inScopeOf:ID
     }
   ) {
     proposal {
+      id,
       name,
       note
-      publishes {
-        id
-        reciprocal
-        publishes {
-          name
-          note
-          id
-        }
-      }
     }
-  }
-}
-```
-
-### Propose an offer or a need as part of a proposal
-
-- Include an existing intent as part of a proposal. @param publishedIn the (Proposal) to include the intent in @param publishes the (Intent) to include as part of the proposa
-
-
-```graphql
-mutation {
-  proposeIntent(
-		publishes: ID! 
-    publishes: ID!
-    reciprocal: Boolean
-  ) {
-		proposedIntent {
-      id
-      publishes {
-        name
-        note
-      }
-      publishedIn {
-        name
-        eligibleLocation {
-          name
-        }
-      }
-  	}
   }
 }
 ```
@@ -352,7 +437,7 @@ mutation {
   createProcess(
 		process: {
       name: String,
-      note:String,
+      note: String,
       hasEnd: DateTime,
       hasBeginning: DateTime
     }
@@ -366,19 +451,20 @@ mutation {
 }
 ```
 
-
-### Create an economic event
+### Conduct an economic event that results in a completely new resource
 
 ```graphql
 mutation {
   createEconomicEvent(
 		event: {
-      note:String,
-      action: ID!,
+      note: String,
+      action: String!, # eg. produce or raise
       provider: ID!,
       receiver: ID!,
-      resourceInventoriedAs: ID,
       resourceQuantity: {hasUnit: ID!, hasNumericalValue: Float!}
+    },
+    newInventoriedResource: { # details of the new resource
+      name: String
     }
   ) {
 		economicEvent {
@@ -394,6 +480,135 @@ mutation {
         name
         note
       }
+      resourceQuantity {
+        hasNumericalValue
+        hasUnit {
+          label
+          symbol
+        }
+      }
+      resourceInventoriedAs { # the newly created resource
+        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
+  	}
+  }
+}
+```
+
+
+### Conduct an economic event on an existing resource
+
+```graphql
+mutation {
+  createEconomicEvent(
+		event: {
+      note: String,
+      action: String!, # eg. consume
+      resourceInventoriedAs: ID!, # what resource to act on
+      provider: ID!,
+      receiver: ID!,
+      resourceQuantity: {hasUnit: ID!, hasNumericalValue: Float!} # how much of the resource is affected
+    }
+  ) {
+		economicEvent {
+      id
+      note
+      resourceInventoriedAs { # updated details of the existing resource
+        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
+  	}
+  }
+}
+```
+
+
+### Conduct an economic event between an existing resource and a new resource
+
+```graphql
+mutation {
+  createEconomicEvent(
+		event: {
+      note: String,
+      action: String!, # eg. transfer
+      provider: ID!,
+      receiver: ID!,
+      resourceInventoriedAs: ID!, # what resource are we transfering
+      resourceQuantity: {hasUnit: ID!, hasNumericalValue: Float!} # how much of the resource to transfer
+    },
+    newInventoriedResource: { # details of the transfered (part of the) resource
+      name: String
+    }
+  ) {
+		economicEvent {
+      id
+      note
+      resourceInventoriedAs { # updated details of the existing resource
+        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
+  	}
+    resourceInventoriedAs { # details of the new transfered resource
+        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
   	}
   }
 }
@@ -403,7 +618,7 @@ mutation {
 ```graphql
 mutation {
   createThread(
-    contextId: String
+    contextId: ID # what are we commenting on (eg a proposal) or in what context are we starting a discussion (eg a community)
     comment: {
       content: String!
     }
@@ -422,74 +637,79 @@ mutation {
 
 #### Phase 2. Search and filter aggregated data 
 
-### Look for intents on a specific location
+### Look for proposals at a specific place
 
 ```graphql
 {
-  intentsFiltered(atLocation: ID) {
+  proposalsFiltered(atLocation: ID) {
     id
     name
     note
-    image {
-      url
-    }
+    image
   }
 }
 ```
 
-### Look for intents near a specific location
+### Look for proposals near a specific location
 
 ```graphql
 {
-  intentsFiltered(geolocation: {
-    nearAddress:String,
+  proposalsFiltered(geolocation: {
+    nearAddress: String, # eg. Place de la Republique, Paris, France
     distance: {meters: 5000}
   }) {
     id
     name
     note
-    image {
-      url
-    }
+    image 
   }
 }
 ```
 
-### Look for intents from a specific agent
+### Look for proposals from a specific agent
 
 ```graphql
 {
-  intentsFiltered(agent: [ID]) {
+  proposalsFiltered(agent: [ID]) {
     id
     name
     note
-    image {
-      url
-    }
+    image
   }
 }
 ```
 
-### Look for all intents that include a specific tag
+### Look for proposals with a specific scope (eg. a community)
 
 ```graphql
 {
-  intentsFiltered(tagIds: [ID]) {
+  proposalsFiltered(inScopeOf: [ID]) {
     id
     name
     note
-    image {
-      url
-    }
+    image
   }
 }
 ```
 
-### Look for all EconomicEvents of a specific resource
+### Look for all proposals tagged with a specific category / taxonomy
+
+```graphql
+{
+  proposalsFiltered(tagIds: [ID]) {
+    id
+    name
+    note
+    image
+  }
+}
+```
+
+### Look for all EconomicEvents with a specific scope
 
 ```graphql 
 {
-  economicEventsFiltered(resourceClassifiedAs: [URI!]) {
+  economicEventsFiltered(in_scope_of: [ID!]) {
     id
     provider {
       id
@@ -508,7 +728,7 @@ mutation {
 
 ```graphql
 {
-  economicEventsFiltered(providerId: ID) {
+  economicEventsFiltered(agent: ID) {
     id
     provider {
       id
@@ -525,7 +745,6 @@ mutation {
 
 ## Generate a material passport
 **[Read more about this usecase](/docs/generate_a_material_passport)**
-
 
 ## Manage your inventory
 **[Read more about this usecase](/docs/create_and_manage_inventory)**
@@ -600,7 +819,6 @@ mutation {
       long
     }
     tags 
-    
   }
 }
 ```
