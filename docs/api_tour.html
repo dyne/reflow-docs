@@ -71,22 +71,25 @@ Think of the following ones as a starting point to help shape your apps and idea
 <span class="hljs-symbol">    icon:</span> {url: String}, 
 <span class="hljs-symbol">    image:</span> {url: String}, 
 <span class="hljs-symbol">    user:</span> {
-<span class="hljs-symbol">      email:</span> String!
-<span class="hljs-symbol">      extraInfo:</span> Json
-<span class="hljs-symbol">      location:</span> String
-<span class="hljs-symbol">      name:</span> String!
-<span class="hljs-symbol">      password:</span> String!
-<span class="hljs-symbol">      preferredUsername:</span> String!
-<span class="hljs-symbol">      summary:</span> String
-<span class="hljs-symbol">      wantsEmailDigest:</span> Boolean!
-<span class="hljs-symbol">      wantsNotifications:</span> Boolean!
+<span class="hljs-symbol">      email:</span> String!,
+<span class="hljs-symbol">      extraInfo:</span> Json,
+<span class="hljs-symbol">      location:</span> String,
+<span class="hljs-symbol">      name:</span> String!,
+<span class="hljs-symbol">      password:</span> String!,
+<span class="hljs-symbol">      preferredUsername:</span> String!,
+<span class="hljs-symbol">      summary:</span> String,
+<span class="hljs-symbol">      wantsEmailDigest:</span> Boolean!,
+<span class="hljs-symbol">      wantsNotifications:</span> Boolean!,
 <span class="hljs-symbol">      website:</span> String
     }) {
-    <span class="hljs-class">me </span>{
       email
       isConfirmed
-      ...
-    }
+      <span class="hljs-class">user </span>{
+        preferredUsername
+        displayUsername
+        canonicalUrl
+        ...
+      }
   }
 }
 </code></pre>
@@ -107,9 +110,9 @@ Think of the following ones as a starting point to help shape your apps and idea
 </span>    }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="display-the-user-profile"></a><a href="#display-the-user-profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display the user profile</h3>
-<p>The current logged user. Contains more information than just the <code>user</code> type</p>
-<pre><code class="hljs css language-graphql">me {
+<h3><a class="anchor" aria-hidden="true" id="get-the-current-user-details"></a><a href="#get-the-current-user-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get the current user details</h3>
+<p>The current logged in account and user. Contains different fields (including private information) than querying for myAgent.</p>
+<pre><code class="hljs css language-graphql">{me {
   email
   isConfirmed
   isInstanceAdmin
@@ -119,57 +122,117 @@ Think of the following ones as a starting point to help shape your apps and idea
     name
     preferredUsername
   }
-}
+}}
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="display-any-user-profile"></a><a href="#display-any-user-profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display any user profile</h3>
-<pre><code class="hljs css language-graphql"><span class="hljs-function"><span class="hljs-title">user</span><span class="hljs-params">(username: String!)</span></span> {
+<h3><a class="anchor" aria-hidden="true" id="display-currently-logged-in-agent-profile"></a><a href="#display-currently-logged-in-agent-profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display currently logged in agent profile</h3>
+<pre><code class="hljs css language-graphql"> {myAgent {
+  <span class="hljs-built_in">id</span>
+  <span class="hljs-built_in">name</span>
+  displayUsername
+  canonicalUrl
+  image
+  primaryLocation {
+    <span class="hljs-built_in">name</span>
+    lat
+    long
+  }
+  intents {
+    <span class="hljs-built_in">name</span>
+  }
+  proposals {
+    <span class="hljs-built_in">name</span>
+  }
+  inventoriedEconomicResources {
+    <span class="hljs-built_in">name</span>
+  }
+  economic_events {
+    <span class="hljs-built_in">name</span>
+  }
+}}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="display-any-agent-profile"></a><a href="#display-any-agent-profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display any agent profile</h3>
+<pre><code class="hljs css language-graphql"> {agent(<span class="hljs-name">id:</span> ID!) {
   id
   name
-  preferredUsername
+  displayUsername
+  canonicalUrl
   image
-  <span class="hljs-attribute">icon</span>
-}
+  primaryLocation {
+    name
+    lat
+    long
+  }
+  intents {
+    name
+  }
+  proposals {
+    name
+  }
+  inventoriedEconomicResources {
+    name
+  }
+  economic_events {
+    name
+  }
+}}
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="display-the-instance-timeline-paginated"></a><a href="#display-the-instance-timeline-paginated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display the instance timeline (paginated)</h4>
+<h4><a class="anchor" aria-hidden="true" id="display-the-activities-on-the-local-instance-paginated"></a><a href="#display-the-activities-on-the-local-instance-paginated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display the activities on the local instance (paginated)</h4>
 <p>Contains all activities from the instance.</p>
-<pre><code class="hljs css language-graphql">instance {
+<pre><code class="hljs css language-graphql">{instance {
   description
-  outbox(after: [id], before: [id], limit: Number) {
+  outbox(<span class="hljs-keyword">after</span>: [<span class="hljs-built_in">id</span>], <span class="hljs-keyword">before</span>: [<span class="hljs-built_in">id</span>], limit: Number) { <span class="hljs-comment"># &lt;- pagination</span>
     edges {
-     <span class="hljs-built_in"> user </span>{
-        icon
-        name
-        image
+      user {
+        icon {
+          url
+        }
+        <span class="hljs-built_in">name</span>
+        image {
+          url
+        }
       }
       verb
       context {
-        <span class="hljs-built_in">..</span>. # it can be an intent, an economic event, <span class="hljs-keyword">or</span> a social activity
+        <span class="hljs-comment"># it can be an intent, an economic event, a social activity, etc</span>
+        __typename
+        ...<span class="hljs-keyword">on</span> Intent {
+          <span class="hljs-built_in">name</span>
+          canonicalUrl
+        }
+         ...<span class="hljs-keyword">on</span> Comment {
+          content
+        }
       }
     }
     totalCount
-    pageInfo
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
   }
-}
+}}
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="display-a-users-activities-paginated"></a><a href="#display-a-users-activities-paginated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display a user's activities (paginated)</h4>
-<pre><code class="hljs css language-graphql">me {
-  email
-  isConfirmed
-  isInstanceAdmin
- <span class="hljs-built_in"> user </span>{
-    icon
-    image
-    name
-    outbox(after: [id], before: [id], limit: Number) {
+<pre><code class="hljs css language-graphql">{user(<span class="hljs-name">id:</span> String!) {
+    outbox(<span class="hljs-name">after:</span> [id], before: [id], limit: Number) {
       edges {
-       <span class="hljs-built_in"> user </span>{
+        user {
           icon
           name
           image
         }
         verb
         context {
-          <span class="hljs-built_in">..</span>. # it can be an intent, an economic event, <span class="hljs-keyword">or</span> a social activity
+          __typename
+          ...on Intent {
+          name
+          canonicalUrl
+        }
+         ...on Comment {
+          content
+        }
         }
       }
       totalCount
@@ -178,40 +241,55 @@ Think of the following ones as a starting point to help shape your apps and idea
   }
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="display-a-users-feed-paginated"></a><a href="#display-a-users-feed-paginated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display a user's feed (paginated)</h4>
-<p>Contains activities from people, agents or groups the user is following.</p>
-<pre><code class="hljs css language-graphql">user(<span class="hljs-built_in">id</span>: String!) {
-    icon
-    image
-    <span class="hljs-built_in">name</span>
-    inbox(<span class="hljs-keyword">after</span>: [<span class="hljs-built_in">id</span>], <span class="hljs-keyword">before</span>: [<span class="hljs-built_in">id</span>], limit: Number) {
+<h4><a class="anchor" aria-hidden="true" id="display-current-users-feed-paginated"></a><a href="#display-current-users-feed-paginated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display current user's feed (paginated)</h4>
+<p>Contains activities from people, agents or groups the current user is following.</p>
+<pre><code class="hljs css language-graphql">{me {
+user(<span class="hljs-name">id:</span> String!) {
+    inbox(<span class="hljs-name">after:</span> [id], before: [id], limit: Number) {
       edges {
         user {
           icon
-          <span class="hljs-built_in">name</span>
+          name
           image
         }
         verb
         context {
-          ... <span class="hljs-comment"># it can be an intent, an economic event, or a social activity</span>
+          __typename
+          ...on Intent {
+          name
+          canonicalUrl
+        }
+         ...on Comment {
+          content
+        }
         }
       }
       totalCount
       pageInfo
     }
   }
-}
+}}
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="display-all-users-paginated"></a><a href="#display-all-users-paginated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display all users (paginated)</h4>
-<pre><code class="hljs css language-graphql">users(<span class="hljs-keyword">after</span>: <span class="hljs-keyword">after</span>, <span class="hljs-keyword">limit</span>: <span class="hljs-keyword">limit</span>) {
-  edges:{
+<pre><code class="hljs css language-graphql">{peoplePages(<span class="hljs-name">limit:</span> <span class="hljs-number">10</span>) {
+  edges {
     id
-    <span class="hljs-type">name</span>
-    preferredUsername
+    name
+    displayUsername
     image
-    icon
+    canonicalUrl
   }
-}
+}}
+</code></pre>
+<pre><code class="hljs css language-graphql">{organizationsPages(<span class="hljs-name">limit:</span> <span class="hljs-number">10</span>) {
+  edges {
+    id
+    name
+    displayUsername
+    image
+    canonicalUrl
+  }
+}}
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="define-the-network-sentiment"></a><a href="#define-the-network-sentiment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define the network sentiment</h2>
 <p><strong><a href="/docs/define_the_network_sentiment">Read more about this usecase</a></strong></p>
@@ -257,29 +335,28 @@ Think of the following ones as a starting point to help shape your apps and idea
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="create-an-offer"></a><a href="#create-an-offer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create an offer</h3>
+<h3><a class="anchor" aria-hidden="true" id="record-an-offer-inventory-entry"></a><a href="#record-an-offer-inventory-entry" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Record an offer (inventory entry)</h3>
 <pre><code class="hljs css language-graphql"><span class="hljs-selector-tag">mutation</span> {
   <span class="hljs-selector-tag">createOffer</span>(<span class="hljs-attribute">intent</span>: {
-    <span class="hljs-attribute">action</span>:String!,
-    <span class="hljs-attribute">name</span>: String,
-    <span class="hljs-attribute">note</span>: String
-    <span class="hljs-attribute">atLocation</span>: ID,
-    <span class="hljs-attribute">availableQuantity</span>: {<span class="hljs-attribute">hasUnit</span>: String!, <span class="hljs-attribute">hasNumericalValue</span>: String!},
-    <span class="hljs-attribute">due</span>: DateTime,
-    <span class="hljs-attribute">image</span>: {<span class="hljs-attribute">url</span>: String},
-    <span class="hljs-attribute">tags</span>: [ID!]
-  }
-  <span class="hljs-attribute">isProposal</span>: true
+      <span class="hljs-attribute">action</span>:String!,
+      <span class="hljs-attribute">name</span>: String,
+      <span class="hljs-attribute">note</span>: String
+      <span class="hljs-attribute">atLocation</span>: ID,
+      <span class="hljs-attribute">availableQuantity</span>: {<span class="hljs-attribute">hasUnit</span>: ID!, <span class="hljs-attribute">hasNumericalValue</span>: String!},
+      <span class="hljs-attribute">due</span>: DateTime,
+      <span class="hljs-attribute">image</span>: {<span class="hljs-attribute">url</span>: String},
+      <span class="hljs-attribute">tags</span>: [ID!]
+    }
   ) {
-    intent {
-      id
-      name
-      note
+    <span class="hljs-selector-tag">intent</span> {
+      <span class="hljs-selector-tag">id</span>
+      <span class="hljs-selector-tag">name</span>
+      <span class="hljs-selector-tag">note</span>
     }
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="create-a-need"></a><a href="#create-a-need" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a need</h3>
+<h3><a class="anchor" aria-hidden="true" id="record-a-need-wishlist-entry"></a><a href="#record-a-need-wishlist-entry" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Record a need (wishlist entry)</h3>
 <pre><code class="hljs css language-graphql"><span class="hljs-selector-tag">mutation</span> {
   <span class="hljs-selector-tag">createNeed</span>(<span class="hljs-attribute">intent</span>: {
     <span class="hljs-attribute">action</span>:String!,
@@ -291,64 +368,69 @@ Think of the following ones as a starting point to help shape your apps and idea
     <span class="hljs-attribute">image</span>: {<span class="hljs-attribute">url</span>: String},
     <span class="hljs-attribute">tags</span>: [ID!]
   }
-  <span class="hljs-attribute">isProposal</span>: true
   ) {
-    intent {
-      id
-      name
-      note
+    <span class="hljs-selector-tag">intent</span> {
+      <span class="hljs-selector-tag">id</span>
+      <span class="hljs-selector-tag">name</span>
+      <span class="hljs-selector-tag">note</span>
     }
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="create-a-proposal"></a><a href="#create-a-proposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a proposal</h3>
+<h3><a class="anchor" aria-hidden="true" id="publish-an-offer-or-a-need-proposal"></a><a href="#publish-an-offer-or-a-need-proposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Publish an offer or a need (proposal)</h3>
+<ol>
+<li>Publish a proposal</li>
+</ol>
+<pre><code class="hljs css language-graphql">mutation {
+  createProposal(
+    proposal: {
+      hasEnd: Date,
+      inScopeOf: ID,
+    }
+  ) {
+   <span class="hljs-built_in"> proposal </span>{
+      id
+    }
+  }
+}
+</code></pre>
+<ol start="2">
+<li>Link the offer or need (intent) to the proposal</li>
+</ol>
+<pre><code class="hljs css language-graphql"><span class="hljs-class">mutation </span>{
+  proposeIntent(
+<span class="hljs-symbol">        publishes:</span> ID!  <span class="hljs-meta"># the (Intent) to <span class="hljs-meta-keyword">include</span> as part of the proposal </span>
+<span class="hljs-symbol">    publishedIn:</span> ID! <span class="hljs-meta"># the (Proposal) to <span class="hljs-meta-keyword">include</span> the intent in </span>
+<span class="hljs-symbol">    reciprocal:</span> Boolean <span class="hljs-meta"># true <span class="hljs-meta-keyword">if</span> this is a reciprocal intent of this proposal, not primary (eg. what amount of currency is offered in exchange for the proposed need)</span>
+  ) {
+        <span class="hljs-class">proposedIntent </span>{
+      id
+      <span class="hljs-class">publishes </span>{
+        name
+      }
+      <span class="hljs-class">publishedIn </span>{
+        name
+      }
+    }
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="publish-a-proposal-by-itself"></a><a href="#publish-a-proposal-by-itself" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Publish a proposal (by itself)</h3>
 <pre><code class="hljs css language-graphql">mutation {
   createProposal(
     proposal: {
       name: String,
       note: String,
-      eligibleLocation: ID
+      eligibleLocation: ID,
+      hasEnd: Date,
+      inScopeOf:ID
     }
   ) {
    <span class="hljs-built_in"> proposal </span>{
+      id,
       name,
      <span class="hljs-built_in"> note
-</span>      publishes {
-        id
-        reciprocal
-        publishes {
-          name
-         <span class="hljs-built_in"> note
-</span>          id
-        }
-      }
-    }
-  }
-}
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="propose-an-offer-or-a-need-as-part-of-a-proposal"></a><a href="#propose-an-offer-or-a-need-as-part-of-a-proposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propose an offer or a need as part of a proposal</h3>
-<ul>
-<li>Include an existing intent as part of a proposal. @param publishedIn the (Proposal) to include the intent in @param publishes the (Intent) to include as part of the proposa</li>
-</ul>
-<pre><code class="hljs css language-graphql">mutation {
-  proposeIntent(
-        publishes: ID! 
-    publishes: ID!
-    reciprocal: Boolean
-  ) {
-        proposedIntent {
-      id
-      publishes {
-        name
-       <span class="hljs-built_in"> note
-</span>      }
-      publishedIn {
-        name
-        eligibleLocation {
-          name
-        }
-      }
-    }
+</span>    }
   }
 }
 </code></pre>
@@ -358,7 +440,7 @@ Think of the following ones as a starting point to help shape your apps and idea
   createProcess(
         process: {
       name: String,
-      note:String,
+      note: String,
       hasEnd: DateTime,
       hasBeginning: DateTime
     }
@@ -371,16 +453,18 @@ Think of the following ones as a starting point to help shape your apps and idea
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="create-an-economic-event"></a><a href="#create-an-economic-event" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create an economic event</h3>
+<h3><a class="anchor" aria-hidden="true" id="conduct-an-economic-event-that-results-in-a-completely-new-resource"></a><a href="#conduct-an-economic-event-that-results-in-a-completely-new-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conduct an economic event that results in a completely new resource</h3>
 <pre><code class="hljs css language-graphql">mutation {
   createEconomicEvent(
         event: {
-      note:String,
-      action: ID!,
+      note: String,
+      action: String!, # eg. produce <span class="hljs-keyword">or</span> raise
       provider: ID!,
       receiver: ID!,
-      resourceInventoriedAs: ID,
       resourceQuantity: {hasUnit: ID!, hasNumericalValue: Float!}
+    },
+    newInventoriedResource: { # details of the new<span class="hljs-built_in"> resource
+</span>      name: String
     }
   ) {
         economicEvent {
@@ -396,84 +480,207 @@ Think of the following ones as a starting point to help shape your apps and idea
         name
        <span class="hljs-built_in"> note
 </span>      }
+      resourceQuantity {
+        hasNumericalValue
+        hasUnit {
+          label
+          symbol
+        }
+      }
+      resourceInventoriedAs { # the newly created<span class="hljs-built_in"> resource
+</span>        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="conduct-an-economic-event-on-an-existing-resource"></a><a href="#conduct-an-economic-event-on-an-existing-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conduct an economic event on an existing resource</h3>
+<pre><code class="hljs css language-graphql">mutation {
+  createEconomicEvent(
+        event: {
+      note: String,
+      action: String!, # eg. consume
+      resourceInventoriedAs: ID!, # what<span class="hljs-built_in"> resource </span><span class="hljs-keyword">to</span> act on
+      provider: ID!,
+      receiver: ID!,
+      resourceQuantity: {hasUnit: ID!, hasNumericalValue: Float!} # how much of the<span class="hljs-built_in"> resource </span>is affected
+    }
+  ) {
+        economicEvent {
+      id
+     <span class="hljs-built_in"> note
+</span>      resourceInventoriedAs { # updated details of the existing<span class="hljs-built_in"> resource
+</span>        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="conduct-an-economic-event-between-an-existing-resource-and-a-new-resource"></a><a href="#conduct-an-economic-event-between-an-existing-resource-and-a-new-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conduct an economic event between an existing resource and a new resource</h3>
+<pre><code class="hljs css language-graphql">mutation {
+  createEconomicEvent(
+        event: {
+      note: String,
+      action: String!, # eg. transfer
+      provider: ID!,
+      receiver: ID!,
+      resourceInventoriedAs: ID!, # what<span class="hljs-built_in"> resource </span>are we transfering
+      resourceQuantity: {hasUnit: ID!, hasNumericalValue: Float!} # how much of the<span class="hljs-built_in"> resource </span><span class="hljs-keyword">to</span> transfer
+    },
+    newInventoriedResource: { # details of the transfered (part of the)<span class="hljs-built_in"> resource
+</span>      name: String
+    }
+  ) {
+        economicEvent {
+      id
+     <span class="hljs-built_in"> note
+</span>      resourceInventoriedAs { # updated details of the existing<span class="hljs-built_in"> resource
+</span>        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
+    }
+    resourceInventoriedAs { # details of the new transfered<span class="hljs-built_in"> resource
+</span>        id
+        name
+        onhandQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+        accountingQuantity {
+          hasNumericalValue
+          hasUnit {
+            label
+            symbol
+          }
+        }
+      }
     }
   }
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="start-a-discussion-upon-an-offer-or-a-need"></a><a href="#start-a-discussion-upon-an-offer-or-a-need" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start a discussion upon an offer or a need</h4>
-<pre><code class="hljs css language-graphql">mutation {
+<pre><code class="hljs css language-graphql"><span class="hljs-keyword">mutation</span> {
   createThread(
-    contextId: String
-    <span class="hljs-keyword">comment</span>: {
-      content: String!
+    contextId: ID <span class="hljs-comment"># what are we commenting on (eg a proposal) or in what context are we starting a discussion (eg a community)</span>
+    comment: {
+      <span class="hljs-literal">content</span>: String!
     }
   }) {
-   <span class="hljs-built_in"> id</span>
-    creator {
-     <span class="hljs-built_in"> name</span>
-     <span class="hljs-built_in"> id</span>
+    id
+    <span class="hljs-keyword">creator</span> {
+      <span class="hljs-literal">name</span>
+      <span class="hljs-built_in">id</span>
       likerCount
     }
-   <span class="hljs-built_in"> name</span>
-    content
+    <span class="hljs-keyword">name</span>
+    <span class="hljs-keyword">content</span>
   }
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="phase-2-search-and-filter-aggregated-data"></a><a href="#phase-2-search-and-filter-aggregated-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phase 2. Search and filter aggregated data</h4>
-<h3><a class="anchor" aria-hidden="true" id="look-for-intents-on-a-specific-location"></a><a href="#look-for-intents-on-a-specific-location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for intents on a specific location</h3>
+<h3><a class="anchor" aria-hidden="true" id="look-for-proposals-at-a-specific-place"></a><a href="#look-for-proposals-at-a-specific-place" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for proposals at a specific place</h3>
 <pre><code class="hljs css language-graphql">{
-  intentsFiltered(atLocation: ID) {
+  proposalsFiltered(atLocation: ID) {
     id
     name
    <span class="hljs-built_in"> note
-</span>    image {
-      url
-    }
+</span>    image
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="look-for-intents-near-a-specific-location"></a><a href="#look-for-intents-near-a-specific-location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for intents near a specific location</h3>
+<h3><a class="anchor" aria-hidden="true" id="look-for-proposals-near-a-specific-location"></a><a href="#look-for-proposals-near-a-specific-location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for proposals near a specific location</h3>
 <pre><code class="hljs css language-graphql">{
-  intentsFiltered(geolocation: {
-    nearAddress:String,
+  proposalsFiltered(geolocation: {
+    nearAddress: String, # eg. Place de la Republique, Paris, France
     distance: {meters: 5000}
   }) {
     id
     name
    <span class="hljs-built_in"> note
-</span>    image {
-      url
-    }
+</span>    image 
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="look-for-intents-from-a-specific-agent"></a><a href="#look-for-intents-from-a-specific-agent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for intents from a specific agent</h3>
+<h3><a class="anchor" aria-hidden="true" id="look-for-proposals-from-a-specific-agent"></a><a href="#look-for-proposals-from-a-specific-agent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for proposals from a specific agent</h3>
 <pre><code class="hljs css language-graphql">{
-  intentsFiltered(agent: [ID]) {
+  proposalsFiltered(agent: [ID]) {
     id
     name
    <span class="hljs-built_in"> note
-</span>    image {
-      url
-    }
+</span>    image
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="look-for-all-intents-that-include-a-specific-tag"></a><a href="#look-for-all-intents-that-include-a-specific-tag" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for all intents that include a specific tag</h3>
+<h3><a class="anchor" aria-hidden="true" id="look-for-proposals-with-a-specific-scope-eg-a-community"></a><a href="#look-for-proposals-with-a-specific-scope-eg-a-community" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for proposals with a specific scope (eg. a community)</h3>
 <pre><code class="hljs css language-graphql">{
-  intentsFiltered(tagIds: [ID]) {
+  proposalsFiltered(inScopeOf: [ID]) {
     id
     name
    <span class="hljs-built_in"> note
-</span>    image {
-      url
-    }
+</span>    image
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="look-for-all-economicevents-of-a-specific-resource"></a><a href="#look-for-all-economicevents-of-a-specific-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for all EconomicEvents of a specific resource</h3>
+<h3><a class="anchor" aria-hidden="true" id="look-for-all-proposals-tagged-with-a-specific-category--taxonomy"></a><a href="#look-for-all-proposals-tagged-with-a-specific-category--taxonomy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for all proposals tagged with a specific category / taxonomy</h3>
 <pre><code class="hljs css language-graphql">{
-  economicEventsFiltered(<span class="hljs-name">resourceClassifiedAs:</span> [URI!]) {
+  proposalsFiltered(tagIds: [ID]) {
+    id
+    name
+   <span class="hljs-built_in"> note
+</span>    image
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="look-for-all-economicevents-with-a-specific-scope"></a><a href="#look-for-all-economicevents-with-a-specific-scope" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for all EconomicEvents with a specific scope</h3>
+<pre><code class="hljs css language-graphql">{
+  economicEventsFiltered(<span class="hljs-name">in_scope_of:</span> [ID!]) {
     id
     provider {
       id
@@ -489,7 +696,7 @@ Think of the following ones as a starting point to help shape your apps and idea
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="look-for-all-economicevents-of-a-specific-agent"></a><a href="#look-for-all-economicevents-of-a-specific-agent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Look for all EconomicEvents of a specific agent</h3>
 <pre><code class="hljs css language-graphql">{
-  economicEventsFiltered(<span class="hljs-name">providerId:</span> ID) {
+  economicEventsFiltered(<span class="hljs-name">agent:</span> ID) {
     id
     provider {
       id
@@ -572,8 +779,7 @@ Think of the following ones as a starting point to help shape your apps and idea
       long
     }
     tags 
-    
   }
 }
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/valueflows"><span class="arrow-prev">← </span><span class="function-name-prevnext">🥮 ValueFlows</span></a><a class="docs-next button" href="/docs/maintenance"><span>🌱 Maintenance</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication">Authentication</a><ul class="toc-headings"><li><a href="#register-a-new-user">Register a new user</a></li><li><a href="#confirm-email">Confirm email</a></li><li><a href="#login">Login</a></li><li><a href="#display-the-user-profile">Display the user profile</a></li><li><a href="#display-any-user-profile">Display any user profile</a></li></ul></li><li><a href="#define-the-network-sentiment">Define the network sentiment</a><ul class="toc-headings"><li><a href="#create-a-location">Create a location</a></li><li><a href="#create-a-unit">Create a unit</a></li><li><a href="#create-an-offer">Create an offer</a></li><li><a href="#create-a-need">Create a need</a></li><li><a href="#create-a-proposal">Create a proposal</a></li><li><a href="#propose-an-offer-or-a-need-as-part-of-a-proposal">Propose an offer or a need as part of a proposal</a></li><li><a href="#create-a-process">Create a process</a></li><li><a href="#create-an-economic-event">Create an economic event</a></li><li><a href="#look-for-intents-on-a-specific-location">Look for intents on a specific location</a></li><li><a href="#look-for-intents-near-a-specific-location">Look for intents near a specific location</a></li><li><a href="#look-for-intents-from-a-specific-agent">Look for intents from a specific agent</a></li><li><a href="#look-for-all-intents-that-include-a-specific-tag">Look for all intents that include a specific tag</a></li><li><a href="#look-for-all-economicevents-of-a-specific-resource">Look for all EconomicEvents of a specific resource</a></li><li><a href="#look-for-all-economicevents-of-a-specific-agent">Look for all EconomicEvents of a specific agent</a></li></ul></li><li><a href="#generate-a-material-passport">Generate a material passport</a></li><li><a href="#manage-your-inventory">Manage your inventory</a><ul class="toc-headings"><li><a href="#filter-resources-by-owner">Filter resources by owner</a></li><li><a href="#filter-resources-by-current-location">Filter resources by current location</a></li><li><a href="#filter-resources-by-tags">Filter resources by tags</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logoWhite.svg" alt="ReflowOS" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/what_is_reflowOS.html">Project Documentation</a><a href="/api/index">API reference</a></div><div></div><div><h5>More</h5><a href="https://github.com/undefined/undefined"> GitHub </a><a class="github-button" data-icon="octicon-star" data-count-href="/undefined/undefined/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/REFLOW_project" class="twitter-follow-button">Follow @REFLOW_project</a></div></div></section><section class="copyright">Copyright © 2020 Dyne.org</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/valueflows"><span class="arrow-prev">← </span><span class="function-name-prevnext">🥮 ValueFlows</span></a><a class="docs-next button" href="/docs/maintenance"><span>🌱 Maintenance</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication">Authentication</a><ul class="toc-headings"><li><a href="#register-a-new-user">Register a new user</a></li><li><a href="#confirm-email">Confirm email</a></li><li><a href="#login">Login</a></li><li><a href="#get-the-current-user-details">Get the current user details</a></li><li><a href="#display-currently-logged-in-agent-profile">Display currently logged in agent profile</a></li><li><a href="#display-any-agent-profile">Display any agent profile</a></li></ul></li><li><a href="#define-the-network-sentiment">Define the network sentiment</a><ul class="toc-headings"><li><a href="#create-a-location">Create a location</a></li><li><a href="#create-a-unit">Create a unit</a></li><li><a href="#record-an-offer-inventory-entry">Record an offer (inventory entry)</a></li><li><a href="#record-a-need-wishlist-entry">Record a need (wishlist entry)</a></li><li><a href="#publish-an-offer-or-a-need-proposal">Publish an offer or a need (proposal)</a></li><li><a href="#publish-a-proposal-by-itself">Publish a proposal (by itself)</a></li><li><a href="#create-a-process">Create a process</a></li><li><a href="#conduct-an-economic-event-that-results-in-a-completely-new-resource">Conduct an economic event that results in a completely new resource</a></li><li><a href="#conduct-an-economic-event-on-an-existing-resource">Conduct an economic event on an existing resource</a></li><li><a href="#conduct-an-economic-event-between-an-existing-resource-and-a-new-resource">Conduct an economic event between an existing resource and a new resource</a></li><li><a href="#look-for-proposals-at-a-specific-place">Look for proposals at a specific place</a></li><li><a href="#look-for-proposals-near-a-specific-location">Look for proposals near a specific location</a></li><li><a href="#look-for-proposals-from-a-specific-agent">Look for proposals from a specific agent</a></li><li><a href="#look-for-proposals-with-a-specific-scope-eg-a-community">Look for proposals with a specific scope (eg. a community)</a></li><li><a href="#look-for-all-proposals-tagged-with-a-specific-category--taxonomy">Look for all proposals tagged with a specific category / taxonomy</a></li><li><a href="#look-for-all-economicevents-with-a-specific-scope">Look for all EconomicEvents with a specific scope</a></li><li><a href="#look-for-all-economicevents-of-a-specific-agent">Look for all EconomicEvents of a specific agent</a></li></ul></li><li><a href="#generate-a-material-passport">Generate a material passport</a></li><li><a href="#manage-your-inventory">Manage your inventory</a><ul class="toc-headings"><li><a href="#filter-resources-by-owner">Filter resources by owner</a></li><li><a href="#filter-resources-by-current-location">Filter resources by current location</a></li><li><a href="#filter-resources-by-tags">Filter resources by tags</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logoWhite.svg" alt="ReflowOS" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/what_is_reflowOS.html">Project Documentation</a><a href="/api/index">API reference</a></div><div></div><div><h5>More</h5><a href="https://github.com/undefined/undefined"> GitHub </a><a class="github-button" data-icon="octicon-star" data-count-href="/undefined/undefined/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/REFLOW_project" class="twitter-follow-button">Follow @REFLOW_project</a></div></div></section><section class="copyright">Copyright © 2021 Dyne.org</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

@@ -92,69 +92,44 @@ The <code>docker-compose.yml</code> uses <code>config/docker.env</code> to launc
 <ol>
 <li>Make sure you have <a href="https://www.docker.com/">Docker</a>, a recent <a href="https://docs.docker.com/compose/install/#install-compose">docker-compose</a> (which supports v3 configs), and <a href="https://www.gnu.org/software/make/">make</a> installed:</li>
 </ol>
-<pre><code class="hljs css language-sh">$ docker version
-Docker version 18.09.1-ce
+<pre><code class="hljs css language-sh">docker version
+    Docker version 18.09.1-ce
 
-$ docker-compose -v                                                                                                        
-docker-compose version 1.23.2
+docker-compose -v
+    docker-compose version 1.23.2
 
-$ make --version
-GNU Make 4.2.1
+make --version
+    GNU Make 4.2.1
 ...
 </code></pre>
 <ol start="2">
 <li>Clone this repository and change into the directory:</li>
 </ol>
-<pre><code class="hljs css language-sh">$ git <span class="hljs-built_in">clone</span> git@gitlab.com:CommonsPub/Server.git commonspub-backend
-$ <span class="hljs-built_in">cd</span> commonspub-backend
+<pre><code class="hljs css language-sh">git <span class="hljs-built_in">clone</span> https://github.com/dyne/zenpub
+<span class="hljs-built_in">cd</span> zenpub
 </code></pre>
 <ol start="3">
 <li>Build the docker image.</li>
 </ol>
-<pre><code class="hljs"><span class="hljs-variable">$ </span>make build
-
-<span class="hljs-variable">$ </span>make tag_latest
+<pre><code class="hljs">make dev-<span class="hljs-built_in">setup</span>
 </code></pre>
 <ol start="4">
-<li>Start the docker containers with docker-compose:</li>
+<li>Setup the database schemas</li>
 </ol>
-<pre><code class="hljs css language-sh">$ docker-compose up
+<p>The previous step will start building the database schemas, but it may lead to this error:</p>
+<pre><code class="hljs">[<span class="hljs-builtin-name">debug</span>] QUERY <span class="hljs-builtin-name">ERROR</span> <span class="hljs-attribute">db</span>=13.0ms
+CREATE INDEX <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> EXISTS <span class="hljs-string">"character_actor_id_index"</span> ON <span class="hljs-string">"character"</span> (<span class="hljs-string">"actor_id"</span>) []
+** (Postgrex.Error) <span class="hljs-builtin-name">ERROR</span> 42P01 (undefined_table) relation <span class="hljs-string">"character"</span> does <span class="hljs-keyword">not</span> exist
+</code></pre>
+<p>In case it does, then run:</p>
+<pre><code class="hljs"><span class="hljs-keyword">make</span> db-<span class="hljs-keyword">pre</span>-migrations
+</code></pre>
+<p>Then continue issuing again:</p>
+<pre><code class="hljs">make dev-<span class="hljs-built_in">setup</span>
 </code></pre>
 <ol start="5">
-<li><p>The backend should now be running at <a href="http://localhost:4000/">http://localhost:4000/</a>.</p></li>
-<li><p>If that worked, start the app as a daemon next time:</p></li>
+<li>The backend should now be running at <a href="http://localhost:4000/">http://localhost:4000/</a>.</li>
 </ol>
-<pre><code class="hljs css language-sh">$ docker-compose up -d
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="docker-commands"></a><a href="#docker-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker commands</h4>
-<ul>
-<li><code>docker-compose up</code> launches the service, by default at the port 4000.</li>
-<li><code>docker-compose run --rm backend bin/moodle_net</code> returns all the possible commands</li>
-<li><code>docker-compose run --rm backend /bin/sh</code> runs a simple shell inside of the container, useful to explore the image</li>
-<li><code>docker-compose run --rm backend bin/moodle_net start_iex</code> starts a new <code>iex</code> console</li>
-<li><code>docker-compose run backend bin/moodle_net remote</code> runs an <code>iex</code> console when the service is already running.</li>
-</ul>
-<p>There are some useful release tasks under <code>MoodleNet.ReleaseTasks.</code> that can be run in an <code>iex</code> console:</p>
-<ul>
-<li><code>create_db</code> starts the app, creates the DB, and stops</li>
-<li><code>create_repos</code> creates the DB on already running app</li>
-<li><code>drop_db</code> starts the app, deletes the DB, and stops</li>
-<li><code>drop_repos</code> deletes the DB</li>
-<li><code>empty_db</code> starts the app, runs all down migrations, and stops</li>
-<li><code>empty_repos</code> runs all down migrations</li>
-<li><code>migrate_db</code> starts the app, runs all up migrations, and stops</li>
-<li><code>migrate_repos</code> runs all up migrations</li>
-<li><code>rollback_db</code> rolls back the previous migration</li>
-</ul>
-<p>For example:
-<code>iex&gt; MoodleNet.ReleaseTasks.create_db</code> to create your database if it doesn't already exist.</p>
-<h4><a class="anchor" aria-hidden="true" id="building-a-docker-image"></a><a href="#building-a-docker-image" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building a Docker image</h4>
-<p>The Dockerfile uses the <a href="https://docs.docker.com/develop/develop-images/multistage-build/">multistage build</a> feature to make the image as small as possible. It is a very common release using OTP releases. It generates the release which is later copied into the final image.</p>
-<p>There is a <code>Makefile</code> with two relavant commands:</p>
-<ul>
-<li><code>make build</code> which builds the docker image in <code>commonspub/commonspub:latest</code> and <code>commonspub/commonspub:$VERSION-$BUILD</code></li>
-<li><code>make run</code> which can be used to run the docker built docker image without <code>docker-compose</code></li>
-</ul>
 <hr>
 <h3><a class="anchor" aria-hidden="true" id="option-b---manual-installation-without-docker"></a><a href="#option-b---manual-installation-without-docker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Option B - Manual installation without Docker</h3>
 <h4><a class="anchor" aria-hidden="true" id="dependencies"></a><a href="#dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dependencies</h4>
@@ -209,4 +184,4 @@ $ _build/prod/rel/moodle_net/bin/moodle_net start
 <p>Once you've signed up, you may want to make yourself an instance admin, by running this in the iex console:</p>
 <pre><code class="hljs"><span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">MoodleNet</span>.</span><span class="hljs-module"><span class="hljs-identifier">ReleaseTasks</span>.</span></span>make<span class="hljs-constructor">_instance_admin(<span class="hljs-string">"your_username"</span>)</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/guides"><span class="arrow-prev">← </span><span>📖 Guides</span></a><a class="docs-next button" href="/docs/first_steps"><span>🐇 Start using the network</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#step-0---configure-your-database">Step 0 - Configure your database</a></li><li><a href="#step-1---configure-the-backend">Step 1 - Configure the backend</a></li><li><a href="#step-2---install">Step 2 - Install</a><ul class="toc-headings"><li><a href="#option-a---install-using-docker-containers-recommended">Option A - Install using Docker containers (recommended)</a></li><li><a href="#option-b---manual-installation-without-docker">Option B - Manual installation without Docker</a></li></ul></li><li><a href="#step-3---run">Step 3 - Run</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logoWhite.svg" alt="ReflowOS" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/what_is_reflowOS.html">Project Documentation</a><a href="/api/index">API reference</a></div><div></div><div><h5>More</h5><a href="https://github.com/undefined/undefined"> GitHub </a><a class="github-button" data-icon="octicon-star" data-count-href="/undefined/undefined/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/REFLOW_project" class="twitter-follow-button">Follow @REFLOW_project</a></div></div></section><section class="copyright">Copyright © 2020 Dyne.org</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/guides"><span class="arrow-prev">← </span><span>📖 Guides</span></a><a class="docs-next button" href="/docs/first_steps"><span>🐇 Start using the network</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#step-0---configure-your-database">Step 0 - Configure your database</a></li><li><a href="#step-1---configure-the-backend">Step 1 - Configure the backend</a></li><li><a href="#step-2---install">Step 2 - Install</a><ul class="toc-headings"><li><a href="#option-a---install-using-docker-containers-recommended">Option A - Install using Docker containers (recommended)</a></li><li><a href="#option-b---manual-installation-without-docker">Option B - Manual installation without Docker</a></li></ul></li><li><a href="#step-3---run">Step 3 - Run</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logoWhite.svg" alt="ReflowOS" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/what_is_reflowOS.html">Project Documentation</a><a href="/api/index">API reference</a></div><div></div><div><h5>More</h5><a href="https://github.com/undefined/undefined"> GitHub </a><a class="github-button" data-icon="octicon-star" data-count-href="/undefined/undefined/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/REFLOW_project" class="twitter-follow-button">Follow @REFLOW_project</a></div></div></section><section class="copyright">Copyright © 2021 Dyne.org</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
