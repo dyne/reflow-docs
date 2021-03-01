@@ -822,3 +822,53 @@ mutation {
   }
 }
 ```
+
+### Track back from an EconomicResource
+Currently is only possible to go one level back in the chain. It will always return an EconomicEvent, when tracing back from an EconomicResource.
+
+```graphql
+{
+  economicResource(id: "ID") {
+    id
+    trace {
+      id
+    }
+  }
+}
+```
+
+### Track back from an EconomicEvent
+Currently is only possible to go one level back in the chain. Tracing back from an EconomicEvent, it may return a Process or an EconomicResource
+
+```graphql
+{
+  economicEvent(id: "ID") {
+    id
+    trace {
+      __typename
+      ... on Process {
+        id
+      }
+      ... on EconomicResource {
+        id
+      }
+    }
+  }
+}
+```
+
+
+### Track back from a Process
+Currently is only possible to go one level back in the chain. Tracing back from a Process, it will return an EconomicEvent
+
+```graphql
+{
+  Process(id: "ID") {
+    id
+    trace {
+      __typename
+      id
+    }
+  }
+}
+```
