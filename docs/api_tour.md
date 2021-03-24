@@ -746,6 +746,72 @@ mutation {
 ## Generate a material passport
 **[Read more about this usecase](/docs/generate_a_material_passport)**
 
+To generate a material passport, it is needed to create economic events, resources and processes that are bound each other.
+
+Following some examples of data coming from economic resource, event and process queries
+
+**EconomicResource**
+
+```{
+    "accountingQuantity": {
+      "hasNumericalValue": 0.0478270231353376,
+      "hasUnit": {
+        "label": "kilo"
+      }
+    },
+    "currentLocation": {
+      "lat": -18.895467439976088,
+      "long": 13.45323887068065,
+      "name": "Streich"
+    },
+    "id": "01EVTV5QR62V7A489V2W84NJHT",
+    "image": null,
+    "name": "Streich",
+    "note": "Dicta velit quo neque qui unde fuga non laboriosam! Aliquam eligendi ex autem ut ratione incidunt et maiores voluptas? Vitae et repellat exercitationem omnis quos eaque totam pariatur. Autem quam a officiis rerum fuga aspernatur.",
+    "primaryAccountable": {
+      "name": "Cruickshank-Hodkiewicz"
+    }
+  }```
+
+**Economic Event**
+```{
+    "action": {
+      "label": "transfer"
+    },
+    "id": "01EVTV5RCD4JTJDYX5HKERJ5KP",
+    "note": "Earum placeat eveniet sint sint exercitationem ea? Sint libero perspiciatis ad et harum aliquid et minus. Natus reprehenderit asperiores sapiente quae.",
+    "provider": {
+      "id": "01EVTV5F0PHMH7R1J5A1QXEZM1",
+      "name": "Cruickshank-Hodkiewicz"
+    },
+    "receiver": {
+      "id": "01EVTV5F0PHMH7R1J5A1QXEZM1",
+      "name": "Cruickshank-Hodkiewicz"
+    },
+    "resourceInventoriedAs": {
+      "name": "Waters",
+      "note": "Consequatur facilis dignissimos cum dolores dolorem qui facere numquam. Ea quia recusandae tempora modi facilis blanditiis dolores. Deserunt quia qui facere eius soluta vel quo itaque vitae. Nesciunt blanditiis ea nihil incidunt."
+    },
+    "resourceQuantity": {
+      "hasNumericalValue": 0.5173676470814242,
+      "hasUnit": {
+        "label": "kilo"
+      }
+    }
+  }```
+
+**Process**
+
+```{
+  finished: false,
+  id: "01EVTV5F0PHMH7R1J5A1QXEZM1",
+  name: "A sample process",
+  note: "Description of a sample process",
+  inputs: [],
+  outputs: []
+}```
+
+
 ## Manage your inventory
 **[Read more about this usecase](/docs/create_and_manage_inventory)**
 
