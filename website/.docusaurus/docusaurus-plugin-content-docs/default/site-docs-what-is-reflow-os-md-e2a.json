@@ -1,0 +1,23 @@
+{
+  "unversionedId": "what_is_reflowOS",
+  "id": "what_is_reflowOS",
+  "isDocsHomePage": false,
+  "title": "The ReflowOS",
+  "description": "ReflowOS is an operating system for communities who want to create federated and secure economic networks to foster the creation and coordination of distributed value chains.",
+  "source": "@site/docs/what_is_reflowOS.md",
+  "sourceDirName": ".",
+  "slug": "/what_is_reflowOS",
+  "permalink": "/docs/what_is_reflowOS",
+  "version": "current",
+  "sidebar_label": "👋 Welcome",
+  "frontMatter": {
+    "id": "what_is_reflowOS",
+    "title": "The ReflowOS",
+    "sidebar_label": "👋 Welcome"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Architecture",
+    "permalink": "/docs/architecture"
+  }
+}

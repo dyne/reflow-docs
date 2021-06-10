@@ -1,0 +1,27 @@
+{
+  "unversionedId": "system_requirements",
+  "id": "system_requirements",
+  "isDocsHomePage": false,
+  "title": "System requirements",
+  "description": "Server",
+  "source": "@site/docs/system_requirements.md",
+  "sourceDirName": ".",
+  "slug": "/system_requirements",
+  "permalink": "/docs/system_requirements",
+  "version": "current",
+  "sidebar_label": "🔨 System requirements",
+  "frontMatter": {
+    "id": "system_requirements",
+    "title": "System requirements",
+    "sidebar_label": "🔨 System requirements"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Bugtracker",
+    "permalink": "/docs/bugtracker"
+  },
+  "next": {
+    "title": "Changelog",
+    "permalink": "/docs/changelog"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "unversionedId": "setup_a_network",
+  "id": "setup_a_network",
+  "isDocsHomePage": false,
+  "title": "How to set up a network",
+  "description": "-- TODO --",
+  "source": "@site/docs/setup_a_network.md",
+  "sourceDirName": ".",
+  "slug": "/setup_a_network",
+  "permalink": "/docs/setup_a_network",
+  "version": "current",
+  "sidebar_label": "Set up a network",
+  "frontMatter": {
+    "id": "setup_a_network",
+    "title": "How to set up a network",
+    "sidebar_label": "Set up a network"
+  }
+}

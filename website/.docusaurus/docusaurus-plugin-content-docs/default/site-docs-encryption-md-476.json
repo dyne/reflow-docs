@@ -1,0 +1,21 @@
+{
+  "unversionedId": "encryption",
+  "id": "encryption",
+  "isDocsHomePage": false,
+  "title": "Encryption",
+  "description": "-- TODO --",
+  "source": "@site/../docs/encryption.md",
+  "sourceDirName": ".",
+  "slug": "/encryption",
+  "permalink": "/docs/encryption",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "📝 Encryption",
+  "frontMatter": {
+    "id": "encryption",
+    "title": "Encryption",
+    "sidebar_label": "📝 Encryption"
+  }
+}

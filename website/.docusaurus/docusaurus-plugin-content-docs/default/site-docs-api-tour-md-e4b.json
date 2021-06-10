@@ -1,0 +1,30 @@
+{
+  "unversionedId": "api_tour",
+  "id": "api_tour",
+  "isDocsHomePage": false,
+  "title": "API Tour",
+  "description": "Here is a series of sample queries and mutations for the ZenPub client API (which uses GraphQL) that will be needed to achieve the use cases proposed in this manual.",
+  "source": "@site/../docs/api_tour.md",
+  "sourceDirName": ".",
+  "slug": "/api_tour",
+  "permalink": "/docs/api_tour",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "📕 API Tour",
+  "frontMatter": {
+    "id": "api_tour",
+    "title": "API Tour",
+    "sidebar_label": "📕 API Tour"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ValueFlows",
+    "permalink": "/docs/valueflows"
+  },
+  "next": {
+    "title": "Maintenance",
+    "permalink": "/docs/maintenance"
+  }
+}

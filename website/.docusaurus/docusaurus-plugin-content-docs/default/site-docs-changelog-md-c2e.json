@@ -1,0 +1,30 @@
+{
+  "unversionedId": "changelog",
+  "id": "changelog",
+  "isDocsHomePage": false,
+  "title": "Changelog",
+  "description": "All notable changes to this project will be documented in this file.",
+  "source": "@site/../docs/changelog.md",
+  "sourceDirName": ".",
+  "slug": "/changelog",
+  "permalink": "/docs/changelog",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "🕰️ Changelog",
+  "frontMatter": {
+    "id": "changelog",
+    "title": "Changelog",
+    "sidebar_label": "🕰️ Changelog"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "System requirements",
+    "permalink": "/docs/system_requirements"
+  },
+  "next": {
+    "title": "Usecases",
+    "permalink": "/docs/usecases"
+  }
+}

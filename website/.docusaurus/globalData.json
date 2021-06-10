@@ -1,0 +1,136 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "what_is_reflowOS",
+          "docs": [
+            {
+              "id": "api_tour",
+              "path": "/docs/api_tour",
+              "sidebar": "docs"
+            },
+            {
+              "id": "architecture",
+              "path": "/docs/architecture",
+              "sidebar": "docs"
+            },
+            {
+              "id": "bugtracker",
+              "path": "/docs/bugtracker",
+              "sidebar": "docs"
+            },
+            {
+              "id": "changelog",
+              "path": "/docs/changelog",
+              "sidebar": "docs"
+            },
+            {
+              "id": "components",
+              "path": "/docs/components",
+              "sidebar": "docs"
+            },
+            {
+              "id": "create_and_manage_inventory",
+              "path": "/docs/create_and_manage_inventory",
+              "sidebar": "docs"
+            },
+            {
+              "id": "decodeOS",
+              "path": "/docs/decodeOS"
+            },
+            {
+              "id": "define_the_network_sentiment",
+              "path": "/docs/define_the_network_sentiment",
+              "sidebar": "docs"
+            },
+            {
+              "id": "encryption",
+              "path": "/docs/encryption"
+            },
+            {
+              "id": "federation",
+              "path": "/docs/federation",
+              "sidebar": "docs"
+            },
+            {
+              "id": "first_steps",
+              "path": "/docs/first_steps",
+              "sidebar": "docs"
+            },
+            {
+              "id": "generate_a_material_passport",
+              "path": "/docs/generate_a_material_passport",
+              "sidebar": "docs"
+            },
+            {
+              "id": "glossary",
+              "path": "/docs/glossary",
+              "sidebar": "docs"
+            },
+            {
+              "id": "guides",
+              "path": "/docs/guides",
+              "sidebar": "docs"
+            },
+            {
+              "id": "install_a_reflowOS_node",
+              "path": "/docs/install_a_reflowOS_node",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance",
+              "path": "/docs/maintenance",
+              "sidebar": "docs"
+            },
+            {
+              "id": "setup_a_network",
+              "path": "/docs/setup_a_network"
+            },
+            {
+              "id": "system_requirements",
+              "path": "/docs/system_requirements",
+              "sidebar": "docs"
+            },
+            {
+              "id": "usecases",
+              "path": "/docs/usecases",
+              "sidebar": "docs"
+            },
+            {
+              "id": "value_networks",
+              "path": "/docs/value_networks"
+            },
+            {
+              "id": "valueflows",
+              "path": "/docs/valueflows",
+              "sidebar": "docs"
+            },
+            {
+              "id": "what_is_reflowOS",
+              "path": "/docs/what_is_reflowOS",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ZenPub",
+              "path": "/docs/ZenPub"
+            },
+            {
+              "id": "ZenPub-client",
+              "path": "/docs/ZenPub-client"
+            },
+            {
+              "id": "ZenRoom",
+              "path": "/docs/ZenRoom"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

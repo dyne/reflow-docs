@@ -1,0 +1,30 @@
+{
+  "unversionedId": "maintenance",
+  "id": "maintenance",
+  "isDocsHomePage": false,
+  "title": "Maintenance",
+  "description": "This page gives an overview of the currently supported and released versions as well as basic release scheduling.",
+  "source": "@site/../docs/maintenance.md",
+  "sourceDirName": ".",
+  "slug": "/maintenance",
+  "permalink": "/docs/maintenance",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "🌱 Maintenance",
+  "frontMatter": {
+    "id": "maintenance",
+    "title": "Maintenance",
+    "sidebar_label": "🌱 Maintenance"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "API Tour",
+    "permalink": "/docs/api_tour"
+  },
+  "next": {
+    "title": "Bugtracker",
+    "permalink": "/docs/bugtracker"
+  }
+}

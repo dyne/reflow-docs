@@ -1,0 +1,27 @@
+{
+  "unversionedId": "generate_a_material_passport",
+  "id": "generate_a_material_passport",
+  "isDocsHomePage": false,
+  "title": "Scenario: Material passport",
+  "description": "The material passport (MP) gives us meaningful insights about the genealogy of a specific product.",
+  "source": "@site/docs/generate_a_material_passport.md",
+  "sourceDirName": ".",
+  "slug": "/generate_a_material_passport",
+  "permalink": "/docs/generate_a_material_passport",
+  "version": "current",
+  "sidebar_label": "📖 Generate a material passport",
+  "frontMatter": {
+    "id": "generate_a_material_passport",
+    "title": "Scenario: Material passport",
+    "sidebar_label": "📖 Generate a material passport"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Network sentiment analysis",
+    "permalink": "/docs/define_the_network_sentiment"
+  },
+  "next": {
+    "title": "Create and manage your public inventory",
+    "permalink": "/docs/create_and_manage_inventory"
+  }
+}

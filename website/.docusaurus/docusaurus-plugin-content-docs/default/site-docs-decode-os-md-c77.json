@@ -1,0 +1,18 @@
+{
+  "unversionedId": "decodeOS",
+  "id": "decodeOS",
+  "isDocsHomePage": false,
+  "title": "DecodeOS",
+  "description": "Operating System for Private and Anonymous Computation Clusters",
+  "source": "@site/docs/decodeOS.md",
+  "sourceDirName": ".",
+  "slug": "/decodeOS",
+  "permalink": "/docs/decodeOS",
+  "version": "current",
+  "sidebar_label": "🧩 DecodeOS",
+  "frontMatter": {
+    "id": "decodeOS",
+    "title": "DecodeOS",
+    "sidebar_label": "🧩 DecodeOS"
+  }
+}

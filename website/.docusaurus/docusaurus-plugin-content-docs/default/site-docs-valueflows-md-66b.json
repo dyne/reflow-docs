@@ -1,0 +1,30 @@
+{
+  "unversionedId": "valueflows",
+  "id": "valueflows",
+  "isDocsHomePage": false,
+  "title": "ValueFlows",
+  "description": "A vocabulary for the distributed economic networks of the next economy",
+  "source": "@site/../docs/valueflows.md",
+  "sourceDirName": ".",
+  "slug": "/valueflows",
+  "permalink": "/docs/valueflows",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "🥮 ValueFlows",
+  "frontMatter": {
+    "title": "ValueFlows",
+    "id": "valueflows",
+    "sidebar_label": "🥮 ValueFlows"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Federation",
+    "permalink": "/docs/federation"
+  },
+  "next": {
+    "title": "API Tour",
+    "permalink": "/docs/api_tour"
+  }
+}

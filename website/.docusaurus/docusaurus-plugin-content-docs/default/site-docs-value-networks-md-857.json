@@ -1,0 +1,13 @@
+{
+  "unversionedId": "value_networks",
+  "id": "value_networks",
+  "isDocsHomePage": false,
+  "title": "value_networks",
+  "description": "id: value_networks",
+  "source": "@site/docs/value_networks.md",
+  "sourceDirName": ".",
+  "slug": "/value_networks",
+  "permalink": "/docs/value_networks",
+  "version": "current",
+  "frontMatter": {}
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "install_a_reflowOS_node",
+  "id": "install_a_reflowOS_node",
+  "isDocsHomePage": false,
+  "title": "Backend Configuration and Deployment",
+  "description": "These instructions are for setting up the *backend* alone in production. You probably want to start with the following two guides, and only refer back to this document for some more advanced things you might not find in those guides.",
+  "source": "@site/../docs/install_a_reflowOS_node.md",
+  "sourceDirName": ".",
+  "slug": "/install_a_reflowOS_node",
+  "permalink": "/docs/install_a_reflowOS_node",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "💾 Install an instance",
+  "frontMatter": {
+    "id": "install_a_reflowOS_node",
+    "title": "How to install a reflowOS instance",
+    "sidebar_label": "💾 Install an instance"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Guides",
+    "permalink": "/docs/guides"
+  },
+  "next": {
+    "title": "How to start using and populating the network",
+    "permalink": "/docs/first_steps"
+  }
+}

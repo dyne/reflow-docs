@@ -1,0 +1,110 @@
+{
+  "/-deb": {
+    "component": "c4f5d8e4",
+    "config": "5e9f5e1a"
+  },
+  "/docs-93e": {
+    "component": "1be78505",
+    "versionMetadata": "935f2afb"
+  },
+  "/docs/api_tour-342": {
+    "component": "17896441",
+    "content": "85f969dd"
+  },
+  "/docs/architecture-54f": {
+    "component": "17896441",
+    "content": "5281b7a2"
+  },
+  "/docs/bugtracker-7f8": {
+    "component": "17896441",
+    "content": "9d1d6a4f"
+  },
+  "/docs/changelog-b16": {
+    "component": "17896441",
+    "content": "9beb87c2"
+  },
+  "/docs/components-0b0": {
+    "component": "17896441",
+    "content": "1f7c204c"
+  },
+  "/docs/create_and_manage_inventory-cd3": {
+    "component": "17896441",
+    "content": "cde19471"
+  },
+  "/docs/decodeOS-8ea": {
+    "component": "17896441",
+    "content": "c770cbce"
+  },
+  "/docs/define_the_network_sentiment-c6f": {
+    "component": "17896441",
+    "content": "a83e742c"
+  },
+  "/docs/encryption-f14": {
+    "component": "17896441",
+    "content": "045bd6f5"
+  },
+  "/docs/federation-6e6": {
+    "component": "17896441",
+    "content": "960abe3a"
+  },
+  "/docs/first_steps-98c": {
+    "component": "17896441",
+    "content": "6d5e3dfe"
+  },
+  "/docs/generate_a_material_passport-044": {
+    "component": "17896441",
+    "content": "433fe67a"
+  },
+  "/docs/glossary-65f": {
+    "component": "17896441",
+    "content": "e747ec83"
+  },
+  "/docs/guides-38b": {
+    "component": "17896441",
+    "content": "d7b8612d"
+  },
+  "/docs/install_a_reflowOS_node-32e": {
+    "component": "17896441",
+    "content": "49572ee5"
+  },
+  "/docs/maintenance-a97": {
+    "component": "17896441",
+    "content": "8da24fa5"
+  },
+  "/docs/setup_a_network-7d7": {
+    "component": "17896441",
+    "content": "37d76f43"
+  },
+  "/docs/system_requirements-cda": {
+    "component": "17896441",
+    "content": "1583d938"
+  },
+  "/docs/usecases-2eb": {
+    "component": "17896441",
+    "content": "274771d6"
+  },
+  "/docs/value_networks-0cc": {
+    "component": "17896441",
+    "content": "857073f9"
+  },
+  "/docs/valueflows-0f5": {
+    "component": "17896441",
+    "content": "88fe4ea4"
+  },
+  "/docs/what_is_reflowOS-bfe": {
+    "component": "17896441",
+    "content": "e2a909d7"
+  },
+  "/docs/ZenPub-8ae": {
+    "component": "17896441",
+    "content": "31e3aa6b"
+  },
+  "/docs/ZenPub-client-64c": {
+    "component": "17896441",
+    "content": "5335d0e6"
+  },
+  "/docs/ZenRoom-00a": {
+    "component": "17896441",
+    "content": "dab8ec4d"
+  }
+}

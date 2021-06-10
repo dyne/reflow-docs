@@ -1,0 +1,28 @@
+{
+  "docs": {
+    "Getting started": [
+      "what_is_reflowOS", 
+      "architecture",
+      "federation",
+      "valueflows",
+      "api_tour",
+      "maintenance",
+      "bugtracker",
+      "system_requirements",
+      "changelog"
+    ],
+    "Usecases": [
+      "usecases",
+      "define_the_network_sentiment",
+      "generate_a_material_passport",
+      "create_and_manage_inventory"
+    ],
+    "Guides": [
+      "guides",
+      "install_a_reflowOS_node", 
+      "first_steps",
+      "components",
+      "glossary"
+    ]
+  }
+}

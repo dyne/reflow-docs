@@ -1,0 +1,27 @@
+{
+  "unversionedId": "components",
+  "id": "components",
+  "isDocsHomePage": false,
+  "title": "Components",
+  "description": "Server backend",
+  "source": "@site/docs/components.md",
+  "sourceDirName": ".",
+  "slug": "/components",
+  "permalink": "/docs/components",
+  "version": "current",
+  "sidebar_label": "🧩 Components",
+  "frontMatter": {
+    "id": "components",
+    "title": "Components",
+    "sidebar_label": "🧩 Components"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "How to start using and populating the network",
+    "permalink": "/docs/first_steps"
+  },
+  "next": {
+    "title": "Glossary",
+    "permalink": "/docs/glossary"
+  }
+}

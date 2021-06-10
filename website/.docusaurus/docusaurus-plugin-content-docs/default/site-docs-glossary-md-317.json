@@ -1,0 +1,26 @@
+{
+  "unversionedId": "glossary",
+  "id": "glossary",
+  "isDocsHomePage": false,
+  "title": "Glossary",
+  "description": "Glossary",
+  "source": "@site/../docs/glossary.md",
+  "sourceDirName": ".",
+  "slug": "/glossary",
+  "permalink": "/docs/glossary",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "❓ Glossary",
+  "frontMatter": {
+    "id": "glossary",
+    "title": "Glossary",
+    "sidebar_label": "❓ Glossary"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Components",
+    "permalink": "/docs/components"
+  }
+}

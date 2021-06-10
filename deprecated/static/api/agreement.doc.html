@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
+    <title>Agreement</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
+</head>
+<body class="slds-scrollable--y">
+    <nav class="slds-grid slds-grid--vertical slds-col--rule-right">
+        <header class="slds-p-around--medium slds-col slds-shrik slds-grow-none">
+            <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
+                <i class="material-icons">close</i>
+            </button>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
+            <div class="slds-p-top--small">
+                <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
+            </div>
+        </header>
+        <div id="navication-scroll" class="slds-scrollable--y slds-col slds-grow">
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Schema</h4>
+    <ul>
+        <li  title="RootQueryType">
+            <a href="rootquerytype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RootQueryType
+            </a>
+        </li>
+        <li  title="RootMutationType">
+            <a href="rootmutationtype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RootMutationType
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Scalars</h4>
+    <ul>
+        <li  title="Boolean">
+            <a href="boolean.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Boolean
+            </a>
+        </li>
+        <li  title="Cursor">
+            <a href="cursor.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Cursor
+            </a>
+        </li>
+        <li  title="DateTime">
+            <a href="datetime.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DateTime
+            </a>
+        </li>
+        <li  title="Float">
+            <a href="float.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Float
+            </a>
+        </li>
+        <li  title="ID">
+            <a href="id.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ID
+            </a>
+        </li>
+        <li  title="Int">
+            <a href="int.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Int
+            </a>
+        </li>
+        <li  title="Json">
+            <a href="json.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Json
+            </a>
+        </li>
+        <li  title="String">
+            <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                String
+            </a>
+        </li>
+        <li  title="Upload">
+            <a href="upload.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Upload
+            </a>
+        </li>
+        <li  title="URI">
+            <a href="uri.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                URI
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Enums</h4>
+    <ul>
+        <li  title="ActivityVerb">
+            <a href="activityverb.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ActivityVerb
+            </a>
+        </li>
+        <li  title="AgentType">
+            <a href="agenttype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AgentType
+            </a>
+        </li>
+        <li  title="TimeUnit">
+            <a href="timeunit.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TimeUnit
+            </a>
+        </li>
+        <li  title="__DirectiveLocation">
+            <a href="directivelocation.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __DirectiveLocation
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Interfaces</h4>
+    <ul>
+        <li  title="Agent">
+            <a href="agent.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Agent
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
+    <ul>
+        <li  title="AccountingScope">
+            <a href="accountingscope.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AccountingScope
+            </a>
+        </li>
+        <li  title="AnyContext">
+            <a href="anycontext.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AnyContext
+            </a>
+        </li>
+        <li  title="EventOrCommitment">
+            <a href="eventorcommitment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EventOrCommitment
+            </a>
+        </li>
+        <li  title="ProductionFlowItem">
+            <a href="productionflowitem.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductionFlowItem
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
+    <ul>
+        <li  title="Action">
+            <a href="action.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Action
+            </a>
+        </li>
+        <li  title="ActivitiesPage">
+            <a href="activitiespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ActivitiesPage
+            </a>
+        </li>
+        <li  title="Activity">
+            <a href="activity.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Activity
+            </a>
+        </li>
+        <li  title="AgentRelationship">
+            <a href="agentrelationship.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AgentRelationship
+            </a>
+        </li>
+        <li  title="AgentRelationshipRole">
+            <a href="agentrelationshiprole.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AgentRelationshipRole
+            </a>
+        </li>
+        <li  title="AgentsPage">
+            <a href="agentspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AgentsPage
+            </a>
+        </li>
+        <li class="slds-is-active" title="Agreement">
+            <a href="agreement.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Agreement
+            </a>
+        </li>
+        <li  title="Appreciation">
+            <a href="appreciation.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Appreciation
+            </a>
+        </li>
+        <li  title="AuthPayload">
+            <a href="authpayload.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AuthPayload
+            </a>
+        </li>
+        <li  title="CategoriesPage">
+            <a href="categoriespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CategoriesPage
+            </a>
+        </li>
+        <li  title="Category">
+            <a href="category.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Category
+            </a>
+        </li>
+        <li  title="Character">
+            <a href="character.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Character
+            </a>
+        </li>
+        <li  title="CharactersPage">
+            <a href="characterspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CharactersPage
+            </a>
+        </li>
+        <li  title="Comment">
+            <a href="comment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Comment
+            </a>
+        </li>
+        <li  title="CommentsPage">
+            <a href="commentspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CommentsPage
+            </a>
+        </li>
+        <li  title="Commitment">
+            <a href="commitment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Commitment
+            </a>
+        </li>
+        <li  title="CommunitiesPage">
+            <a href="communitiespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CommunitiesPage
+            </a>
+        </li>
+        <li  title="Community">
+            <a href="community.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Community
+            </a>
+        </li>
+        <li  title="Content">
+            <a href="content.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Content
+            </a>
+        </li>
+        <li  title="ContentMirror">
+            <a href="contentmirror.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ContentMirror
+            </a>
+        </li>
+        <li  title="ContentUpload">
+            <a href="contentupload.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ContentUpload
+            </a>
+        </li>
+        <li  title="CountriesPages">
+            <a href="countriespages.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CountriesPages
+            </a>
+        </li>
+        <li  title="Country">
+            <a href="country.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Country
+            </a>
+        </li>
+        <li  title="Duration">
+            <a href="duration.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Duration
+            </a>
+        </li>
+        <li  title="EconomicEvent">
+            <a href="economicevent.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicEvent
+            </a>
+        </li>
+        <li  title="EconomicEventResponse">
+            <a href="economiceventresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicEventResponse
+            </a>
+        </li>
+        <li  title="EconomicResource">
+            <a href="economicresource.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicResource
+            </a>
+        </li>
+        <li  title="EconomicResourceResponse">
+            <a href="economicresourceresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicResourceResponse
+            </a>
+        </li>
+        <li  title="FileIntrinsics">
+            <a href="fileintrinsics.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FileIntrinsics
+            </a>
+        </li>
+        <li  title="FileMetadata">
+            <a href="filemetadata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FileMetadata
+            </a>
+        </li>
+        <li  title="Flag">
+            <a href="flag.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Flag
+            </a>
+        </li>
+        <li  title="FlagsPage">
+            <a href="flagspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FlagsPage
+            </a>
+        </li>
+        <li  title="Follow">
+            <a href="follow.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Follow
+            </a>
+        </li>
+        <li  title="FollowsPage">
+            <a href="followspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FollowsPage
+            </a>
+        </li>
+        <li  title="Fulfillment">
+            <a href="fulfillment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Fulfillment
+            </a>
+        </li>
+        <li  title="Instance">
+            <a href="instance.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Instance
+            </a>
+        </li>
+        <li  title="Intent">
+            <a href="intent.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Intent
+            </a>
+        </li>
+        <li  title="IntentResponse">
+            <a href="intentresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                IntentResponse
+            </a>
+        </li>
+        <li  title="IntentsPage">
+            <a href="intentspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                IntentsPage
+            </a>
+        </li>
+        <li  title="Language">
+            <a href="language.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Language
+            </a>
+        </li>
+        <li  title="LanguagesPage">
+            <a href="languagespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                LanguagesPage
+            </a>
+        </li>
+        <li  title="Like">
+            <a href="like.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Like
+            </a>
+        </li>
+        <li  title="LikesPage">
+            <a href="likespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                LikesPage
+            </a>
+        </li>
+        <li  title="Me">
+            <a href="me.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Me
+            </a>
+        </li>
+        <li  title="Measure">
+            <a href="measure.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Measure
+            </a>
+        </li>
+        <li  title="MeasuresPage">
+            <a href="measurespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                MeasuresPage
+            </a>
+        </li>
+        <li  title="Organisation">
+            <a href="organisation.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Organisation
+            </a>
+        </li>
+        <li  title="OrganisationsPage">
+            <a href="organisationspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                OrganisationsPage
+            </a>
+        </li>
+        <li  title="Organization">
+            <a href="organization.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Organization
+            </a>
+        </li>
+        <li  title="OrganizationResponse">
+            <a href="organizationresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                OrganizationResponse
+            </a>
+        </li>
+        <li  title="PageInfo">
+            <a href="pageinfo.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PageInfo
+            </a>
+        </li>
+        <li  title="Person">
+            <a href="person.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Person
+            </a>
+        </li>
+        <li  title="PersonResponse">
+            <a href="personresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PersonResponse
+            </a>
+        </li>
+        <li  title="Plan">
+            <a href="plan.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Plan
+            </a>
+        </li>
+        <li  title="Process">
+            <a href="process.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Process
+            </a>
+        </li>
+        <li  title="ProcessResponse">
+            <a href="processresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProcessResponse
+            </a>
+        </li>
+        <li  title="ProcessSpecification">
+            <a href="processspecification.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProcessSpecification
+            </a>
+        </li>
+        <li  title="ProcessSpecificationResponse">
+            <a href="processspecificationresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProcessSpecificationResponse
+            </a>
+        </li>
+        <li  title="ProductBatch">
+            <a href="productbatch.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProductBatch
+            </a>
+        </li>
+        <li  title="Profile">
+            <a href="profile.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Profile
+            </a>
+        </li>
+        <li  title="ProfilesPage">
+            <a href="profilespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProfilesPage
+            </a>
+        </li>
+        <li  title="Proposal">
+            <a href="proposal.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Proposal
+            </a>
+        </li>
+        <li  title="ProposalResponse">
+            <a href="proposalresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposalResponse
+            </a>
+        </li>
+        <li  title="ProposalsPage">
+            <a href="proposalspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposalsPage
+            </a>
+        </li>
+        <li  title="ProposedIntent">
+            <a href="proposedintent.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposedIntent
+            </a>
+        </li>
+        <li  title="ProposedIntentResponse">
+            <a href="proposedintentresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposedIntentResponse
+            </a>
+        </li>
+        <li  title="ProposedTo">
+            <a href="proposedto.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposedTo
+            </a>
+        </li>
+        <li  title="ProposedToResponse">
+            <a href="proposedtoresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposedToResponse
+            </a>
+        </li>
+        <li  title="RegisterEmailAccess">
+            <a href="registeremailaccess.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RegisterEmailAccess
+            </a>
+        </li>
+        <li  title="RegisterEmailAccessesPage">
+            <a href="registeremailaccessespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RegisterEmailAccessesPage
+            </a>
+        </li>
+        <li  title="RegisterEmailDomainAccess">
+            <a href="registeremaildomainaccess.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RegisterEmailDomainAccess
+            </a>
+        </li>
+        <li  title="RegisterEmailDomainAccessesPage">
+            <a href="registeremaildomainaccessespage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RegisterEmailDomainAccessesPage
+            </a>
+        </li>
+        <li  title="ResourceSpecification">
+            <a href="resourcespecification.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ResourceSpecification
+            </a>
+        </li>
+        <li  title="ResourceSpecificationResponse">
+            <a href="resourcespecificationresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ResourceSpecificationResponse
+            </a>
+        </li>
+        <li  title="Satisfaction">
+            <a href="satisfaction.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Satisfaction
+            </a>
+        </li>
+        <li  title="Scenario">
+            <a href="scenario.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Scenario
+            </a>
+        </li>
+        <li  title="ScenarioDefinition">
+            <a href="scenariodefinition.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ScenarioDefinition
+            </a>
+        </li>
+        <li  title="SearchFollow">
+            <a href="searchfollow.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SearchFollow
+            </a>
+        </li>
+        <li  title="SpatialThing">
+            <a href="spatialthing.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SpatialThing
+            </a>
+        </li>
+        <li  title="SpatialThingResponse">
+            <a href="spatialthingresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SpatialThingResponse
+            </a>
+        </li>
+        <li  title="SpatialThingsPage">
+            <a href="spatialthingspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SpatialThingsPage
+            </a>
+        </li>
+        <li  title="Taggable">
+            <a href="taggable.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Taggable
+            </a>
+        </li>
+        <li  title="TaxonomyTag">
+            <a href="taxonomytag.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TaxonomyTag
+            </a>
+        </li>
+        <li  title="TaxonomyTagsPage">
+            <a href="taxonomytagspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TaxonomyTagsPage
+            </a>
+        </li>
+        <li  title="Thread">
+            <a href="thread.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Thread
+            </a>
+        </li>
+        <li  title="ThreadsPage">
+            <a href="threadspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ThreadsPage
+            </a>
+        </li>
+        <li  title="Unit">
+            <a href="unit.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Unit
+            </a>
+        </li>
+        <li  title="UnitResponse">
+            <a href="unitresponse.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UnitResponse
+            </a>
+        </li>
+        <li  title="UnitsPage">
+            <a href="unitspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UnitsPage
+            </a>
+        </li>
+        <li  title="User">
+            <a href="user.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                User
+            </a>
+        </li>
+        <li  title="UsersPage">
+            <a href="userspage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UsersPage
+            </a>
+        </li>
+        <li  title="WebMetadata">
+            <a href="webmetadata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                WebMetadata
+            </a>
+        </li>
+        <li  title="__Directive">
+            <a href="directive.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Directive
+            </a>
+        </li>
+        <li  title="__EnumValue">
+            <a href="enumvalue.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __EnumValue
+            </a>
+        </li>
+        <li  title="__Field">
+            <a href="field.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Field
+            </a>
+        </li>
+        <li  title="__InputValue">
+            <a href="inputvalue.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __InputValue
+            </a>
+        </li>
+        <li  title="__Schema">
+            <a href="schema.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Schema
+            </a>
+        </li>
+        <li  title="__Type">
+            <a href="type.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Type
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Input Objects</h4>
+    <ul>
+        <li  title="agentCommitmentSearchParams">
+            <a href="agentcommitmentsearchparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                agentCommitmentSearchParams
+            </a>
+        </li>
+        <li  title="AgentCreateParams">
+            <a href="agentcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AgentCreateParams
+            </a>
+        </li>
+        <li  title="agentEventSearchParams">
+            <a href="agenteventsearchparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                agentEventSearchParams
+            </a>
+        </li>
+        <li  title="agentIntentSearchParams">
+            <a href="agentintentsearchparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                agentIntentSearchParams
+            </a>
+        </li>
+        <li  title="agentPlanSearchParams">
+            <a href="agentplansearchparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                agentPlanSearchParams
+            </a>
+        </li>
+        <li  title="agentProcessSearchParams">
+            <a href="agentprocesssearchparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                agentProcessSearchParams
+            </a>
+        </li>
+        <li  title="agentResourceSearchParams">
+            <a href="agentresourcesearchparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                agentResourceSearchParams
+            </a>
+        </li>
+        <li  title="AgentUpdateParams">
+            <a href="agentupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AgentUpdateParams
+            </a>
+        </li>
+        <li  title="CategoryInput">
+            <a href="categoryinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CategoryInput
+            </a>
+        </li>
+        <li  title="CharacterInput">
+            <a href="characterinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CharacterInput
+            </a>
+        </li>
+        <li  title="CommentInput">
+            <a href="commentinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CommentInput
+            </a>
+        </li>
+        <li  title="CommunityInput">
+            <a href="communityinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CommunityInput
+            </a>
+        </li>
+        <li  title="CommunityUpdateInput">
+            <a href="communityupdateinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CommunityUpdateInput
+            </a>
+        </li>
+        <li  title="EconomicEventCreateParams">
+            <a href="economiceventcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicEventCreateParams
+            </a>
+        </li>
+        <li  title="EconomicEventUpdateParams">
+            <a href="economiceventupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicEventUpdateParams
+            </a>
+        </li>
+        <li  title="EconomicResourceCreateParams">
+            <a href="economicresourcecreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicResourceCreateParams
+            </a>
+        </li>
+        <li  title="EconomicResourceUpdateParams">
+            <a href="economicresourceupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EconomicResourceUpdateParams
+            </a>
+        </li>
+        <li  title="GeolocationDistance">
+            <a href="geolocationdistance.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GeolocationDistance
+            </a>
+        </li>
+        <li  title="GeolocationFilters">
+            <a href="geolocationfilters.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GeolocationFilters
+            </a>
+        </li>
+        <li  title="GeolocationPoint">
+            <a href="geolocationpoint.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GeolocationPoint
+            </a>
+        </li>
+        <li  title="IMeasure">
+            <a href="imeasure.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                IMeasure
+            </a>
+        </li>
+        <li  title="IntentCreateParams">
+            <a href="intentcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                IntentCreateParams
+            </a>
+        </li>
+        <li  title="IntentUpdateParams">
+            <a href="intentupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                IntentUpdateParams
+            </a>
+        </li>
+        <li  title="OrganisationInput">
+            <a href="organisationinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                OrganisationInput
+            </a>
+        </li>
+        <li  title="OrganisationUpdateInput">
+            <a href="organisationupdateinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                OrganisationUpdateInput
+            </a>
+        </li>
+        <li  title="planProcessSearchParams">
+            <a href="planprocesssearchparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                planProcessSearchParams
+            </a>
+        </li>
+        <li  title="ProcessCreateParams">
+            <a href="processcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProcessCreateParams
+            </a>
+        </li>
+        <li  title="ProcessSpecificationCreateParams">
+            <a href="processspecificationcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProcessSpecificationCreateParams
+            </a>
+        </li>
+        <li  title="ProcessSpecificationUpdateParams">
+            <a href="processspecificationupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProcessSpecificationUpdateParams
+            </a>
+        </li>
+        <li  title="ProcessUpdateParams">
+            <a href="processupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProcessUpdateParams
+            </a>
+        </li>
+        <li  title="ProfileInput">
+            <a href="profileinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProfileInput
+            </a>
+        </li>
+        <li  title="ProposalCreateParams">
+            <a href="proposalcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposalCreateParams
+            </a>
+        </li>
+        <li  title="ProposalUpdateParams">
+            <a href="proposalupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ProposalUpdateParams
+            </a>
+        </li>
+        <li  title="RegistrationInput">
+            <a href="registrationinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RegistrationInput
+            </a>
+        </li>
+        <li  title="ResourceSpecificationCreateParams">
+            <a href="resourcespecificationcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ResourceSpecificationCreateParams
+            </a>
+        </li>
+        <li  title="ResourceSpecificationUpdateParams">
+            <a href="resourcespecificationupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ResourceSpecificationUpdateParams
+            </a>
+        </li>
+        <li  title="SpatialThingCreateParams">
+            <a href="spatialthingcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SpatialThingCreateParams
+            </a>
+        </li>
+        <li  title="SpatialThingUpdateParams">
+            <a href="spatialthingupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SpatialThingUpdateParams
+            </a>
+        </li>
+        <li  title="UnitCreateParams">
+            <a href="unitcreateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UnitCreateParams
+            </a>
+        </li>
+        <li  title="UnitUpdateParams">
+            <a href="unitupdateparams.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UnitUpdateParams
+            </a>
+        </li>
+        <li  title="UpdateProfileInput">
+            <a href="updateprofileinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UpdateProfileInput
+            </a>
+        </li>
+        <li  title="UploadInput">
+            <a href="uploadinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UploadInput
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
+    <ul>
+        <li  title="include">
+            <a href="include.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                include
+            </a>
+        </li>
+        <li  title="skip">
+            <a href="skip.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                skip
+            </a>
+        </li>
+    </ul>
+</div>
+        </div>
+    </nav>
+    <main><section class="title slds-theme--inverse">
+    <div class="container slds-grid">
+        <div>
+        <button class="slds-button js-toggle-navigation less-than-medium">
+            <i class="material-icons slds-button__icon slds-button__icon--left">menu</i>
+            <span class="slds-text-title--caps">Types<span>
+        </button>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">Agreement</h1>
+        <div class="slds-text-body--regular"><p>Any type of agreement among economic agents.</p>
+</div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 id="graphql-schema-definition" class="graphdoc-section__title slds-text-heading--medium slds-m-top--small">
+            <a href="#graphql-schema-definition">
+                <i class="material-icons">link</i>
+            </a>
+            GraphQL Schema definition
+        </h2>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Agreement</span> {</li><li></li><li><span class="tab"><span class="meta">commitments</span>: [<a class="support type" href="commitment.doc.html">Commitment</a>!] </span></li><li></li><li><span class="tab"><span class="comment line">#   The date and time the agreement was created.</span></span></li><li><span class="tab"><span class="meta">created</span>: <a class="support type" href="datetime.doc.html">DateTime</a> </span></li><li></li><li><span class="tab"><span class="meta">economicEvents</span>: [<a class="support type" href="economicevent.doc.html">EconomicEvent</a>!] </span></li><li></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="meta">involvedAgents</span>: [<a class="support type" href="agent.doc.html">Agent</a>!] </span></li><li></li><li><span class="tab"><span class="comment line">#   An informal or formal textual identifier for an agreement. Does not imply </span></span></li><li><span class="tab"><span class="comment line">#   uniqueness.</span></span></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   A textual description or comment.</span></span></li><li><span class="tab"><span class="meta">note</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 id="require-by" class="graphdoc-section__title slds-text-heading--medium slds-m-top--small">
+            <a href="#require-by">
+                <i class="material-icons">link</i>
+            </a>
+            Require by
+        </h2>
+        <ul class="require-by"><li><a href="commitment.doc.html" title="Commitment - A planned economic flow that has been promised by an agent to another agent.">Commitment<em>A planned economic flow that has been promised by an agent to another agent.</em></a><li><li><a href="economicevent.doc.html" title="EconomicEvent - An observed economic flow, as opposed to a flow planned to happen in the future.
+This could reflect a change in the quantity of an economic resource. It is also
+defined by its behavior in relation to the economic resource (see `Action`)">EconomicEvent<em>An observed economic flow, as opposed to a flow planned to happen in the future.
+This could reflect a change in the quantity of an economic resource. It is also
+defined by its behavior in relation to the economic resource (see `Action`)</em></a><li></ul>
+    </div>
+</section>
+<footer>
+<div class="container slds-p-around--large">
+    <p class="slds-text-align--right slds-text-title--caps">
+        Generated with <a href="https://github.com/2fd/graphdoc#readme" target="_blank">graphdoc 2.4.0</a>
+    </p>
+</div>
+</footer>
+</main>
+    <script src="./scripts/focus-active.js"></script>
+    <script src="./scripts/filter-types.js"></script>
+    <script src="./scripts/toggle-navigation.js"></script>
+</body>

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "first_steps",
+  "id": "first_steps",
+  "isDocsHomePage": false,
+  "title": "How to start using and populating the network",
+  "description": "The OS is the entry point to interact with such network, which can be private and permissioned - leveraging TOR to anonymise all the data flows - or open and public, giving the possibility to any user to start a node and participate on the web.",
+  "source": "@site/docs/first_step.md",
+  "sourceDirName": ".",
+  "slug": "/first_steps",
+  "permalink": "/docs/first_steps",
+  "version": "current",
+  "sidebar_label": "🐇 Start using the network",
+  "frontMatter": {
+    "id": "first_steps",
+    "title": "How to start using and populating the network",
+    "sidebar_label": "🐇 Start using the network"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Backend Configuration and Deployment",
+    "permalink": "/docs/install_a_reflowOS_node"
+  },
+  "next": {
+    "title": "Components",
+    "permalink": "/docs/components"
+  }
+}

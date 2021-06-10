@@ -1,0 +1,30 @@
+{
+  "unversionedId": "usecases",
+  "id": "usecases",
+  "isDocsHomePage": false,
+  "title": "Usecases",
+  "description": "PLANNING AN ECONOMY, MORE THAN JUST MAPS AND EXCHANGES",
+  "source": "@site/../docs/usecases.md",
+  "sourceDirName": ".",
+  "slug": "/usecases",
+  "permalink": "/docs/usecases",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "🧭 Usecases",
+  "frontMatter": {
+    "id": "usecases",
+    "title": "Usecases",
+    "sidebar_label": "🧭 Usecases"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Changelog",
+    "permalink": "/docs/changelog"
+  },
+  "next": {
+    "title": "Network sentiment analysis",
+    "permalink": "/docs/define_the_network_sentiment"
+  }
+}

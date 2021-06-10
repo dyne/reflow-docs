@@ -1,0 +1,30 @@
+{
+  "unversionedId": "guides",
+  "id": "guides",
+  "isDocsHomePage": false,
+  "title": "Guides",
+  "description": "In the following section, we will guide you through the installation and setup of your economic network.",
+  "source": "@site/../docs/guides.md",
+  "sourceDirName": ".",
+  "slug": "/guides",
+  "permalink": "/docs/guides",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "📖 Guides",
+  "frontMatter": {
+    "id": "guides",
+    "title": "Guides",
+    "sidebar_label": "📖 Guides"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Create and manage your public inventory",
+    "permalink": "/docs/create_and_manage_inventory"
+  },
+  "next": {
+    "title": "Backend Configuration and Deployment",
+    "permalink": "/docs/install_a_reflowOS_node"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "architecture",
+  "id": "architecture",
+  "isDocsHomePage": false,
+  "title": "Architecture",
+  "description": "Reflow is a decentralised network",
+  "source": "@site/docs/architecture.md",
+  "sourceDirName": ".",
+  "slug": "/architecture",
+  "permalink": "/docs/architecture",
+  "version": "current",
+  "sidebar_label": "🔩 Architecture",
+  "frontMatter": {
+    "id": "architecture",
+    "title": "Architecture",
+    "sidebar_label": "🔩 Architecture"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "The ReflowOS",
+    "permalink": "/docs/what_is_reflowOS"
+  },
+  "next": {
+    "title": "Federation",
+    "permalink": "/docs/federation"
+  }
+}

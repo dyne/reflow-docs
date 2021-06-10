@@ -1,0 +1,27 @@
+{
+  "unversionedId": "bugtracker",
+  "id": "bugtracker",
+  "isDocsHomePage": false,
+  "title": "Bugtracker",
+  "description": "Thank you for helping ReflowOS by reporting bugs. Before submitting an issue, please ensure you are reporting the bug in the correct repository.",
+  "source": "@site/docs/bugtracker.md",
+  "sourceDirName": ".",
+  "slug": "/bugtracker",
+  "permalink": "/docs/bugtracker",
+  "version": "current",
+  "sidebar_label": "📕 Bugtracker",
+  "frontMatter": {
+    "id": "bugtracker",
+    "title": "Bugtracker",
+    "sidebar_label": "📕 Bugtracker"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Maintenance",
+    "permalink": "/docs/maintenance"
+  },
+  "next": {
+    "title": "System requirements",
+    "permalink": "/docs/system_requirements"
+  }
+}

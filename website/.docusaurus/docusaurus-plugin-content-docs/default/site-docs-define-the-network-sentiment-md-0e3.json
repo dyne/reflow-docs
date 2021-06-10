@@ -1,0 +1,30 @@
+{
+  "unversionedId": "define_the_network_sentiment",
+  "id": "define_the_network_sentiment",
+  "isDocsHomePage": false,
+  "title": "Network sentiment analysis",
+  "description": "Defining the network sentiment is a practice that allows participants to choose different lenses to observe a network and the data produced, and which constraints, shades, angles, aspects to highlight. This helps building more solid and data-driven assumptions.",
+  "source": "@site/../docs/define_the_network_sentiment.md",
+  "sourceDirName": ".",
+  "slug": "/define_the_network_sentiment",
+  "permalink": "/docs/define_the_network_sentiment",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "sidebar_label": "😸 Define the network sentiment",
+  "frontMatter": {
+    "id": "define_the_network_sentiment",
+    "title": "Network sentiment analysis",
+    "sidebar_label": "😸 Define the network sentiment"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Usecases",
+    "permalink": "/docs/usecases"
+  },
+  "next": {
+    "title": "Scenario: Material passport",
+    "permalink": "/docs/generate_a_material_passport"
+  }
+}

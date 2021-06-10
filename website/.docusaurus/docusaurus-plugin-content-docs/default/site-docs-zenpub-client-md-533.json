@@ -1,0 +1,16 @@
+{
+  "unversionedId": "ZenPub-client",
+  "id": "ZenPub-client",
+  "isDocsHomePage": false,
+  "title": "🧩 ZenPub client app",
+  "description": "ZenPub client is the front-end software for the Reflow project, which connects to the API of ZenPub server.",
+  "source": "@site/docs/zenpub-client.md",
+  "sourceDirName": ".",
+  "slug": "/ZenPub-client",
+  "permalink": "/docs/ZenPub-client",
+  "version": "current",
+  "frontMatter": {
+    "id": "ZenPub-client",
+    "title": "🧩 ZenPub client app"
+  }
+}

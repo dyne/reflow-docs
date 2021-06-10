@@ -1,0 +1,826 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/docs",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/ivan/Sites/ReflowOS/website/sidebars.json",
+          "contentPath": "/home/ivan/Sites/ReflowOS/website/docs",
+          "contentPathLocalized": "/home/ivan/Sites/ReflowOS/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "mainDocId": "what_is_reflowOS",
+          "sidebars": {
+            "docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Getting started",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "what_is_reflowOS"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "architecture"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "federation"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "valueflows"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api_tour"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "maintenance"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "bugtracker"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "system_requirements"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "changelog"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Usecases",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "usecases"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "define_the_network_sentiment"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "generate_a_material_passport"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "create_and_manage_inventory"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Guides",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "guides"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "install_a_reflowOS_node"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "first_steps"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "components"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "glossary"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/docs/api_tour": "docs",
+            "/docs/architecture": "docs",
+            "/docs/bugtracker": "docs",
+            "/docs/changelog": "docs",
+            "/docs/components": "docs",
+            "/docs/create_and_manage_inventory": "docs",
+            "/docs/define_the_network_sentiment": "docs",
+            "/docs/federation": "docs",
+            "/docs/first_steps": "docs",
+            "/docs/generate_a_material_passport": "docs",
+            "/docs/glossary": "docs",
+            "/docs/guides": "docs",
+            "/docs/install_a_reflowOS_node": "docs",
+            "/docs/maintenance": "docs",
+            "/docs/system_requirements": "docs",
+            "/docs/usecases": "docs",
+            "/docs/valueflows": "docs",
+            "/docs/what_is_reflowOS": "docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "api_tour",
+              "id": "api_tour",
+              "isDocsHomePage": false,
+              "title": "API Tour",
+              "description": "Here is a series of sample queries and mutations for the ZenPub client API (which uses GraphQL) that will be needed to achieve the use cases proposed in this manual.",
+              "source": "@site/docs/api_tour.md",
+              "sourceDirName": ".",
+              "slug": "/api_tour",
+              "permalink": "/docs/api_tour",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "📕 API Tour",
+              "frontMatter": {
+                "id": "api_tour",
+                "title": "API Tour",
+                "sidebar_label": "📕 API Tour"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "ValueFlows",
+                "permalink": "/docs/valueflows"
+              },
+              "next": {
+                "title": "Maintenance",
+                "permalink": "/docs/maintenance"
+              }
+            },
+            {
+              "unversionedId": "architecture",
+              "id": "architecture",
+              "isDocsHomePage": false,
+              "title": "Architecture",
+              "description": "Reflow is a decentralised network",
+              "source": "@site/docs/architecture.md",
+              "sourceDirName": ".",
+              "slug": "/architecture",
+              "permalink": "/docs/architecture",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🔩 Architecture",
+              "frontMatter": {
+                "id": "architecture",
+                "title": "Architecture",
+                "sidebar_label": "🔩 Architecture"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "The ReflowOS",
+                "permalink": "/docs/what_is_reflowOS"
+              },
+              "next": {
+                "title": "Federation",
+                "permalink": "/docs/federation"
+              }
+            },
+            {
+              "unversionedId": "bugtracker",
+              "id": "bugtracker",
+              "isDocsHomePage": false,
+              "title": "Bugtracker",
+              "description": "Thank you for helping ReflowOS by reporting bugs. Before submitting an issue, please ensure you are reporting the bug in the correct repository.",
+              "source": "@site/docs/bugtracker.md",
+              "sourceDirName": ".",
+              "slug": "/bugtracker",
+              "permalink": "/docs/bugtracker",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "📕 Bugtracker",
+              "frontMatter": {
+                "id": "bugtracker",
+                "title": "Bugtracker",
+                "sidebar_label": "📕 Bugtracker"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Maintenance",
+                "permalink": "/docs/maintenance"
+              },
+              "next": {
+                "title": "System requirements",
+                "permalink": "/docs/system_requirements"
+              }
+            },
+            {
+              "unversionedId": "changelog",
+              "id": "changelog",
+              "isDocsHomePage": false,
+              "title": "Changelog",
+              "description": "All notable changes to this project will be documented in this file.",
+              "source": "@site/docs/changelog.md",
+              "sourceDirName": ".",
+              "slug": "/changelog",
+              "permalink": "/docs/changelog",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🕰️ Changelog",
+              "frontMatter": {
+                "id": "changelog",
+                "title": "Changelog",
+                "sidebar_label": "🕰️ Changelog"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "System requirements",
+                "permalink": "/docs/system_requirements"
+              },
+              "next": {
+                "title": "Usecases",
+                "permalink": "/docs/usecases"
+              }
+            },
+            {
+              "unversionedId": "components",
+              "id": "components",
+              "isDocsHomePage": false,
+              "title": "Components",
+              "description": "Server backend",
+              "source": "@site/docs/components.md",
+              "sourceDirName": ".",
+              "slug": "/components",
+              "permalink": "/docs/components",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🧩 Components",
+              "frontMatter": {
+                "id": "components",
+                "title": "Components",
+                "sidebar_label": "🧩 Components"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "How to start using and populating the network",
+                "permalink": "/docs/first_steps"
+              },
+              "next": {
+                "title": "Glossary",
+                "permalink": "/docs/glossary"
+              }
+            },
+            {
+              "unversionedId": "create_and_manage_inventory",
+              "id": "create_and_manage_inventory",
+              "isDocsHomePage": false,
+              "title": "Create and manage your public inventory",
+              "description": "With ReflowOS, every participant manages their personal inventory, which contains all their available resources, correlated with a set of meaningful data to help describe and categorize them.",
+              "source": "@site/docs/create_and_manage_inventory.md",
+              "sourceDirName": ".",
+              "slug": "/create_and_manage_inventory",
+              "permalink": "/docs/create_and_manage_inventory",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "💼 Manage your inventory",
+              "frontMatter": {
+                "id": "create_and_manage_inventory",
+                "title": "Create and manage your public inventory",
+                "sidebar_label": "💼 Manage your inventory"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Scenario: Material passport",
+                "permalink": "/docs/generate_a_material_passport"
+              },
+              "next": {
+                "title": "Guides",
+                "permalink": "/docs/guides"
+              }
+            },
+            {
+              "unversionedId": "decodeOS",
+              "id": "decodeOS",
+              "isDocsHomePage": false,
+              "title": "DecodeOS",
+              "description": "Operating System for Private and Anonymous Computation Clusters",
+              "source": "@site/docs/decodeOS.md",
+              "sourceDirName": ".",
+              "slug": "/decodeOS",
+              "permalink": "/docs/decodeOS",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🧩 DecodeOS",
+              "frontMatter": {
+                "id": "decodeOS",
+                "title": "DecodeOS",
+                "sidebar_label": "🧩 DecodeOS"
+              }
+            },
+            {
+              "unversionedId": "define_the_network_sentiment",
+              "id": "define_the_network_sentiment",
+              "isDocsHomePage": false,
+              "title": "Network sentiment analysis",
+              "description": "Defining the network sentiment is a practice that allows participants to choose different lenses to observe a network and the data produced, and which constraints, shades, angles, aspects to highlight. This helps building more solid and data-driven assumptions.",
+              "source": "@site/docs/define_the_network_sentiment.md",
+              "sourceDirName": ".",
+              "slug": "/define_the_network_sentiment",
+              "permalink": "/docs/define_the_network_sentiment",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "😸 Define the network sentiment",
+              "frontMatter": {
+                "id": "define_the_network_sentiment",
+                "title": "Network sentiment analysis",
+                "sidebar_label": "😸 Define the network sentiment"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Usecases",
+                "permalink": "/docs/usecases"
+              },
+              "next": {
+                "title": "Scenario: Material passport",
+                "permalink": "/docs/generate_a_material_passport"
+              }
+            },
+            {
+              "unversionedId": "encryption",
+              "id": "encryption",
+              "isDocsHomePage": false,
+              "title": "Encryption",
+              "description": "-- TODO --",
+              "source": "@site/docs/encryption.md",
+              "sourceDirName": ".",
+              "slug": "/encryption",
+              "permalink": "/docs/encryption",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "📝 Encryption",
+              "frontMatter": {
+                "id": "encryption",
+                "title": "Encryption",
+                "sidebar_label": "📝 Encryption"
+              }
+            },
+            {
+              "unversionedId": "federation",
+              "id": "federation",
+              "isDocsHomePage": false,
+              "title": "Federation",
+              "description": "What's federation?",
+              "source": "@site/docs/federation.md",
+              "sourceDirName": ".",
+              "slug": "/federation",
+              "permalink": "/docs/federation",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🌐 Federation",
+              "frontMatter": {
+                "id": "federation",
+                "title": "Federation",
+                "sidebar_label": "🌐 Federation"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Architecture",
+                "permalink": "/docs/architecture"
+              },
+              "next": {
+                "title": "ValueFlows",
+                "permalink": "/docs/valueflows"
+              }
+            },
+            {
+              "unversionedId": "first_steps",
+              "id": "first_steps",
+              "isDocsHomePage": false,
+              "title": "How to start using and populating the network",
+              "description": "The OS is the entry point to interact with such network, which can be private and permissioned - leveraging TOR to anonymise all the data flows - or open and public, giving the possibility to any user to start a node and participate on the web.",
+              "source": "@site/docs/first_step.md",
+              "sourceDirName": ".",
+              "slug": "/first_steps",
+              "permalink": "/docs/first_steps",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🐇 Start using the network",
+              "frontMatter": {
+                "id": "first_steps",
+                "title": "How to start using and populating the network",
+                "sidebar_label": "🐇 Start using the network"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Backend Configuration and Deployment",
+                "permalink": "/docs/install_a_reflowOS_node"
+              },
+              "next": {
+                "title": "Components",
+                "permalink": "/docs/components"
+              }
+            },
+            {
+              "unversionedId": "generate_a_material_passport",
+              "id": "generate_a_material_passport",
+              "isDocsHomePage": false,
+              "title": "Scenario: Material passport",
+              "description": "The material passport (MP) gives us meaningful insights about the genealogy of a specific product.",
+              "source": "@site/docs/generate_a_material_passport.md",
+              "sourceDirName": ".",
+              "slug": "/generate_a_material_passport",
+              "permalink": "/docs/generate_a_material_passport",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "📖 Generate a material passport",
+              "frontMatter": {
+                "id": "generate_a_material_passport",
+                "title": "Scenario: Material passport",
+                "sidebar_label": "📖 Generate a material passport"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Network sentiment analysis",
+                "permalink": "/docs/define_the_network_sentiment"
+              },
+              "next": {
+                "title": "Create and manage your public inventory",
+                "permalink": "/docs/create_and_manage_inventory"
+              }
+            },
+            {
+              "unversionedId": "glossary",
+              "id": "glossary",
+              "isDocsHomePage": false,
+              "title": "Glossary",
+              "description": "Glossary",
+              "source": "@site/docs/glossary.md",
+              "sourceDirName": ".",
+              "slug": "/glossary",
+              "permalink": "/docs/glossary",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "❓ Glossary",
+              "frontMatter": {
+                "id": "glossary",
+                "title": "Glossary",
+                "sidebar_label": "❓ Glossary"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Components",
+                "permalink": "/docs/components"
+              }
+            },
+            {
+              "unversionedId": "guides",
+              "id": "guides",
+              "isDocsHomePage": false,
+              "title": "Guides",
+              "description": "In the following section, we will guide you through the installation and setup of your economic network.",
+              "source": "@site/docs/guides.md",
+              "sourceDirName": ".",
+              "slug": "/guides",
+              "permalink": "/docs/guides",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "📖 Guides",
+              "frontMatter": {
+                "id": "guides",
+                "title": "Guides",
+                "sidebar_label": "📖 Guides"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Create and manage your public inventory",
+                "permalink": "/docs/create_and_manage_inventory"
+              },
+              "next": {
+                "title": "Backend Configuration and Deployment",
+                "permalink": "/docs/install_a_reflowOS_node"
+              }
+            },
+            {
+              "unversionedId": "install_a_reflowOS_node",
+              "id": "install_a_reflowOS_node",
+              "isDocsHomePage": false,
+              "title": "Backend Configuration and Deployment",
+              "description": "These instructions are for setting up the *backend* alone in production. You probably want to start with the following two guides, and only refer back to this document for some more advanced things you might not find in those guides.",
+              "source": "@site/docs/install_a_reflowOS_node.md",
+              "sourceDirName": ".",
+              "slug": "/install_a_reflowOS_node",
+              "permalink": "/docs/install_a_reflowOS_node",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "💾 Install an instance",
+              "frontMatter": {
+                "id": "install_a_reflowOS_node",
+                "title": "How to install a reflowOS instance",
+                "sidebar_label": "💾 Install an instance"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Guides",
+                "permalink": "/docs/guides"
+              },
+              "next": {
+                "title": "How to start using and populating the network",
+                "permalink": "/docs/first_steps"
+              }
+            },
+            {
+              "unversionedId": "maintenance",
+              "id": "maintenance",
+              "isDocsHomePage": false,
+              "title": "Maintenance",
+              "description": "This page gives an overview of the currently supported and released versions as well as basic release scheduling.",
+              "source": "@site/docs/maintenance.md",
+              "sourceDirName": ".",
+              "slug": "/maintenance",
+              "permalink": "/docs/maintenance",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🌱 Maintenance",
+              "frontMatter": {
+                "id": "maintenance",
+                "title": "Maintenance",
+                "sidebar_label": "🌱 Maintenance"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "API Tour",
+                "permalink": "/docs/api_tour"
+              },
+              "next": {
+                "title": "Bugtracker",
+                "permalink": "/docs/bugtracker"
+              }
+            },
+            {
+              "unversionedId": "setup_a_network",
+              "id": "setup_a_network",
+              "isDocsHomePage": false,
+              "title": "How to set up a network",
+              "description": "-- TODO --",
+              "source": "@site/docs/setup_a_network.md",
+              "sourceDirName": ".",
+              "slug": "/setup_a_network",
+              "permalink": "/docs/setup_a_network",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "Set up a network",
+              "frontMatter": {
+                "id": "setup_a_network",
+                "title": "How to set up a network",
+                "sidebar_label": "Set up a network"
+              }
+            },
+            {
+              "unversionedId": "system_requirements",
+              "id": "system_requirements",
+              "isDocsHomePage": false,
+              "title": "System requirements",
+              "description": "Server",
+              "source": "@site/docs/system_requirements.md",
+              "sourceDirName": ".",
+              "slug": "/system_requirements",
+              "permalink": "/docs/system_requirements",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🔨 System requirements",
+              "frontMatter": {
+                "id": "system_requirements",
+                "title": "System requirements",
+                "sidebar_label": "🔨 System requirements"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Bugtracker",
+                "permalink": "/docs/bugtracker"
+              },
+              "next": {
+                "title": "Changelog",
+                "permalink": "/docs/changelog"
+              }
+            },
+            {
+              "unversionedId": "usecases",
+              "id": "usecases",
+              "isDocsHomePage": false,
+              "title": "Usecases",
+              "description": "PLANNING AN ECONOMY, MORE THAN JUST MAPS AND EXCHANGES",
+              "source": "@site/docs/usecases.md",
+              "sourceDirName": ".",
+              "slug": "/usecases",
+              "permalink": "/docs/usecases",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🧭 Usecases",
+              "frontMatter": {
+                "id": "usecases",
+                "title": "Usecases",
+                "sidebar_label": "🧭 Usecases"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Changelog",
+                "permalink": "/docs/changelog"
+              },
+              "next": {
+                "title": "Network sentiment analysis",
+                "permalink": "/docs/define_the_network_sentiment"
+              }
+            },
+            {
+              "unversionedId": "value_networks",
+              "id": "value_networks",
+              "isDocsHomePage": false,
+              "title": "value_networks",
+              "description": "id: value_networks",
+              "source": "@site/docs/value_networks.md",
+              "sourceDirName": ".",
+              "slug": "/value_networks",
+              "permalink": "/docs/value_networks",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "valueflows",
+              "id": "valueflows",
+              "isDocsHomePage": false,
+              "title": "ValueFlows",
+              "description": "A vocabulary for the distributed economic networks of the next economy",
+              "source": "@site/docs/valueflows.md",
+              "sourceDirName": ".",
+              "slug": "/valueflows",
+              "permalink": "/docs/valueflows",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🥮 ValueFlows",
+              "frontMatter": {
+                "title": "ValueFlows",
+                "id": "valueflows",
+                "sidebar_label": "🥮 ValueFlows"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Federation",
+                "permalink": "/docs/federation"
+              },
+              "next": {
+                "title": "API Tour",
+                "permalink": "/docs/api_tour"
+              }
+            },
+            {
+              "unversionedId": "what_is_reflowOS",
+              "id": "what_is_reflowOS",
+              "isDocsHomePage": false,
+              "title": "The ReflowOS",
+              "description": "ReflowOS is an operating system for communities who want to create federated and secure economic networks to foster the creation and coordination of distributed value chains.",
+              "source": "@site/docs/what_is_reflowOS.md",
+              "sourceDirName": ".",
+              "slug": "/what_is_reflowOS",
+              "permalink": "/docs/what_is_reflowOS",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "👋 Welcome",
+              "frontMatter": {
+                "id": "what_is_reflowOS",
+                "title": "The ReflowOS",
+                "sidebar_label": "👋 Welcome"
+              },
+              "sidebar": "docs",
+              "next": {
+                "title": "Architecture",
+                "permalink": "/docs/architecture"
+              }
+            },
+            {
+              "unversionedId": "ZenPub",
+              "id": "ZenPub",
+              "isDocsHomePage": false,
+              "title": "🧩 ZenPub server",
+              "description": "ZenPub server is the back-end software for the Reflow project.",
+              "source": "@site/docs/zenpub.md",
+              "sourceDirName": ".",
+              "slug": "/ZenPub",
+              "permalink": "/docs/ZenPub",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "ZenPub",
+                "title": "🧩 ZenPub server"
+              }
+            },
+            {
+              "unversionedId": "ZenPub-client",
+              "id": "ZenPub-client",
+              "isDocsHomePage": false,
+              "title": "🧩 ZenPub client app",
+              "description": "ZenPub client is the front-end software for the Reflow project, which connects to the API of ZenPub server.",
+              "source": "@site/docs/zenpub-client.md",
+              "sourceDirName": ".",
+              "slug": "/ZenPub-client",
+              "permalink": "/docs/ZenPub-client",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "ZenPub-client",
+                "title": "🧩 ZenPub client app"
+              }
+            },
+            {
+              "unversionedId": "ZenRoom",
+              "id": "ZenRoom",
+              "isDocsHomePage": false,
+              "title": "Crypto smart-contract executor",
+              "description": "Zenroom is a tiny secure execution environment that integrates in any platform and application, even on a chip or a web page. It can authenticate, authorize access and execute human-readable smart contracts for blockchains, databases and much more. It helps to develop cryptography keeping it simple, understandable and maintainable.",
+              "source": "@site/docs/zenroom.md",
+              "sourceDirName": ".",
+              "slug": "/ZenRoom",
+              "permalink": "/docs/ZenRoom",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "sidebar_label": "🧩 ZenRoom",
+              "frontMatter": {
+                "id": "ZenRoom",
+                "title": "ZenRoom",
+                "sidebar_label": "🧩 ZenRoom"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": null
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
+}

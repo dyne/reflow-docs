@@ -1,0 +1,27 @@
+{
+  "unversionedId": "federation",
+  "id": "federation",
+  "isDocsHomePage": false,
+  "title": "Federation",
+  "description": "What's federation?",
+  "source": "@site/docs/federation.md",
+  "sourceDirName": ".",
+  "slug": "/federation",
+  "permalink": "/docs/federation",
+  "version": "current",
+  "sidebar_label": "🌐 Federation",
+  "frontMatter": {
+    "id": "federation",
+    "title": "Federation",
+    "sidebar_label": "🌐 Federation"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Architecture",
+    "permalink": "/docs/architecture"
+  },
+  "next": {
+    "title": "ValueFlows",
+    "permalink": "/docs/valueflows"
+  }
+}
