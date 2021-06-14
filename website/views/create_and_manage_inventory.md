@@ -1,0 +1,1 @@
+../docs/create_and_manage_inventory.md

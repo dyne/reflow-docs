@@ -1,0 +1,1 @@
+../docs/generate_a_material_passport.md

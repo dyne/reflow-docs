@@ -1,0 +1,6 @@
+FROM node:lts
+
+WORKDIR /app/website
+
+RUN yarn global add docusaurus
+

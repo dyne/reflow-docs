@@ -1,0 +1,22 @@
+#    "Getting started": [
+what_is_reflowOS.md
+architecture.md
+federation.md
+valueflows.md
+api_tour.md
+maintenance.md
+bugtracker.md
+system_requirements.md
+changelog.md
+#    "Usecases": [
+usecases.md
+define_the_network_sentiment.md
+generate_a_material_passport.md
+create_and_manage_inventory.md
+#    "Guides": [
+guides.md
+install_a_reflowOS_node.md
+first_step.md
+components.md
+glossary.md
+
