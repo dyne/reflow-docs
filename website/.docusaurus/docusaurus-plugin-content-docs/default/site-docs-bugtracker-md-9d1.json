@@ -9,6 +9,9 @@
   "slug": "/bugtracker",
   "permalink": "/docs/bugtracker",
   "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "sidebar_label": "📕 Bugtracker",
   "frontMatter": {
     "id": "bugtracker",

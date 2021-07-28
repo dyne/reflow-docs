@@ -1,6 +1,15 @@
-.slds-scrollable--y {
-    
-    nav {
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
     left: $spacing-none;
     top: $spacing-none;
     width: 30%;
@@ -136,5 +145,3 @@ main code.highlight::after {
 .graphdoc-section__title a .material-icons {
     font-size: 1.2rem;
 }
-}
-

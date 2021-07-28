@@ -9,6 +9,9 @@
   "slug": "/create_and_manage_inventory",
   "permalink": "/docs/create_and_manage_inventory",
   "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "sidebar_label": "💼 Manage your inventory",
   "frontMatter": {
     "id": "create_and_manage_inventory",

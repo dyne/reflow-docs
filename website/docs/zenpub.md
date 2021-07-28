@@ -13,7 +13,7 @@ It is based on [CommonsPub](http://commonspub.org), a [federated](./federation) 
 
 The server implementation language is Elixir (running on Erlang/OTP), a language designed for building reliable systems. It uses the Phoenix web framework and the Absinthe GraphQL Toolkit to deliver a <a href="https://graphql.org/" rel="nofollow">GraphQL API</a> which the frontend interacts with. It uses ActivityPub to deliver server-to-server [federation](/docs/federation).
 
-[Read more about the full auto-generated API documentation](/api/index). 
+[Read more about the full auto-generated API documentation](/static/api/index). 
 
 
 ## Documentation

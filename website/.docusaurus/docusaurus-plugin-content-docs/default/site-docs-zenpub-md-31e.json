@@ -9,6 +9,9 @@
   "slug": "/ZenPub",
   "permalink": "/docs/ZenPub",
   "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {
     "id": "ZenPub",
     "title": "🧩 ZenPub server"

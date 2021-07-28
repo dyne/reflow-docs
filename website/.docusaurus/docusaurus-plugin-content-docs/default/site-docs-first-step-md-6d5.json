@@ -9,6 +9,9 @@
   "slug": "/first_steps",
   "permalink": "/docs/first_steps",
   "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "sidebar_label": "🐇 Start using the network",
   "frontMatter": {
     "id": "first_steps",

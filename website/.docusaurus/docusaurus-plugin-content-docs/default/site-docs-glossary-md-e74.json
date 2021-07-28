@@ -9,6 +9,9 @@
   "slug": "/glossary",
   "permalink": "/docs/glossary",
   "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "sidebar_label": "❓ Glossary",
   "frontMatter": {
     "id": "glossary",

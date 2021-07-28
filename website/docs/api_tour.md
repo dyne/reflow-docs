@@ -9,7 +9,7 @@ Here is a series of sample queries and mutations for the [ZenPub](/docs/ZenPub) 
 The API is flexible enough to satisfy a wider range of use cases and scenario, according to the stakeholders needs.
 Think of the following ones as a starting point to help shape your apps and ideas.
 
-You can also refer to the [full auto-generated API documentation](/api/index). 
+You can also refer to the [full auto-generated API documentation](/static/static/api/index). 
 
 ## Authentication
 
