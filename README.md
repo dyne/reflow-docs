@@ -16,5 +16,11 @@ Build using `cd website && yarn build`.
 
 Results found in `website/build/ReflowOS`
 
+## Run local copy
+
+Run using `yarn run start`
+
+##Deploy
+
 For deploy use `make` which will put results in the gh-pages branch. 
 
