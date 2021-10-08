@@ -12,8 +12,8 @@ The Reflow network is based on open protocols and standards to form a decentrali
 
 A Reflow instance comprises: 
 
-- the ZenPub server (running on a Elixir-capable web server)
-- a ZenPub client (typically static JS/HTML/CSS/images which can be served by any web server)
+- the ReflowOS server (running on a Elixir-capable web server)
+- a ReflowOS client (typically static JS/HTML/CSS/images which can be served by any web server)
 - a database managed by PostgreSQL
 - a file store for uploaded files
 - an optional search index (powered by Meili)

@@ -42,7 +42,7 @@ The above protocols and standard vocabularies are made for social activities, bu
 
 Fortunately these standards were designed to be extensible, and even more fortunate, some fine folks have been working on something that fits the gap perfectly: [ValueFlows](https://valueflo.ws/) is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
 
-[ReflowOS](./ZenPub) has been developed as an implementation of a subset of ValueFlows's vocabularies, the Reflow client API is based on [ValueFlow's GraphQL API](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql#vf-graphql), and all economic data can federate over ActivityPub, by making ValueFlows JSON-encoded data available as an ActivityPub `actor` (for people, organisations, and groups), `activity` (eg. economic events) or `object` (eg. economic resources, proposals, processes, etc).
+[ReflowOS](./ReflowOS-server) has been developed as an implementation of a subset of ValueFlows's vocabularies, the Reflow client API is based on [ValueFlow's GraphQL API](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql#vf-graphql), and all economic data can federate over ActivityPub, by making ValueFlows JSON-encoded data available as an ActivityPub `actor` (for people, organisations, and groups), `activity` (eg. economic events) or `object` (eg. economic resources, proposals, processes, etc).
 
 ## What does it mean for Reflow?
 

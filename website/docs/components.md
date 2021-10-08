@@ -18,7 +18,7 @@ The ReflowOS server implementation language is Elixir (running on Erlang/OTP), a
 
 ## Client frontend
 
-[Reflow WeLoop client](https://github.com/reflow-project/weloop) is an example front-end software for the Reflow project, which connects to the [API](./api_tour) of a [ReflowOS server](./ZenPub).
+[Reflow WeLoop client](https://github.com/reflow-project/weloop) is an example front-end software for the Reflow project, which connects to the [API](./api_tour) of a [ReflowOS server](./ReflowOS-server).
 
 It is based on web technologies so you can use it with any modern browser (desktop or mobile). The client is written in React (TypeScript and JavaScript).
 

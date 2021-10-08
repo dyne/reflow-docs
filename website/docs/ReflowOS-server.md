@@ -1,5 +1,5 @@
 ---
-id: ZenPub
+id: ReflowOS-server
 title: "🧩 ReflowOS server"
 ---
 
@@ -20,12 +20,12 @@ The server implementation language is Elixir (running on Erlang/OTP), a language
 
 Do you want to...
 
-- Read about the backend architecture? Read the ZenPub [overview](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/ARCHITECTURE.md).
+- Read about the backend architecture? Read the ReflowOS [overview](https://github.com/dyne/bonfire-app/blob/main/flavours/reflow/README.md).
 
-- Hack on the code? Read the ZenPub [Developer FAQs](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/HACKING.md).
+- Hack on the code? Read the ReflowOS [Developer FAQs](https://github.com/dyne/bonfire-app/blob/main/docs/HACKING.md).
 
-- Understand the API implementation? Read the ZenPub [GraphQL guide](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/GRAPHQL.md).
+- Understand the API implementation? Read the ReflowOS [GraphQL guide](https://github.com/dyne/bonfire-app/blob/main/docs/GRAPHQL.md).
 
-- Deploy in production? Read the ZenPub [Deployment Docs](https://github.com/dyne/zenpub/blob/flavour/zenpub/docs/DEPLOY.md).
+- Deploy in production? Read the ReflowOS [Deployment Docs](https://github.com/dyne/reflow-os/).
 
 </section>

@@ -4,7 +4,7 @@ title: API Tour
 sidebar_label: "📕 API Tour"
 ---
 
-Here is a series of sample queries and mutations for the [ZenPub](/docs/ZenPub) client API (which uses [GraphQL](https://graphql.org/)) that will be needed to achieve the use cases proposed in this manual.
+Here is a series of sample queries and mutations for the [ReflowOS](./ReflowOS-server) client API (which uses [GraphQL](https://graphql.org/)) that will be needed to achieve the use cases proposed in this manual.
 
 The API is flexible enough to satisfy a wider range of use cases and scenario, according to the stakeholders needs.
 Think of the following ones as a starting point to help shape your apps and ideas.
