@@ -30,7 +30,7 @@ sidebar_label: "❓ Glossary"
 
 **Metadata** - data that provides information about other data. For educational resources, it could describe various aspects of the material, including grade level, subject area, and content type or format.
 
-**Instance** - an independently-hosted version of the ZenPub server.
+**Instance** - an independently-hosted version of the ReflowOS server.
 
 **Node** - a member of a decentralised network, which can sometimes serve as client, sometimes as server. See also Instance.
 

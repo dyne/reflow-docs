@@ -16,7 +16,7 @@ _The map is not the territory_, as Alfred Korzybski warns us...
 Taking actions - backed by such data-driven analysis -  may have a meaningful impact upon complex networks such as a municipality, where usually is hard to connect and intertwine data together in reliable ways, and where most of the information are gathered mostly through questionnaires or direct involvements/experiences.
 
 ## How it works
-With ZenPub each participant can record different types of economic activities that are performed over time.
+With ReflowOS each participant can record different types of economic activities that are performed over time.
 
 One such economic activity could represent the production of a new resource (eg. a cake).
 

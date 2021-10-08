@@ -29,6 +29,7 @@ Through the definition of personas and the collection of user requirements, repo
 - Being able to plan and coordinate supply chains within the urban/periurban area, in order to include different actors in different phases of the production of goods
 - Distributing the value generated from the production of goods, based on each stakeholder’s contributions to the production phases
 
-The usecases presented in this section are intented to be food for thoughts of what can be achieved with ReflowOS.
+The usecases presented in this section are intended to be food for thought for what can be achieved with ReflowOS.
+
 
 </section>

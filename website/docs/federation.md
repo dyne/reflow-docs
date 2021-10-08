@@ -42,12 +42,12 @@ The above protocols and standard vocabularies are made for social activities, bu
 
 Fortunately these standards were designed to be extensible, and even more fortunate, some fine folks have been working on something that fits the gap perfectly: [ValueFlows](https://valueflo.ws/) is a set of common vocabularies to describe flows of economic resources of all kinds within distributed economic ecosystems.
 
-[ZenPub](./ZenPub) has been developed as an implementation of a subset of ValueFlows's vocabularies, the Reflow client API is based on [ValueFlow's GraphQL API](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql#vf-graphql), and all economic data can federate over ActivityPub, by making ValueFlows JSON-encoded data available as an ActivityPub `actor` (for people, organisations, and groups), `activity` (eg. economic events) or `object` (eg. economic resources, proposals, processes, etc).
+[ReflowOS](./ZenPub) has been developed as an implementation of a subset of ValueFlows's vocabularies, the Reflow client API is based on [ValueFlow's GraphQL API](https://lab.allmende.io/valueflows/vf-schemas/vf-graphql#vf-graphql), and all economic data can federate over ActivityPub, by making ValueFlows JSON-encoded data available as an ActivityPub `actor` (for people, organisations, and groups), `activity` (eg. economic events) or `object` (eg. economic resources, proposals, processes, etc).
 
 ## What does it mean for Reflow?
 
 We have built upon these standards so that any interaction one may have with an actor (person, organisation, group), or object (eg. a proposal or an economic resource) within the system (eg. posting a need in a neighborhood group, or recording the use of a 3D printer in a Fablab of a city one is visiting) can happen seamlessly even if the other people/groups involved are not users of the same instance, for example if one signed up to the Amsterdam Fablab of Reflow and then is interacting with resources and recording events on othe premises of the Barcelona Fablab, or another example can when there is more than one Fablab in the same city and resources and events by each of them can be networked and made available through every federated instance.
 
-This can foster more connection and cooperation between participants in Reflow, but thanks to the heavy use of interoperable standards, it also means that future adaptations of ZenPub as well as entirely new projects will be able to integrate with Reflow as well.
+This can foster more connection and cooperation between participants in Reflow, but thanks to the heavy use of interoperable standards, it also means that future adaptations of ReflowOS as well as entirely new projects will be able to integrate with Reflow as well.
 
 This feature is being developed and tested in the course of the next cycle of development, following adoption by pilots and the evolution of requirements.

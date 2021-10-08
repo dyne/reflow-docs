@@ -34,5 +34,5 @@ For the best experience with the ReflowOS web interface, we recommend that you u
 
 
 ### Deployment documentation
-Please refer to the deploy guide published **[here](https://github.com/dyne/zenpub/blob/flavour/zenpub/DEPLOY.md)**
+Please refer to the deploy guide published **[here](https://github.com/dyne/reflow-os)**
 

@@ -11,7 +11,7 @@ This page gives an overview of the currently supported and released versions as 
 | 1.0 | 2021-06-20| |
 | 0.8| 2020-11-20| 2021-06-20 |
 
-Find the detailed schedule for major and maintenance releases at: **[GitHub](https://github.com/dyne/zenpub)**.
+Find the detailed schedule for major and maintenance releases at: **[GitHub](https://github.com/dyne/bonfire)**.
 
 ## Major releases
 The first major release of the REFLOW OS software is scheduled one month before the deliverable (June 2021). Specific dates for each release can be found on **[GitHub](https://github.com/dyne/zenpub)**.

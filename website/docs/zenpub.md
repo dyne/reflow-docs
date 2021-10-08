@@ -1,13 +1,13 @@
 ---
 id: ZenPub
-title: "🧩 ZenPub server"
+title: "🧩 ReflowOS server"
 ---
 
 <section class="reflow__doc">
   
-[ZenPub server](https://github.com/dyne/zenpub) is the back-end software for the Reflow project.
+[ReflowOS server](https://github.com/dyne/reflow-os) is the back-end software for the Reflow project.
 
-It is based on [CommonsPub](http://commonspub.org), a [federated](./federation) free software app ecosystem.
+It is based on [Bonfire](http://bonfire.cafe), a [federated](./federation) free software app ecosystem.
 
 ## Stack
 
