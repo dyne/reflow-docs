@@ -705,11 +705,11 @@ mutation {
 }
 ```
 
-### Look for all EconomicEvents with a specific scope
+### Look for all EconomicEvents within a specific scope
 
 ```graphql 
 {
-  economicEventsFiltered(in_scope_of: [ID!]) {
+  economicEventsFiltered(inScopeOf: [ID!]) {
     id
     provider {
       id
