@@ -89,6 +89,14 @@
               "sidebar": "docs"
             },
             {
+              "id": "ReflowOS-client",
+              "path": "/docs/ReflowOS-client"
+            },
+            {
+              "id": "ReflowOS-server",
+              "path": "/docs/ReflowOS-server"
+            },
+            {
               "id": "setup_a_network",
               "path": "/docs/setup_a_network"
             },
@@ -115,14 +123,6 @@
               "id": "what_is_reflowOS",
               "path": "/docs/what_is_reflowOS",
               "sidebar": "docs"
-            },
-            {
-              "id": "ZenPub",
-              "path": "/docs/ZenPub"
-            },
-            {
-              "id": "ZenPub-client",
-              "path": "/docs/ZenPub-client"
             },
             {
               "id": "ZenRoom",

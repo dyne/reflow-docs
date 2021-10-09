@@ -1,0 +1,19 @@
+{
+  "unversionedId": "ReflowOS-server",
+  "id": "ReflowOS-server",
+  "isDocsHomePage": false,
+  "title": "🧩 ReflowOS server",
+  "description": "ReflowOS server is the back-end software for the Reflow project.",
+  "source": "@site/docs/ReflowOS-server.md",
+  "sourceDirName": ".",
+  "slug": "/ReflowOS-server",
+  "permalink": "/docs/ReflowOS-server",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "ReflowOS-server",
+    "title": "🧩 ReflowOS server"
+  }
+}

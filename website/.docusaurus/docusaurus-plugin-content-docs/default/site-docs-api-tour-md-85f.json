@@ -3,7 +3,7 @@
   "id": "api_tour",
   "isDocsHomePage": false,
   "title": "API Tour",
-  "description": "Here is a series of sample queries and mutations for the ZenPub client API (which uses GraphQL) that will be needed to achieve the use cases proposed in this manual.",
+  "description": "Here is a series of sample queries and mutations for the ReflowOS client API (which uses GraphQL) that will be needed to achieve the use cases proposed in this manual.",
   "source": "@site/docs/api_tour.md",
   "sourceDirName": ".",
   "slug": "/api_tour",

@@ -44,7 +44,7 @@ export default [
 },
 {
   path: '/docs',
-  component: ComponentCreator('/docs','93e'),
+  component: ComponentCreator('/docs','5c3'),
   
   routes: [
 {
@@ -128,6 +128,16 @@ export default [
   exact: true,
 },
 {
+  path: '/docs/ReflowOS-client',
+  component: ComponentCreator('/docs/ReflowOS-client','a3f'),
+  exact: true,
+},
+{
+  path: '/docs/ReflowOS-server',
+  component: ComponentCreator('/docs/ReflowOS-server','898'),
+  exact: true,
+},
+{
   path: '/docs/setup_a_network',
   component: ComponentCreator('/docs/setup_a_network','7d7'),
   exact: true,
@@ -155,16 +165,6 @@ export default [
 {
   path: '/docs/what_is_reflowOS',
   component: ComponentCreator('/docs/what_is_reflowOS','bfe'),
-  exact: true,
-},
-{
-  path: '/docs/ZenPub',
-  component: ComponentCreator('/docs/ZenPub','8ae'),
-  exact: true,
-},
-{
-  path: '/docs/ZenPub-client',
-  component: ComponentCreator('/docs/ZenPub-client','64c'),
   exact: true,
 },
 {

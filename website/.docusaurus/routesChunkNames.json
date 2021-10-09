@@ -25,7 +25,7 @@
   "/__docusaurus/debug/routes-244": {
     "component": "component---theme-debug-routes-946-699"
   },
-  "/docs-93e": {
+  "/docs-5c3": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -93,6 +93,14 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-maintenance-8-da-c9e"
   },
+  "/docs/ReflowOS-client-a3f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-reflow-os-client-8-a-6-492"
+  },
+  "/docs/ReflowOS-server-898": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-reflow-os-server-64-f-b50"
+  },
   "/docs/setup_a_network-7d7": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-setup-a-network-37-d-17f"
@@ -116,14 +124,6 @@
   "/docs/what_is_reflowOS-bfe": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-what-is-reflow-o-se-2-a-6f0"
-  },
-  "/docs/ZenPub-8ae": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-zen-pub-31-e-5e5"
-  },
-  "/docs/ZenPub-client-64c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-zen-pub-client-533-5f4"
   },
   "/docs/ZenRoom-00a": {
     "component": "component---theme-doc-item-178-a40",

@@ -62,7 +62,7 @@ export default {
           "position": "left"
         },
         {
-          "to": "/static/api/index.html",
+          "to": "/api/index.html",
           "label": "API",
           "position": "left"
         },

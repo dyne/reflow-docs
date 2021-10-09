@@ -1,0 +1,19 @@
+{
+  "unversionedId": "ReflowOS-client",
+  "id": "ReflowOS-client",
+  "isDocsHomePage": false,
+  "title": "🧩 ReflowOS client app",
+  "description": "WeLoop client is front-end software for the Reflow project, which connects to the API of ReflowOS server.",
+  "source": "@site/docs/ReflowOS-client.md",
+  "sourceDirName": ".",
+  "slug": "/ReflowOS-client",
+  "permalink": "/docs/ReflowOS-client",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "ReflowOS-client",
+    "title": "🧩 ReflowOS client app"
+  }
+}

@@ -8,9 +8,9 @@
           "versionPath": "/docs",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/home/ivan/Sites/ReflowOS/website/sidebars.json",
-          "contentPath": "/home/ivan/Sites/ReflowOS/website/docs",
-          "contentPathLocalized": "/home/ivan/Sites/ReflowOS/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/home/vortex/src/dyne/Reflow/reflow-docs/website/sidebars.json",
+          "contentPath": "/home/vortex/src/dyne/Reflow/reflow-docs/website/docs",
+          "contentPathLocalized": "/home/vortex/src/dyne/Reflow/reflow-docs/website/i18n/en/docusaurus-plugin-content-docs/current",
           "mainDocId": "what_is_reflowOS",
           "sidebars": {
             "docs": [
@@ -135,7 +135,7 @@
               "id": "api_tour",
               "isDocsHomePage": false,
               "title": "API Tour",
-              "description": "Here is a series of sample queries and mutations for the ZenPub client API (which uses GraphQL) that will be needed to achieve the use cases proposed in this manual.",
+              "description": "Here is a series of sample queries and mutations for the ReflowOS client API (which uses GraphQL) that will be needed to achieve the use cases proposed in this manual.",
               "source": "@site/docs/api_tour.md",
               "sourceDirName": ".",
               "slug": "/api_tour",
@@ -589,6 +589,44 @@
               }
             },
             {
+              "unversionedId": "ReflowOS-client",
+              "id": "ReflowOS-client",
+              "isDocsHomePage": false,
+              "title": "🧩 ReflowOS client app",
+              "description": "WeLoop client is front-end software for the Reflow project, which connects to the API of ReflowOS server.",
+              "source": "@site/docs/ReflowOS-client.md",
+              "sourceDirName": ".",
+              "slug": "/ReflowOS-client",
+              "permalink": "/docs/ReflowOS-client",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "ReflowOS-client",
+                "title": "🧩 ReflowOS client app"
+              }
+            },
+            {
+              "unversionedId": "ReflowOS-server",
+              "id": "ReflowOS-server",
+              "isDocsHomePage": false,
+              "title": "🧩 ReflowOS server",
+              "description": "ReflowOS server is the back-end software for the Reflow project.",
+              "source": "@site/docs/ReflowOS-server.md",
+              "sourceDirName": ".",
+              "slug": "/ReflowOS-server",
+              "permalink": "/docs/ReflowOS-server",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "ReflowOS-server",
+                "title": "🧩 ReflowOS server"
+              }
+            },
+            {
               "unversionedId": "setup_a_network",
               "id": "setup_a_network",
               "isDocsHomePage": false,
@@ -739,44 +777,6 @@
               "next": {
                 "title": "Architecture",
                 "permalink": "/docs/architecture"
-              }
-            },
-            {
-              "unversionedId": "ZenPub",
-              "id": "ZenPub",
-              "isDocsHomePage": false,
-              "title": "🧩 ZenPub server",
-              "description": "ZenPub server is the back-end software for the Reflow project.",
-              "source": "@site/docs/zenpub.md",
-              "sourceDirName": ".",
-              "slug": "/ZenPub",
-              "permalink": "/docs/ZenPub",
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {
-                "id": "ZenPub",
-                "title": "🧩 ZenPub server"
-              }
-            },
-            {
-              "unversionedId": "ZenPub-client",
-              "id": "ZenPub-client",
-              "isDocsHomePage": false,
-              "title": "🧩 ZenPub client app",
-              "description": "ZenPub client is the front-end software for the Reflow project, which connects to the API of ZenPub server.",
-              "source": "@site/docs/zenpub-client.md",
-              "sourceDirName": ".",
-              "slug": "/ZenPub-client",
-              "permalink": "/docs/ZenPub-client",
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {
-                "id": "ZenPub-client",
-                "title": "🧩 ZenPub client app"
               }
             },
             {
