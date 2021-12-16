@@ -9,7 +9,7 @@ Here is a series of sample queries and mutations for the [ReflowOS](./ReflowOS-s
 The API is flexible enough to satisfy a wider range of use cases and scenario, according to the stakeholders needs.
 Think of the following ones as a starting point to help shape your apps and ideas.
 
-You can also refer to the [full auto-generated API documentation](/static/static/api/index). 
+You can also refer to the [full auto-generated API documentation](/static/api/index). 
 
 ## Authentication
 
