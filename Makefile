@@ -7,8 +7,9 @@ docx:
 
 all:
 	cd website && yarn build
-	rsync -raX website/build/ReflowOS /tmp/
-	git co gh-pages
+	#rsync -raX website/build/ReflowOS /tmp/
+	rsync -raX website/build/ /tmp/ReflowOS
+	git checkout gh-pages
 	rsync -raX /tmp/ReflowOS/* .
 	git status
 
