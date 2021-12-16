@@ -1,132 +1,110 @@
 {
   "/-deb": {
-    "component": "component---site-src-pages-index-jsc-4-f-f99",
-    "config": "config---5-e-9-4f3"
-  },
-  "/__docusaurus/debug-3d6": {
-    "component": "component---theme-debug-config-23-a-2ff"
-  },
-  "/__docusaurus/debug/config-914": {
-    "component": "component---theme-debug-config-23-a-2ff"
-  },
-  "/__docusaurus/debug/content-c28": {
-    "component": "component---theme-debug-contentba-8-ce7",
-    "allContent": "allContent---docusaurus-debug-content-246-9aa"
-  },
-  "/__docusaurus/debug/globalData-3cf": {
-    "component": "component---theme-debug-global-dataede-0fa"
-  },
-  "/__docusaurus/debug/metadata-31b": {
-    "component": "component---theme-debug-site-metadata-68-e-3d4"
-  },
-  "/__docusaurus/debug/registry-0da": {
-    "component": "component---theme-debug-registry-679-501"
-  },
-  "/__docusaurus/debug/routes-244": {
-    "component": "component---theme-debug-routes-946-699"
+    "component": "c4f5d8e4",
+    "config": "5e9f5e1a"
   },
   "/docs-5c3": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---docs-935-398"
+    "component": "1be78505",
+    "versionMetadata": "935f2afb"
   },
   "/docs/api_tour-342": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-api-tour-85-f-626"
+    "component": "17896441",
+    "content": "85f969dd"
   },
   "/docs/architecture-54f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-architecture-528-86f"
+    "component": "17896441",
+    "content": "5281b7a2"
   },
   "/docs/bugtracker-7f8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-bugtracker-9-d-1-3e0"
+    "component": "17896441",
+    "content": "9d1d6a4f"
   },
   "/docs/changelog-b16": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-changelog-9-be-5d4"
+    "component": "17896441",
+    "content": "9beb87c2"
   },
   "/docs/components-0b0": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-components-1-f-7-307"
+    "component": "17896441",
+    "content": "1f7c204c"
   },
   "/docs/create_and_manage_inventory-cd3": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-create-and-manage-inventorycde-62e"
+    "component": "17896441",
+    "content": "cde19471"
   },
   "/docs/decodeOS-8ea": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-decode-o-sc-77-446"
+    "component": "17896441",
+    "content": "c770cbce"
   },
   "/docs/define_the_network_sentiment-c6f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-define-the-network-sentimenta-83-032"
+    "component": "17896441",
+    "content": "a83e742c"
   },
   "/docs/encryption-f14": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-encryption-045-5e8"
+    "component": "17896441",
+    "content": "045bd6f5"
   },
   "/docs/federation-6e6": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-federation-960-f8a"
+    "component": "17896441",
+    "content": "960abe3a"
   },
   "/docs/first_steps-98c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-first-steps-6-d-5-095"
+    "component": "17896441",
+    "content": "6d5e3dfe"
   },
   "/docs/generate_a_material_passport-044": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-generate-a-material-passport-433-5b7"
+    "component": "17896441",
+    "content": "433fe67a"
   },
   "/docs/glossary-65f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-glossarye-74-cec"
+    "component": "17896441",
+    "content": "e747ec83"
   },
   "/docs/guides-38b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-guidesd-7-b-d2a"
+    "component": "17896441",
+    "content": "d7b8612d"
   },
   "/docs/install_a_reflowOS_node-32e": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-install-a-reflow-os-node-495-9a5"
+    "component": "17896441",
+    "content": "49572ee5"
   },
   "/docs/maintenance-a97": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-maintenance-8-da-c9e"
+    "component": "17896441",
+    "content": "8da24fa5"
   },
   "/docs/ReflowOS-client-a3f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-reflow-os-client-8-a-6-492"
+    "component": "17896441",
+    "content": "8a65c716"
   },
   "/docs/ReflowOS-server-898": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-reflow-os-server-64-f-b50"
+    "component": "17896441",
+    "content": "64fb8dc6"
   },
   "/docs/setup_a_network-7d7": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-setup-a-network-37-d-17f"
+    "component": "17896441",
+    "content": "37d76f43"
   },
   "/docs/system_requirements-cda": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-system-requirements-158-2ea"
+    "component": "17896441",
+    "content": "1583d938"
   },
   "/docs/usecases-2eb": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-usecases-274-8a3"
+    "component": "17896441",
+    "content": "274771d6"
   },
   "/docs/value_networks-0cc": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-value-networks-857-069"
+    "component": "17896441",
+    "content": "857073f9"
   },
   "/docs/valueflows-0f5": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-valueflows-88-f-faa"
+    "component": "17896441",
+    "content": "88fe4ea4"
   },
   "/docs/what_is_reflowOS-bfe": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-what-is-reflow-o-se-2-a-6f0"
+    "component": "17896441",
+    "content": "e2a909d7"
   },
   "/docs/ZenRoom-00a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-zen-roomdab-a54"
+    "component": "17896441",
+    "content": "dab8ec4d"
   }
 }

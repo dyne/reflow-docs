@@ -9,9 +9,9 @@
   "slug": "/guides",
   "permalink": "/docs/guides",
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "bernini",
+  "lastUpdatedAt": 1623317299,
+  "formattedLastUpdatedAt": "6/10/2021",
   "sidebar_label": "📖 Guides",
   "frontMatter": {
     "id": "guides",
@@ -24,7 +24,7 @@
     "permalink": "/docs/create_and_manage_inventory"
   },
   "next": {
-    "title": "Backend Configuration and Deployment",
+    "title": "ReflowOS instance installation & configuration",
     "permalink": "/docs/install_a_reflowOS_node"
   }
 }
