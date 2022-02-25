@@ -167,7 +167,7 @@ const Cta = () => (
         </a>
       </div>
       <div className="ml-3 inline-flex">
-        <a href="https://github.com/dyne/zenpub" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
+        <a href="https://github.com/dyne/reflow-os" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
           Learn more
         </a>
       </div>
@@ -300,7 +300,7 @@ const SplashContainer = props => (
               </a>
             </div>
             <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-              <a href="https://github.com/dyne/zenpub" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+              <a href="https://github.com/dyne/reflow-os" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                 Github
               </a>
             </div>

@@ -11,7 +11,7 @@ module.exports={
   "favicon": "img/favicon.ico",
   "customFields": {
     "githubUsername": "dyne",
-    "githubProject": "reflow-os",
+    "githubProject": "zenpub",
     "users": [
       {
         "caption": "User1",
@@ -67,7 +67,7 @@ module.exports={
           "position": "left"
         },
         {
-          "href": "https://github.com/dyne/reflow-os",
+          "href": "https://github.com/dyne/zenpub",
           "label": "Github",
           "position": "left"
         }
