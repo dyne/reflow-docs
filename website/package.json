@@ -2,6 +2,7 @@
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus start",
+    "prebuild": "graphql-markdown https://reflow-demo.dyne.org/api/graphql > docs/schema.md && pandoc -o static/schema.html docs/schema.md && pandoc -o static/schema.docx static/schema.html",
     "build": "docusaurus build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
@@ -11,16 +12,18 @@
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "graphql-markdown": "^6.0.0"
+  },
   "dependencies": {
-    "@salesforce-ux/design-system": "^2.12.2",
-    "gray-matter": "^4.0.2",
-    "raw-loader": "^4.0.1",
-    "react-markdown": "^4.3.1",
     "@docusaurus/core": "2.0.0-beta.0",
     "@docusaurus/preset-classic": "2.0.0-beta.0",
+    "@salesforce-ux/design-system": "^2.12.2",
     "clsx": "^1.1.1",
+    "gray-matter": "^4.0.2",
+    "raw-loader": "^4.0.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-markdown": "^4.3.1"
   }
 }
